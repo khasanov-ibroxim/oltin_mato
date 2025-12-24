@@ -49,12 +49,13 @@
   }
 }
 
+/* ✅ To'g'ri font class-lari */
 .font-dm {
-  font-family: var(--font-DM-Serif-Display) sans-serif !important;
+  font-family: var(--font-DM-Serif-Display);
 }
 
 .font-manrope {
-  font-family: var(--font-Manrope) sans-serif !important;
+  font-family: var(--font-Manrope);
 }
 
 .index__bg{

@@ -1,0 +1,44 @@
+import Image from "next/image";
+import getInTouchImage from "@/assets/component/Get_in_touch/get_in_touch.jpg"
+import React from "react";
+import LinkUI from "@/app/components/UI/linkUI";
+
+interface GetInTouchProps {
+    dict: {
+        [key: string]: unknown;
+    };
+}
+
+const GetInTouch = ({dict}: GetInTouchProps) => {
+    return (
+        <div className={"w-full h-[500px] relative  flex justify-end items-center"}>
+            <div className="absolute inset-0 z-20  lg:bg-gradient-to-r  lg:from-black/40 lg:via-black/40 lg:to-transparent"></div>
+            <Image src={getInTouchImage} alt={"Oltin mato"}
+                   className={"w-full object-cover absolute z-10 h-full"}
+            />
+            <div className="absolute z-30 w-full px-5 lg:w-1/2 lg:px-0">
+                <div className="flex items-center gap-3 mb-6">
+                    <div className={'flex gap-1'}>
+                        <div className="w-1 h-7 bg-[#CBA655]"></div>
+                        <div className="w-1 h-7 bg-[#CBA655]"></div>
+                    </div>
+
+                    <h3 className="text-[#fff]  font-manrope font-bold text-sm md:text-base tracking-[2px] uppercase">
+                        Get in touch
+                    </h3>
+                </div>
+                <h2 className={"font-dm font-bold text-[32px] sm:text-[36px] md:text-[44px] lg:text-[50px] leading-tight text-[#fff]"}>
+                    Let’s Weave Something New
+                </h2>
+                <p className={"font-manrope w-[90%] text-[#fff] text-[18px] mt-5 mb-10"}>
+                    Partner with Looma to transform ideas into timeless textiles — crafted with care, precision, and
+                    purpose.
+                </p>
+                <LinkUI text={"Start Your Project"} link={"/contact"}/>
+            </div>
+
+        </div>
+    );
+};
+
+export default GetInTouch;

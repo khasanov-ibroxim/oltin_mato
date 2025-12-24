@@ -7,12 +7,14 @@ import "./globals.css";
 const dm = DM_Serif_Display({
     variable: "--font-DM-Serif-Display",
     subsets: ["latin"],
-    weight:"400"
+    weight: "400",
+    display: "swap", // ✅ Qo'shing
 });
 
 const manrope = Manrope({
     variable: "--font-Manrope",
     subsets: ["latin"],
+    display: "swap", // ✅ Qo'shing
 });
 
 export const metadata: Metadata = {

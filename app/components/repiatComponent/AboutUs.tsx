@@ -7,7 +7,10 @@ import about_1 from "@/assets/component/aboutUs/aboutUs_1.jpg"
 import about_2 from "@/assets/component/aboutUs/aboutUs_2.jpg"
 import about_3 from "@/assets/component/aboutUs/aboutUs_3.jpg"
 import about_4 from "@/assets/component/aboutUs/aboutUs_4.jpg"
-
+import Link from 'next/link';
+import {MoveRight} from "lucide-react"
+import TitleUI from "@/app/components/UI/titleUI";
+import LinkUI from "@/app/components/UI/linkUI";
 
 interface AboutProps {
     dict: {
@@ -57,18 +60,9 @@ const AboutUs = ({dict}: AboutProps) => {
                     variants={fadeInUp}
                     className="mb-12 md:mb-16"
                 >
-                    <div className="flex items-center gap-3 mb-6">
-                        <div className={'flex gap-1'}>
-                            <div className="w-1 h-8 bg-[#CBA655]"></div>
-                            <div className="w-1 h-8 bg-[#CBA655]"></div>
-                        </div>
+                    <TitleUI text={"About Us"} />
 
-                        <h3 className="text-[#CBA655] font-manrope font-bold text-sm md:text-base tracking-[2px] uppercase">
-                            ABOUT US
-                        </h3>
-                    </div>
-
-                    <h1 className="font-dm font-bold text-[32px] sm:text-[40px] md:text-[50px] lg:text-[57px] leading-[57px] text-[#222222] max-w-5xl">
+                    <h1 className="font-dm font-bold text-[25px] sm:text-[40px] md:text-[50px] lg:text-[57px] lg:leading-[57px] text-[#222222] w-full">
                         Looma Weaves Brighter Futures — by Honoring Craftsmanship, Preserving Tradition, and Elevating
                         Every Thread We Create.
 
@@ -135,6 +129,22 @@ const AboutUs = ({dict}: AboutProps) => {
                         />
                     </motion.div>
                 </motion.div>
+            </div>
+            <div className="w-full flex flex-col lg:flex-row pt-10">
+                <div className="w-full lg:w-1/2 font-dm text-[25px] lg:text-[40px]  lg:leading-[48px] text-[rgb(90,90,90)] font-bold">
+                    In 2020, our founders saw the fading art of true craftsmanship — and envisioned Looma as a sanctuary
+                    where tradition, innovation, and human touch are woven into every fabric.
+
+                </div>
+                <div className="w-full lg:w-1/2 flex flex-col gap-5 lg:gap-20">
+                    <p className={"font-manrope text-[18px] text-[rgb(126,126,126)]"}>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
+                        mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+                        posuere, tellus ac commodo fermentum, neque eros finibus neque, sit amet mattis orci justo nec est.
+                        Phasellus vel mauris at nulla aliquet elementum in vitae elit.
+                    </p>
+                   <LinkUI text={"About Us"} link={'/about'}/>
+                </div>
             </div>
         </div>
     );
