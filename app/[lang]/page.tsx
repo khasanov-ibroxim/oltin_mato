@@ -7,6 +7,9 @@ import OurServices from "@/app/components/repiatComponent/Our_Services";
 import OurProjects from "@/app/components/repiatComponent/Our_Projects";
 import GetInTouch from "@/app/components/repiatComponent/Get_in_touch";
 import PricingPlan from "@/app/components/home/Pricing_Plan";
+import Testimonials from "@/app/components/repiatComponent/Testimonials";
+import Questions from "@/app/components/home/Questions";
+import BlogPost from "@/app/components/home/Blog_Post";
 
 interface HomeProps {
     params: Promise<{ lang: Locale }>;
@@ -26,5 +29,9 @@ export default async function IndexPage({params, searchParams}: HomeProps) {
         <OurProjects dict={dict}/>
         <GetInTouch dict={dict}/>
         <PricingPlan dict={dict}/>
+        <Testimonials dict={dict}/>
+        <Questions dict={dict}/>
+        <BlogPost dict={dict}/>
+
     </div>)
 }

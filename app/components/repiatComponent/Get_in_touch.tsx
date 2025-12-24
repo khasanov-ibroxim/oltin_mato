@@ -12,7 +12,7 @@ interface GetInTouchProps {
 const GetInTouch = ({dict}: GetInTouchProps) => {
     return (
         <div className={"w-full h-[500px] relative  flex justify-end items-center"}>
-            <div className="absolute inset-0 z-20  lg:bg-gradient-to-r  lg:from-black/40 lg:via-black/40 lg:to-transparent"></div>
+            <div className="absolute inset-0 z-20   bg-gradient-to-r  from-black/40 via-black/40 to-transparent"></div>
             <Image src={getInTouchImage} alt={"Oltin mato"}
                    className={"w-full object-cover absolute z-10 h-full"}
             />

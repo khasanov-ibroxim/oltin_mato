@@ -1,6 +1,7 @@
 import { i18n, Locale } from "@/i18n-config";
 import {getDictionary} from "@/lib/dictionary";
 import {Navbar} from "@/app/components/navbar";
+import Footer from "@/app/components/footer";
 
 export async function generateStaticParams() {
     return i18n.locales.map((locale) => ({ lang: locale }));
@@ -17,5 +18,6 @@ export default async function LangLayout({children, params}: LangLayoutProps) {
     return(<>
         <Navbar dict={dict} lang={lang}/>
         {children}
+        <Footer dict={dict}/>
     </>)
 }

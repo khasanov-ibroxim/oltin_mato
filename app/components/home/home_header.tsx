@@ -126,7 +126,7 @@ export default function HomeHeader({dict}: HomeHeaderProps) {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.3 }}
-                    variants={slideFromRight}
+                    variants={fadeInScale}
                     whileHover={{ scale: 1.02 }}
                     transition={{ type: "spring", stiffness: 300 }}
                     className="flex w-full flex-col lg:w-1/3 gap-2 rounded-2xl items-start justify-start h-full bg-[#877F75]/70"
