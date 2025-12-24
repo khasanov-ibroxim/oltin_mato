@@ -1,5 +1,5 @@
 // lib/dictionary.ts
-import { Locale } from '@/i18n-config';
+import { Locale, i18n } from '@/i18n-config';
 
 // ✅ Type-safe dictionary loader
 const dictionaries = {
@@ -7,17 +7,23 @@ const dictionaries = {
   en: () => import('@/dictionaries/en.json').then((module) => module.default),
 } as const;
 
-export const getDictionary = async (locale: Locale) => {
+export const getDictionary = async (locale: string) => {
   try {
     // ✅ Validate locale exists
-    if (!dictionaries[locale]) {
-      console.warn(`Dictionary for locale "${locale}" not found, falling back to "ru"`);
-      return dictionaries.ru();
+    const validLocale = i18n.locales.includes(locale as Locale)
+        ? (locale as Locale)
+        : i18n.defaultLocale;
+
+    if (!dictionaries[validLocale]) {
+      console.warn(`Dictionary for locale "${locale}" not found, falling back to "${i18n.defaultLocale}"`);
+      return dictionaries[i18n.defaultLocale]();
     }
 
-    return await dictionaries[locale]();
+    return await dictionaries[validLocale]();
   } catch (error) {
     console.error(`Error loading dictionary for locale "${locale}":`, error);
+    // ✅ Return default locale dictionary on error
+    return dictionaries[i18n.defaultLocale]();
   }
 };
 

@@ -6,14 +6,16 @@ export async function generateStaticParams() {
     return i18n.locales.map((locale) => ({ lang: locale }));
 }
 
-export default async function LangLayout({children, params}: {
-    children: React.ReactNode,
-    params: Promise<{ lang: Locale }>
-}) {
+interface LangLayoutProps {
+    children: React.ReactNode;
+    params: Promise<{ lang: string }>;  // ✅ Changed from Locale to string
+}
+
+export default async function LangLayout({children, params}: LangLayoutProps) {
     const { lang } = await params;
-    const dict = await getDictionary(lang);
+    const dict = await getDictionary(lang as Locale);  // ✅ Type assertion
     return(<>
         <Navbar dict={dict} lang={lang}/>
-            {children}
-        </>)
+        {children}
+    </>)
 }
