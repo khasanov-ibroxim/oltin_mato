@@ -83,7 +83,7 @@ export const Navbar = ({ dict, lang }: NavbarProps) => {
             {/* DRAWER MENU (70%) */}
             <div
                 className={`
-          fixed top-0 left-[-10px] z-50 h-screen w-[50%] bg-white shadow-2xl
+          fixed top-0 left-[-10px] z-50 h-screen w-[70%] bg-white shadow-2xl
           transition-transform duration-500 ease-in-out
           ${isMenuOpen ? "translate-x-0" : "-translate-x-full"}
         `}
