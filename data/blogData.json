@@ -1,0 +1,67 @@
+{
+  "blogs": [
+    {
+      "id": "1",
+      "title": "Textures of Timeless Luxury",
+      "date": "November 10, 2025",
+      "author": "mahstudios",
+      "category": "Style & Luxury",
+      "excerpt": "Textures of Timeless Luxury mahstudios November 10, 2025 Style & Luxury Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "mainImage": "/assets/component/Testimonials/testimonials_title.jpg",
+      "content": {
+        "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consequat, eros ut congue bibendum, purus nisl tincidunt sapien, eget convallis enim elit at turpis. Donec varius sapien vitae ante vestibulum ultricies. Etiam tristique vestibulum felis, nec varius urna dapibus sit amet. Vestibulum lacinia, libero in posuere venenatis, justo urna luctus sapien, ut luctus est velit at orci. Aenean venenatis, purus vitae vulputate convallis, orci elit convallis purus, ac pulvinar magna nibh eu leo. Aliquam posuere, lacus at venenatis efficitur, lacus risus egestas leo, in fermentum tortor lectus ac justo.",
+        "section1": {
+          "title": "Crafted with Purpose and Passion",
+          "text": "Curabitur efficitur auctor diam, in varius sapien hendrerit in. Fusce in nisi velit. Pellentesque imperdiet cursus lacus, ac fermentum tortor fermentum id. Nulla facilisi. Integer non nisl eros. Praesent fermentum leo ac nibh consequat, id consectetur sapien tincidunt. Vestibulum lacinia, libero in posuere venenatis, justo urna luctus sapien, ut luctus est velit at orci. Aenean venenatis, purus vitae vulputate convallis, orci elit convallis purus, ac pulvinar magna nibh eu leo. Aliquam posuere, lacus at venenatis efficitur, lacus risus egestas leo, in fermentum tortor lectus ac justo.",
+          "images": [
+            "/assets/component/Testimonials/testimonials_title.jpg",
+            "/assets/component/Testimonials/testimonials_title.jpg"
+          ]
+        },
+        "section2": "Suspendisse nibh velit, posuere nec erat ut, blandit fermentum metus. Vivamus interdum sem nibh, a aliquet tellus dapibus sed. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc non finibus nunc. Nulla ullamcorper vulputate velit, et mattis dui vehiculum vel quam semper, feugiat justo in, tempor augue. Etiam sagittis est at faucibus vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur interdum tellus at fringilla cursus. Donec pulvinar tincidunt artteu varius. Curabitur efficitur auctor diam, in varius sapien hendrerit in. Fusce in nisi velit. Pellentesque imperdiet cursus lacus, ac fermentum tortor fermentum id. Nulla facilisi. Integer non nisl eros."
+      }
+    },
+    {
+      "id": "2",
+      "title": "Tradition Meets Modern Craft",
+      "date": "November 10, 2025",
+      "author": "mahstudios",
+      "category": "Innovation",
+      "excerpt": "Tradition Meets Modern Craft mahstudios November 10, 2025 Innovation Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "mainImage": "/assets/component/Testimonials/testimonials_title.jpg",
+      "content": {
+        "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consequat, eros ut congue bibendum, purus nisl tincidunt sapien, eget convallis enim elit at turpis. Donec varius sapien vitae ante vestibulum ultricies. Etiam tristique vestibulum felis, nec varius urna dapibus sit amet. Vestibulum lacinia, libero in posuere venenatis, justo urna luctus sapien, ut luctus est velit at orci. Aenean venenatis, purus vitae vulputate convallis, orci elit convallis purus, ac pulvinar magna nibh eu leo. Aliquam posuere, lacus at venenatis efficitur, lacus risus egestas leo, in fermentum tortor lectus ac justo.",
+        "section1": {
+          "title": "From Raw Fibers to Refined Art",
+          "text": "Curabitur efficitur auctor diam, in varius sapien hendrerit in. Fusce in nisi velit. Pellentesque imperdiet cursus lacus, ac fermentum tortor fermentum id. Nulla facilisi. Integer non nisl eros. Praesent fermentum leo ac nibh consequat, id consectetur sapien tincidunt. Vestibulum lacinia, libero in posuere venenatis, justo urna luctus sapien, ut luctus est velit at orci. Aenean venenatis, purus vitae vulputate convallis, orci elit convallis purus, ac pulvinar magna nibh eu leo. Aliquam posuere, lacus at venenatis efficitur, lacus risus egestas leo, in fermentum tortor lectus ac justo.",
+          "images": [
+            "/assets/component/Testimonials/testimonials_title.jpg",
+            "/assets/component/Testimonials/testimonials_title.jpg"
+          ]
+        },
+        "section2": "Suspendisse nibh velit, posuere nec erat ut, blandit fermentum metus. Vivamus interdum sem nibh, a aliquet tellus dapibus sed. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc non finibus nunc. Nulla ullamcorper vulputate velit, et mattis dui vehiculum vel quam semper, feugiat justo in, tempor augue. Etiam sagittis est at faucibus vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur interdum tellus at fringilla cursus. Donec pulvinar tincidunt artteu varius. Curabitur efficitur auctor diam, in varius sapien hendrerit in. Fusce in nisi velit. Pellentesque imperdiet cursus lacus, ac fermentum tortor fermentum id. Nulla facilisi. Integer non nisl eros."
+      }
+    },
+    {
+      "id": "3",
+      "title": "Sustainability in Every Stitch",
+      "date": "November 10, 2025",
+      "author": "mahstudios",
+      "category": "Sustainability",
+      "excerpt": "Sustainability in Every Stitch mahstudios November 10, 2025 Sustainability Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "mainImage": "/assets/component/Testimonials/testimonials_title.jpg",
+      "content": {
+        "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consequat, eros ut congue bibendum, purus nisl tincidunt sapien, eget convallis enim elit at turpis. Donec varius sapien vitae ante vestibulum ultricies. Etiam tristique vestibulum felis, nec varius urna dapibus sit amet. Vestibulum lacinia, libero in posuere venenatis, justo urna luctus sapien, ut luctus est velit at orci. Aenean venenatis, purus vitae vulputate convallis, orci elit convallis purus, ac pulvinar magna nibh eu leo. Aliquam posuere, lacus at venenatis efficitur, lacus risus egestas leo, in fermentum tortor lectus ac justo.",
+        "section1": {
+          "title": "Weaving a Greener Future",
+          "text": "Curabitur efficitur auctor diam, in varius sapien hendrerit in. Fusce in nisi velit. Pellentesque imperdiet cursus lacus, ac fermentum tortor fermentum id. Nulla facilisi. Integer non nisl eros. Praesent fermentum leo ac nibh consequat, id consectetur sapien tincidunt. Vestibulum lacinia, libero in posuere venenatis, justo urna luctus sapien, ut luctus est velit at orci. Aenean venenatis, purus vitae vulputate convallis, orci elit convallis purus, ac pulvinar magna nibh eu leo. Aliquam posuere, lacus at venenatis efficitur, lacus risus egestas leo, in fermentum tortor lectus ac justo.",
+          "images": [
+            "/assets/component/Testimonials/testimonials_title.jpg",
+            "/assets/component/Testimonials/testimonials_title.jpg"
+          ]
+        },
+        "section2": "Suspendisse nibh velit, posuere nec erat ut, blandit fermentum metus. Vivamus interdum sem nibh, a aliquet tellus dapibus sed. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc non finibus nunc. Nulla ullamcorper vulputate velit, et mattis dui vehiculum vel quam semper, feugiat justo in, tempor augue. Etiam sagittis est at faucibus vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur interdum tellus at fringilla cursus. Donec pulvinar tincidunt artteu varius. Curabitur efficitur auctor diam, in varius sapien hendrerit in. Fusce in nisi velit. Pellentesque imperdiet cursus lacus, ac fermentum tortor fermentum id. Nulla facilisi. Integer non nisl eros."
+      }
+    }
+  ]
+}

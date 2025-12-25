@@ -7,6 +7,8 @@ import titleImg from "@/assets/component/Testimonials/testimonials_title.jpg";
 import {motion, Variants} from "framer-motion";
 import Link from "next/link";
 import LinkUI from "@/app/components/UI/linkUI";
+import blogData from "@/data/blogData.json";
+import { useParams } from "next/navigation";
 
 interface BlogPostProps {
     dict: {
@@ -14,8 +16,10 @@ interface BlogPostProps {
     };
 }
 
+const BlogPost = ({dict}: BlogPostProps) => {
+    const params = useParams();
+    const lang = params?.lang as string;
 
-const BlogPost = ({dict}:BlogPostProps) => {
     const fadeInScale: Variants = {
         hidden: { opacity: 0, scale: 0.95 },
         visible: {
@@ -24,33 +28,6 @@ const BlogPost = ({dict}:BlogPostProps) => {
             transition: { duration: 1, ease: "easeOut" }
         }
     };
-
-    const blogPosts = [
-        {
-            id: 1,
-            image: titleImg,
-            title: "Textures of Timeless Luxury",
-            date: "November 10, 2025",
-            category: "Style &...",
-            excerpt: "Textures of Timeless Luxury mahstudios November 10, 2025 Style &..."
-        },
-        {
-            id: 2,
-            image: titleImg,
-            title: "Tradition Meets Modern Craft",
-            date: "November 10, 2025",
-            category: "Innovation",
-            excerpt: "Tradition Meets Modern Craft mahstudios November 10, 2025 Innovation Lorem..."
-        },
-        {
-            id: 3,
-            image: titleImg,
-            title: "Sustainability in Every Stitch",
-            date: "November 10, 2025",
-            category: "Uncategorized",
-            excerpt: "Sustainability in Every Stitch mahstudios November 10, 2025 Uncategorized Lorem..."
-        }
-    ];
 
     return (
         <div className={"container py-16"}>
@@ -68,12 +45,12 @@ const BlogPost = ({dict}:BlogPostProps) => {
                     </h2>
                 </div>
                 <div className="w-full mt-5 sm:mt-0 sm:w-1/3 flex justify-start items-start sm:justify-end sm:items-end">
-                    <LinkUI text={"Discover More"} link={"/"} />
+                    <LinkUI text={"Discover More"} link={`/${lang}`} />
                 </div>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-                {blogPosts.map((post, index) => (
+                {blogData.blogs.map((post, index) => (
                     <motion.div
                         key={post.id}
                         initial="hidden"
@@ -83,7 +60,7 @@ const BlogPost = ({dict}:BlogPostProps) => {
                         transition={{ type: "spring", stiffness: 300 }}
                         className="group cursor-pointer"
                     >
-                        <Link href={`/blog/${post.id}`} className="block">
+                        <Link href={`/${lang}/blog/${post.id}`} className="block">
                             <div className="overflow-hidden rounded-3xl mb-6">
                                 <motion.div
                                     whileHover={{ rotate: 3 }}
@@ -91,7 +68,7 @@ const BlogPost = ({dict}:BlogPostProps) => {
                                     className="relative w-full h-[320px]"
                                 >
                                     <Image
-                                        src={post.image}
+                                        src={titleImg}
                                         alt={post.title}
                                         fill
                                         className="object-cover"
@@ -117,4 +94,5 @@ const BlogPost = ({dict}:BlogPostProps) => {
         </div>
     );
 };
+
 export default BlogPost;
