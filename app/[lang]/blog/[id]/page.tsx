@@ -31,7 +31,7 @@ export default async function BlogDetail({ params }: BlogDetailProps) {
     return (
         <>
             <SectionHeader
-                title={blog.category}
+                title={blog.title}
                 linkName="Blog"
                 titleImage={AboutHeader}
             />
