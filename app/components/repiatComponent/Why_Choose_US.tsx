@@ -9,7 +9,7 @@ import centerImg from "@/assets/component/Why_Choose_US/why_choose_us.jpg"
 
 interface WhyChooseUsProps {
     dict: {
-        [key: string]: unknown;
+        [key: string]: any;
     };
 }
 
@@ -56,36 +56,36 @@ const WhyChooseUs = ({ dict }: WhyChooseUsProps) => {
     const features = [
         {
             icon: Scissors,
-            title: "Artisanal Craft",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            title: dict.features.i_1.title,
+            description: dict.features.i_1.desc
         },
         {
             icon: Sparkles,
-            title: "Timeless Design",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            title: dict.features.i_2.title,
+            description: dict.features.i_2.desc
         },
         {
             icon: Layers,
-            title: "Sustainable Process",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            title: dict.features.i_3.title,
+            description: dict.features.i_3.desc
         }
     ];
 
     const rightFeatures = [
         {
             icon: Ruler,
-            title: "Refined Quality",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            title: dict.rightFeatures.i_1.title,
+            description: dict.rightFeatures.i_1.desc
         },
         {
             icon: Ruler,
-            title: "Innovative Touch",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            title: dict.rightFeatures.i_2.title,
+            description: dict.rightFeatures.i_2.desc
         },
         {
             icon: Users,
-            title: "Collaborative Approach",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            title: dict.rightFeatures.i_3.title,
+            description: dict.rightFeatures.i_3.desc
         }
     ];
 
@@ -101,11 +101,11 @@ const WhyChooseUs = ({ dict }: WhyChooseUsProps) => {
                     className="text-center mb-12 md:mb-16"
                 >
                     <div className="flex items-center justify-center gap-2 mb-4">
-                        <TitleUI text={" WHY CHOOSE US"}/>
+                        <TitleUI text={dict.subtitle}/>
                     </div>
 
                     <h1 className="font-dm font-bold text-[32px] sm:text-[40px] md:text-[50px] lg:text-[57px] leading-tight text-[#222222]">
-                        Where craftsmanship meets conscience
+                        {dict.title}
                     </h1>
                 </motion.div>
 

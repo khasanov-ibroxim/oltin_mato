@@ -62,7 +62,7 @@ const AboutUs = ({dict}: AboutProps) => {
                 >
                     <TitleUI text={dict?.about?.subtitle} />
 
-                    <h1 className="font-dm font-bold text-[25px] sm:text-[40px] md:text-[50px] lg:text-[57px] lg:leading-[57px] text-[#222222] w-full">
+                    <h1 className="font-dm mt-3 font-bold text-[25px] sm:text-[40px] md:text-[50px] lg:text-[57px] lg:leading-[57px] leading-[45px] text-[#222222] w-full">
                         {dict?.about?.title}
                     </h1>
                 </motion.div>
@@ -129,19 +129,14 @@ const AboutUs = ({dict}: AboutProps) => {
                 </motion.div>
             </div>
             <div className="w-full flex flex-col lg:flex-row pt-10">
-                <div className="w-full lg:w-1/2 font-dm text-[25px] lg:text-[40px]  lg:leading-[48px] text-[rgb(90,90,90)] font-bold">
-                    In 2020, our founders saw the fading art of true craftsmanship — and envisioned Looma as a sanctuary
-                    where tradition, innovation, and human touch are woven into every fabric.
-
+                <div className="w-full lg:w-1/2 font-dm text-[25px] lg:text-[30px]  lg:leading-[40px] text-[rgb(90,90,90)] font-bold">
+                    {dict?.about?.left_title}
                 </div>
                 <div className="w-full lg:w-1/2 flex flex-col gap-5 lg:gap-20">
                     <p className={"font-manrope text-[18px] text-[rgb(126,126,126)]"}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
-                        mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-                        posuere, tellus ac commodo fermentum, neque eros finibus neque, sit amet mattis orci justo nec est.
-                        Phasellus vel mauris at nulla aliquet elementum in vitae elit.
+                        {dict?.about?.right_text}
                     </p>
-                   <LinkUI text={"About Us"} link={'/about'}/>
+                   <LinkUI text={dict?.about?.btn} link={'/about'}/>
                 </div>
             </div>
         </div>

@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useState } from 'react';
-import Image, { StaticImageData } from 'next/image';
+import React, {useState} from 'react';
+import Image, {StaticImageData} from 'next/image';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Layers, Sparkles, Droplet, Shirt, Ruler } from 'lucide-react';
+import {motion, AnimatePresence} from 'framer-motion';
+import {Layers, Sparkles, Droplet, Shirt, Ruler} from 'lucide-react';
 import our_1 from "@/assets/component/Our_Services/our_1.jpg"
 import our_2 from "@/assets/component/Our_Services/our_2.jpg"
 import our_3 from "@/assets/component/Our_Services/our_3.jpg"
@@ -14,24 +14,24 @@ import TitleUI from "@/app/components/UI/titleUI";
 
 interface OurServicesProps {
     dict: {
-        [key: string]: unknown;
+        [key: string]: any;
     };
 }
 
 interface Service {
     id: number;
-    title: string;
+    title: string | any;
     icon: React.ElementType;
     description: string;
     content: string;
     image: StaticImageData;
 }
 
-const OurServices = ({ dict }: OurServicesProps) => {
+const OurServices = ({dict}: OurServicesProps) => {
     const services: Service[] = [
         {
             id: 0,
-            title: "Textile Development",
+            title: dict.ourServices.tabs[0],
             icon: Layers,
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
             content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
@@ -86,7 +86,8 @@ const OurServices = ({ dict }: OurServicesProps) => {
                     </div>
 
                     <p className="font-manrope text-[#666666] text-base md:text-lg max-w-md leading-relaxed">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
+                        mattis, pulvinar dapibus leo.
                     </p>
                 </div>
 
@@ -114,10 +115,10 @@ const OurServices = ({ dict }: OurServicesProps) => {
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={activeService}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20 }}
-                        transition={{ duration: 0.4 }}
+                        initial={{opacity: 0, y: 20}}
+                        animate={{opacity: 1, y: 0}}
+                        exit={{opacity: 0, y: -20}}
+                        transition={{duration: 0.4}}
                         className="relative h-[500px] md:h-[600px] rounded-3xl overflow-hidden shadow-2xl"
                     >
                         {/* Background Image */}
@@ -129,14 +130,16 @@ const OurServices = ({ dict }: OurServicesProps) => {
                         />
 
 
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                        <div
+                            className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
 
 
-                        <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-6 md:px-12">
+                        <div
+                            className="absolute inset-0 flex flex-col justify-center items-center text-center px-6 md:px-12">
                             <motion.div
-                                initial={{ scale: 0 }}
-                                animate={{ scale: 1 }}
-                                transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+                                initial={{scale: 0}}
+                                animate={{scale: 1}}
+                                transition={{delay: 0.2, type: "spring", stiffness: 200}}
                                 className="w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-[#CBA655] flex items-center justify-center mb-6"
                             >
                                 {React.createElement(services[activeService].icon, {
@@ -146,27 +149,27 @@ const OurServices = ({ dict }: OurServicesProps) => {
                             </motion.div>
 
                             <motion.h2
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.3 }}
+                                initial={{opacity: 0, y: 20}}
+                                animate={{opacity: 1, y: 0}}
+                                transition={{delay: 0.3}}
                                 className="font-dm font-bold text-[36px] sm:text-[42px] md:text-[52px] text-white mb-4"
                             >
                                 {services[activeService].title}
                             </motion.h2>
 
                             <motion.p
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.4 }}
+                                initial={{opacity: 0, y: 20}}
+                                animate={{opacity: 1, y: 0}}
+                                transition={{delay: 0.4}}
                                 className="font-manrope text-white/90 text-base md:text-lg max-w-2xl leading-relaxed mb-8"
                             >
                                 {services[activeService].content}
                             </motion.p>
 
                             <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.5 }}
+                                initial={{opacity: 0, y: 20}}
+                                animate={{opacity: 1, y: 0}}
+                                transition={{delay: 0.5}}
                             >
                                 <Link
                                     href="/contact"

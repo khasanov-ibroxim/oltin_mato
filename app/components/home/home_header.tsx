@@ -11,7 +11,8 @@ interface HomeHeaderProps {
 }
 
 export default function HomeHeader({dict}: HomeHeaderProps) {
-    // Animation variants with proper typing
+    const title = dict?.home_header?.title || ["OLTIN MATO", "GROUP"];
+
     const fadeInScale: Variants = {
         hidden: { opacity: 0, scale: 0.95 },
         visible: {
@@ -72,7 +73,7 @@ export default function HomeHeader({dict}: HomeHeaderProps) {
                 className="relative text-center font-medium flex z-20 w-full h-screen items-center justify-center text-white font-dm
                text-[50px] sm:text-[100px] md:text-[120px] lg:text-[100px]"
             >
-                {dict.home_header.title[0]} <br/> {dict.home_header.title[1]}
+                {title[0]} <br/> {title[1]}
             </motion.div>
 
             {/* Content Section */}
