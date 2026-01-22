@@ -1,7 +1,10 @@
 {
   "nav": {
-    "home": "Home",
-    "about": "About",
-    "contact": "Contact"
+    "home": "Главная",
+    "about": "О нас",
+    "contact": "Контакты"
+  },
+  "home_header": {
+    "title": ["OLTIN MATO"," GROUP"]
   }
 }

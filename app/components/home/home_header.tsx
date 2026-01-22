@@ -7,9 +7,7 @@ import Link from "next/link";
 import { motion, Variants } from "framer-motion";
 
 interface HomeHeaderProps {
-    dict: {
-        [key: string]: unknown;
-    };
+    dict:any;
 }
 
 export default function HomeHeader({dict}: HomeHeaderProps) {
@@ -71,10 +69,10 @@ export default function HomeHeader({dict}: HomeHeaderProps) {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
                 variants={childVariant}
-                className="relative font-medium flex z-20 w-full h-screen items-center justify-center text-white font-dm
-               text-[100px] sm:text-[180px] md:text-[120px] lg:text-[300px]"
+                className="relative text-center font-medium flex z-20 w-full h-screen items-center justify-center text-white font-dm
+               text-[50px] sm:text-[100px] md:text-[120px] lg:text-[100px]"
             >
-                Crafted
+                {dict.home_header.title[0]} <br/> {dict.home_header.title[1]}
             </motion.div>
 
             {/* Content Section */}
