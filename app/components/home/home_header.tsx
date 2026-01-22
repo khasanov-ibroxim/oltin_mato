@@ -91,30 +91,27 @@ export default function HomeHeader({dict}: HomeHeaderProps) {
                         variants={childVariant}
                         className="flex font-manrope tracking-[1px] sm:tracking-[2px] md:tracking-[3px] uppercase font-bold text-[12px] sm:text-[14px] md:text-[16px] items-center gap-2"
                     >
-                        <Badge size={20} className="text-[#CBA655]"/> Every fiber tells a story
+                        <Badge size={20} className="text-[#CBA655]"/> {dict.home_header.box.title}
                     </motion.h2>
 
                     <motion.h1
                         variants={childVariant}
-                        className="text-[50px] sm:text-[70px] md:text-[50px] lg:text-[80px] font-bold leading-[50px] sm:leading-[70px] md:leading-[50px] lg:leading-[80px] font-dm"
+                        className="text-[30px] w-auto lg:w-3/4 sm:text-[50px] md:text-[40px] lg:text-[50px] font-bold leading-[50px] sm:leading-[50px] md:leading-[50px] lg:leading-[50px] font-dm"
                     >
-                        Textiles beyond the surface
+                        {dict.home_header.box.subtitle}
                     </motion.h1>
 
                     <motion.p
                         variants={childVariant}
                         className="font-manrope text-[14px] sm:text-[16px] md:text-[18px] w-full md:w-2/3"
-                    >
-                        Woven with precision and patience, Looma creates fabrics that embody quiet luxury — where
-                        craftsmanship meets timeless design.
-                    </motion.p>
+                    >{dict.home_header.box.p}</motion.p>
 
                     <motion.div variants={childVariant}>
                         <Link
                             href="/contact"
                             className="index__btn_colors inline-flex items-center justify-center rounded-sm px-6 py-2 font-manrope gap-1"
                         >
-                            Explore the Craft <MoveRight/>
+                            {dict.home_header.box.btn} <MoveRight/>
                         </Link>
                     </motion.div>
                 </motion.div>
@@ -145,8 +142,8 @@ export default function HomeHeader({dict}: HomeHeaderProps) {
                     </div>
 
                     <div className="px-5 py-5 flex flex-col gap-4">
-                        <h3 className={"text-black m-0 font-dm text-3xl font-bold"}>The Making Process</h3>
-                        <p className={"font-manrope text-[19px]"}>Handcrafted through time-honored techniques that bring texture and soul to every fabric.</p>
+                        <h3 className={"text-black m-0 font-dm text-3xl font-bold"}>{dict.home_header.box.video_title}</h3>
+                        <p className={"font-manrope text-[19px]"}>{dict.home_header.box.video_text}</p>
                     </div>
                 </motion.div>
             </div>

@@ -3,5 +3,17 @@
     "home": "Home",
     "about": "About",
     "contact": "Contact"
+  },
+  "home_header": {
+    "title": ["OLTIN MATO"," GROUP"]
+  },
+  "home": {
+    "about": {
+      "subtitle": "",
+      "title": "",
+      "left_title": "",
+      "right_text": "",
+      "text": ""
+    }
   }
 }

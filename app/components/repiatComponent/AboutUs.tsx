@@ -14,7 +14,7 @@ import LinkUI from "@/app/components/UI/linkUI";
 
 interface AboutProps {
     dict: {
-        [key: string]: unknown;
+        [key: string]: any;
     };
 }
 
@@ -60,12 +60,10 @@ const AboutUs = ({dict}: AboutProps) => {
                     variants={fadeInUp}
                     className="mb-12 md:mb-16"
                 >
-                    <TitleUI text={"About Us"} />
+                    <TitleUI text={dict?.about?.subtitle} />
 
                     <h1 className="font-dm font-bold text-[25px] sm:text-[40px] md:text-[50px] lg:text-[57px] lg:leading-[57px] text-[#222222] w-full">
-                        Looma Weaves Brighter Futures — by Honoring Craftsmanship, Preserving Tradition, and Elevating
-                        Every Thread We Create.
-
+                        {dict?.about?.title}
                     </h1>
                 </motion.div>
 

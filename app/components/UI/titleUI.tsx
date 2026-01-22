@@ -3,7 +3,7 @@
 import React from 'react';
 
 interface IProps {
-    text: string;
+    text: string | any;
     classNameGroup?: string;
     classNameText?: string;
 }

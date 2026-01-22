@@ -23,7 +23,7 @@ export default async function IndexPage({params, searchParams}: HomeProps) {
 
     return (<div className={"w-full"}>
         <HomeHeader dict={dict}/>
-        <AboutUs dict={dict}/>
+        <AboutUs dict={dict.home}/>
         <WhyChooseUs dict={dict}/>
         <OurServices dict={dict}/>
         <OurProjects dict={dict}/>
