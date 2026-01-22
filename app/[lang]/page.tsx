@@ -25,7 +25,7 @@ export default async function IndexPage({params, searchParams}: HomeProps) {
         <HomeHeader dict={dict}/>
         <AboutUs dict={dict.home}/>
         <WhyChooseUs dict={dict.home.why_choose}/>
-        <OurServices dict={dict.home}/>
+        <OurServices dict={dict.home.ourServices}/>
         <OurProjects dict={dict}/>
         <GetInTouch dict={dict}/>
         <PricingPlan dict={dict}/>
