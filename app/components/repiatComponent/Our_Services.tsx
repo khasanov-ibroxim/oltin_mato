@@ -1,20 +1,31 @@
 "use client";
 
 import React, {useState} from 'react';
-import Image, {StaticImageData} from 'next/image';
-import Link from 'next/link';
-import {motion, AnimatePresence} from 'framer-motion';
-import {Layers, Sparkles, Droplet, Shirt, Ruler, Globe} from 'lucide-react';
-import our_1 from "@/assets/component/Our_Services/our_1.jpg"
-import our_2 from "@/assets/component/Our_Services/our_2.jpg"
-import our_3 from "@/assets/component/Our_Services/our_3.jpg"
-import our_4 from "@/assets/component/Our_Services/our_4.jpg"
-import our_5 from "@/assets/component/Our_Services/our_5.jpg"
-import our_6 from "@/assets/component/Our_Services/our_1.jpg"
+import {Layers, Sparkles, Droplet, Shirt, Ruler, Globe as GlobeIcon} from 'lucide-react';
 import TitleUI from "@/app/components/UI/titleUI";
+import dynamic from 'next/dynamic';
+
+// ✅ Dynamic import for Globe component (client-side only)
+const Globe = dynamic(() => import('@/app/components/globe/GlobeRegion'), {
+    ssr: false,
+    loading: () => (
+        <div className="w-full h-full flex items-center justify-center bg-[#151515] rounded-3xl">
+            <div className="text-white text-center">
+                <div className="w-16 h-16 border-4 border-[#CBA655] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                <p className="font-manrope text-sm">Loading Globe...</p>
+            </div>
+        </div>
+    )
+});
 
 interface OurServicesProps {
-    dict: {
+    dict?: {
+        ourServices?: {
+            subtitle?: string;
+            title?: string;
+            title_desc?: string;
+            tabs?: string[];
+        };
         [key: string]: any;
     };
 }
@@ -24,28 +35,49 @@ interface Service {
     title: string;
     icon: React.ElementType;
     description: string;
-    content: string;
-    image: StaticImageData;
+    countries: string[]; // Country codes to highlight
 }
 
 const OurServices = ({dict}: OurServicesProps) => {
-    // ✅ Safe access with fallbacks
-    const subtitle = dict?.subtitle || "Our Services";
-    const title = dict?.title || "From fiber to form.";
-    const titleDesc = dict?.title_desc || "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
-    const tabs = dict?.tabs ;
+    // ✅ Default values
+    const defaultTabs = [
+        "CIS Countries",
+        "Europe",
+        "South America",
+        "Middle East",
+        "Regional Markets",
+        "International Partners"
+    ];
 
-    // Create services array with images
-    const serviceImages = [our_1, our_2, our_3, our_4, our_5, our_6];
-    const serviceIcons = [Layers, Sparkles, Droplet, Shirt, Ruler, Globe];
+    // ✅ Safe extraction with proper checks
+    const subtitle = dict?.ourServices?.subtitle ?? "Export Geography";
+    const title = dict?.ourServices?.title ?? "Global Partnership Today";
+    const titleDesc = dict?.ourServices?.title_desc ?? "We actively develop export destinations, cooperating with partners in key regions of the world.";
+
+    // ✅ Ensure tabs is always a valid array
+    let tabs = defaultTabs;
+    if (dict?.ourServices?.tabs && Array.isArray(dict.ourServices.tabs) && dict.ourServices.tabs.length > 0) {
+        tabs = dict.ourServices.tabs;
+    }
+
+    const serviceIcons = [Layers, Sparkles, Droplet, Shirt, Ruler, GlobeIcon];
+
+    // ✅ Map regions to country codes
+    const regionCountries: { [key: number]: string[] } = {
+        0: ['RU', 'KZ', 'UZ', 'BY', 'AM', 'KG', 'TJ'], // CIS Countries
+        1: ['IT', 'DE', 'FR', 'GB', 'ES', 'PL', 'NL'], // Europe
+        2: ['BR', 'AR', 'CL', 'CO', 'PE', 'VE', 'EC'], // South America
+        3: ['TR', 'AE', 'SA', 'IQ', 'IR', 'JO', 'LB'], // Middle East
+        4: ['CN', 'IN', 'JP', 'KR', 'VN', 'TH', 'ID'], // Regional Markets (Asia)
+        5: ['US', 'CA', 'AU', 'NZ', 'MX', 'ZA', 'EG'], // International Partners
+    };
 
     const services: Service[] = tabs.map((tab: string, index: number) => ({
         id: index,
         title: tab,
-        icon: serviceIcons[index] || Layers,
+        icon: serviceIcons[index % serviceIcons.length],
         description: titleDesc,
-        content: titleDesc,
-        image: serviceImages[index] || our_1
+        countries: regionCountries[index] || []
     }));
 
     const [activeService, setActiveService] = useState<number>(0);
@@ -66,6 +98,7 @@ const OurServices = ({dict}: OurServicesProps) => {
                     </p>
                 </div>
 
+                {/* Tabs */}
                 <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-8">
                     {services.map((service) => (
                         <button
@@ -85,73 +118,33 @@ const OurServices = ({dict}: OurServicesProps) => {
                     ))}
                 </div>
 
-                <AnimatePresence mode="wait">
-                    <motion.div
-                        key={activeService}
-                        initial={{opacity: 0, y: 20}}
-                        animate={{opacity: 1, y: 0}}
-                        exit={{opacity: 0, y: -20}}
-                        transition={{duration: 0.4}}
-                        className="relative h-[500px] md:h-[600px] rounded-3xl overflow-hidden shadow-2xl"
-                    >
-                        {/* Background Image */}
-                        <Image
-                            src={services[activeService].image}
-                            alt={services[activeService].title}
-                            fill
-                            className="object-cover"
-                        />
+                {/* Globe Display */}
+                <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] rounded-3xl overflow-hidden shadow-2xl bg-[#151515]">
+                    <Globe
+                        activeRegion={activeService}
+                        activeCountries={services[activeService].countries}
+                    />
 
-                        <div
-                            className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-
-                        <div
-                            className="absolute inset-0 flex flex-col justify-center items-center text-center px-6 md:px-12">
-                            <motion.div
-                                initial={{scale: 0}}
-                                animate={{scale: 1}}
-                                transition={{delay: 0.2, type: "spring", stiffness: 200}}
-                                className="w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-[#CBA655] flex items-center justify-center mb-6"
-                            >
+                    {/* Overlay with region info */}
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 sm:p-6 md:p-8">
+                        <div className="flex items-center gap-3 sm:gap-4">
+                            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl bg-[#CBA655] flex items-center justify-center flex-shrink-0">
                                 {React.createElement(services[activeService].icon, {
-                                    className: "w-10 h-10 md:w-12 md:h-12 text-white",
+                                    className: "w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white",
                                     strokeWidth: 1.5
                                 })}
-                            </motion.div>
-
-                            <motion.h2
-                                initial={{opacity: 0, y: 20}}
-                                animate={{opacity: 1, y: 0}}
-                                transition={{delay: 0.3}}
-                                className="font-dm font-bold text-[36px] sm:text-[42px] md:text-[52px] text-white mb-4"
-                            >
-                                {services[activeService].title}
-                            </motion.h2>
-
-                            <motion.p
-                                initial={{opacity: 0, y: 20}}
-                                animate={{opacity: 1, y: 0}}
-                                transition={{delay: 0.4}}
-                                className="font-manrope text-white/90 text-base md:text-lg max-w-2xl leading-relaxed mb-8"
-                            >
-                                {services[activeService].content}
-                            </motion.p>
-
-                            <motion.div
-                                initial={{opacity: 0, y: 20}}
-                                animate={{opacity: 1, y: 0}}
-                                transition={{delay: 0.5}}
-                            >
-                                <Link
-                                    href="/contact"
-                                    className="inline-flex items-center justify-center bg-[#CBA655] hover:bg-[#222222] text-white font-manrope font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
-                                >
-                                    Contact Us
-                                </Link>
-                            </motion.div>
+                            </div>
+                            <div>
+                                <h3 className="font-dm font-bold text-xl sm:text-2xl md:text-3xl text-white mb-1 sm:mb-2">
+                                    {services[activeService].title}
+                                </h3>
+                                <p className="font-manrope text-white/80 text-xs sm:text-sm md:text-base">
+                                    {services[activeService].description}
+                                </p>
+                            </div>
                         </div>
-                    </motion.div>
-                </AnimatePresence>
+                    </div>
+                </div>
             </div>
         </div>
     );

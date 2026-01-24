@@ -14,9 +14,10 @@
     "next": "16.1.0",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "react-globe.gl": "^2.37.0",
+    "react-globe.gl": "^2.27.2",
     "swiper": "^12.0.3",
-    "three": "^0.182.0"
+    "three": "^0.170.0",
+    "three-globe": "^2.32.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
