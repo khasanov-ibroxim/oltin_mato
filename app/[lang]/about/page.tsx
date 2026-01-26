@@ -23,8 +23,8 @@ export default async function About({params}: AboutProps) {
     return (<>
         <SectionHeader title={"About"} linkName={"About"} titleImage={AboutHeader}/>
         <AboutUs dict={dict}/>
-        <OurServices dict={dict}/>
-        <WhyChooseUs dict={dict}/>
+        <OurServices dict={dict.home.ourServices}/>
+        <WhyChooseUs dict={dict.home.why_choose}/>
         <OurProjects dict={dict}/>
         <AboutGroup dict={dict}/>
         <HowItWorks dict={dict}/>

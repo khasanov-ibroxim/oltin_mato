@@ -80,9 +80,27 @@ const regionCenters: { [key: number]: { lat: number; lng: number; altitude: numb
 }
 
 const GlobeRegion = ({ activeRegion, activeCountries }: GlobeRegionProps) => {
-    const reference = useRef<GlobeMethods>()
+    const reference = useRef<GlobeMethods>(null!)
+    const containerRef = useRef<HTMLDivElement>(null)
     const [activeCountriesSet, setActiveCountriesSet] = useState(new Set(activeCountries))
     const [globeMaterial, setGlobeMaterial] = useState<any>(null)
+    const [dimensions, setDimensions] = useState({ width: 800, height: 600 })
+
+    // ✅ Get container dimensions
+    useEffect(() => {
+        const updateDimensions = () => {
+            if (containerRef.current) {
+                setDimensions({
+                    width: containerRef.current.offsetWidth,
+                    height: containerRef.current.offsetHeight
+                })
+            }
+        }
+
+        updateDimensions()
+        window.addEventListener('resize', updateDimensions)
+        return () => window.removeEventListener('resize', updateDimensions)
+    }, [])
 
     // ✅ Load Three.js material dynamically
     useEffect(() => {
@@ -130,12 +148,11 @@ const GlobeRegion = ({ activeRegion, activeCountries }: GlobeRegionProps) => {
     }, [reference, activeRegion])
 
     return (
-        <div className="w-full h-full flex items-center justify-center">
+        <div ref={containerRef} className="w-full h-full flex items-center justify-center">
             {globeMaterial ? (
                 <WrappedGlDyn
-                    // @ts-ignore
-                    height="100%"
-                    width="100%"
+                    height={dimensions.height}
+                    width={dimensions.width}
                     forwardedRef={reference}
                     animateIn={false}
                     atmosphereColor="#444"
