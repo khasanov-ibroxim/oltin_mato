@@ -22,7 +22,7 @@ export default async function About({params}: AboutProps) {
 
     return (<>
         <SectionHeader title={"About"} linkName={"About"} titleImage={AboutHeader}/>
-        <AboutUs dict={dict}/>
+        <AboutUs dict={dict.home}/>
         <OurServices dict={dict.home.ourServices.services} type_component="services"/>
 
         <WhyChooseUs dict={dict.home.why_choose}/>
