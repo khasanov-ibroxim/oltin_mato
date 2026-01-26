@@ -60,10 +60,10 @@ const AboutUs = ({dict}: AboutProps) => {
                     variants={fadeInUp}
                     className="mb-12 md:mb-16"
                 >
-                    <TitleUI text={dict?.about?.subtitle} />
+                    <TitleUI text={dict?.subtitle} />
 
                     <h1 className="font-dm mt-3 font-bold text-[25px] sm:text-[40px] md:text-[50px] lg:text-[57px] lg:leading-[57px] leading-[45px] text-[#222222] w-full">
-                        {dict?.about?.title}
+                        {dict?.title}
                     </h1>
                 </motion.div>
 
@@ -130,13 +130,13 @@ const AboutUs = ({dict}: AboutProps) => {
             </div>
             <div className="w-full flex flex-col lg:flex-row pt-10">
                 <div className="w-full lg:w-1/2 font-dm text-[25px] lg:text-[30px]  lg:leading-[40px] text-[rgb(90,90,90)] font-bold">
-                    {dict?.about?.left_title}
+                    {dict?.left_title}
                 </div>
                 <div className="w-full lg:w-1/2 flex flex-col gap-5 lg:gap-20">
                     <p className={"font-manrope text-[18px] text-[rgb(126,126,126)]"}>
-                        {dict?.about?.right_text}
+                        {dict?.right_text}
                     </p>
-                   <LinkUI text={dict?.about?.btn} link={'/about'}/>
+                   <LinkUI text={dict?.btn} link={'/about'}/>
                 </div>
             </div>
         </div>

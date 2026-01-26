@@ -4,7 +4,7 @@ import TitleUI from "@/app/components/UI/titleUI";
 
 interface HowItWorksProps {
     dict: {
-        [key: string]: unknown;
+        [key: string]: any;
     };
 }
 
@@ -20,9 +20,9 @@ const HowItWorks = ({dict}:HowItWorksProps) => {
     return (
         <div className={"py-16 container"}>
             <div className="w-full flex flex-col items-center text-center gap-4 mb-12">
-                <TitleUI text="How It Works" />
+                <TitleUI text={dict.title} />
                 <h2 className="font-dm font-bold text-[32px] sm:text-[36px] md:text-[44px] lg:text-[50px] leading-tight text-[#222222]">
-                    From vision to woven perfection.
+                    {dict.subtitle}
                 </h2>
             </div>
 

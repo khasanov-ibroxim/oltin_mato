@@ -5,7 +5,7 @@ import LinkUI from "@/app/components/UI/linkUI";
 
 interface GetInTouchProps {
     dict: {
-        [key: string]: unknown;
+        [key: string]: any;
     };
 }
 
@@ -24,17 +24,16 @@ const GetInTouch = ({dict}: GetInTouchProps) => {
                     </div>
 
                     <h3 className="text-[#fff]  font-manrope font-bold text-sm md:text-base tracking-[2px] uppercase">
-                        Get in touch
+                        {dict.title}
                     </h3>
                 </div>
                 <h2 className={"font-dm font-bold text-[32px] sm:text-[36px] md:text-[44px] lg:text-[50px] leading-tight text-[#fff]"}>
-                    Let’s Weave Something New
+                    {dict.subtitle}
                 </h2>
-                <p className={"font-manrope w-[90%] text-[#fff] text-[18px] mt-5 mb-10"}>
-                    Partner with Looma to transform ideas into timeless textiles — crafted with care, precision, and
-                    purpose.
+                <p className={"font-manrope w-[90%] leading-tight text-[#fff] text-[18px] mt-5 mb-10"}>
+                    {dict.p}
                 </p>
-                <LinkUI text={"Start Your Project"} link={"/contact"}/>
+                <LinkUI text={dict.btn} link={"/contact"}/>
             </div>
 
         </div>

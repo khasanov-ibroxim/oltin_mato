@@ -21,15 +21,15 @@ export default async function About({params}: AboutProps) {
     const dict = await getDictionary(lang);
 
     return (<>
-        <SectionHeader title={"About"} linkName={"About"} titleImage={AboutHeader}/>
-        <AboutUs dict={dict.home}/>
-        <OurServices dict={dict.home.ourServices.services} type_component="services"/>
+        <SectionHeader title={dict.about.title} linkName={dict.about.title} titleImage={AboutHeader} badge={dict.badge}/>
+        <AboutUs dict={dict.about.about}/>
+        <OurServices dict={dict.about.ourServices.services} type_component="services"/>
 
-        <WhyChooseUs dict={dict.home.why_choose}/>
-        <OurProjects dict={dict}/>
+        <WhyChooseUs dict={dict.about.why_choose}/>
+        <OurProjects dict={dict.home.ourProject}/>
         <AboutGroup dict={dict}/>
-        <HowItWorks dict={dict}/>
-        <Testimonials dict={dict}/>
-        <GetInTouch dict={dict}/>
+        <HowItWorks dict={dict.about.howItWorks}/>
+        <Testimonials dict={dict.home.testimonials}/>
+        <GetInTouch dict={dict.home.get_in_touch}/>
     </>)
 }

@@ -14,7 +14,7 @@ interface FormData {
 }
 interface ContactFormProps {
     dict: {
-        [key: string]: unknown;
+        [key: string]: any;
     };
 }
 const ContactForm = ({dict}:ContactFormProps) => {
@@ -88,44 +88,44 @@ const ContactForm = ({dict}:ContactFormProps) => {
                             </div>
 
                             <h3 className={`text-black  font-manrope font-bold text-sm md:text-base tracking-[2px] uppercase`}>
-                                Contact Us
+                                {dict.title}
                             </h3>
                         </div>
 
                         <h1 className="text-4xl font-dm lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
-                            Every Connection Begins with a Thread.
+                            {dict.subtitle}
                         </h1>
 
                         <p className="text-gray-600 font-manrope mb-8 leading-relaxed">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                            {dict.text}
                         </p>
 
                         <div className="space-y-6 bg-[#DAD3C8] p-5 rounded-2xl">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
                                 <div>
                                     <label className="block text-sm font-semibold text-gray-700 mb-2 tracking-wide">
-                                        FULL NAME
+                                        {dict.name}
                                     </label>
                                     <input
                                         type="text"
                                         name="fullName"
                                         value={formData.fullName}
                                         onChange={handleChange}
-                                        placeholder="Enter your full name"
+                                        placeholder={dict.name}
                                         className="w-full px-4 py-3 rounded-lg bg-white border-2 border-transparent focus:border-[#c9a961] focus:outline-none transition-colors"
                                     />
                                 </div>
 
                                 <div>
                                     <label className="block text-sm font-semibold text-gray-700 mb-2 tracking-wide">
-                                        PHONE NUMBER
+                                        {dict.phone}
                                     </label>
                                     <input
                                         type="tel"
                                         name="phone"
                                         value={formData.phone}
                                         onChange={handleChange}
-                                        placeholder="+1 234 567 890"
+                                        placeholder={dict.phone}
                                         className="w-full px-4 py-3 rounded-lg bg-white border-2 border-transparent focus:border-[#c9a961] focus:outline-none transition-colors"
                                     />
                                 </div>
@@ -133,27 +133,27 @@ const ContactForm = ({dict}:ContactFormProps) => {
 
                             <div>
                                 <label className="block text-sm font-semibold text-gray-700 mb-2 tracking-wide">
-                                    EMAIL
+                                    {dict.email}
                                 </label>
                                 <input
                                     type="email"
                                     name="email"
                                     value={formData.email}
                                     onChange={handleChange}
-                                    placeholder="you@example.com"
+                                    placeholder={dict.email}
                                     className="w-full px-4 py-3 rounded-lg bg-white border-2 border-transparent focus:border-[#c9a961] focus:outline-none transition-colors"
                                 />
                             </div>
 
                             <div>
                                 <label className="block text-sm font-semibold text-gray-700 mb-2 tracking-wide">
-                                    YOUR MESSAGE
+                                    {dict.msg}
                                 </label>
                                 <textarea
                                     name="message"
                                     value={formData.message}
                                     onChange={handleChange}
-                                    placeholder="Say hello to us :)"
+                                    placeholder={dict.msg}
                                     rows={5}
                                     className="w-full px-4 py-3 rounded-lg bg-white border-2 border-transparent focus:border-[#c9a961] focus:outline-none transition-colors resize-none"
                                 ></textarea>
@@ -163,7 +163,7 @@ const ContactForm = ({dict}:ContactFormProps) => {
                                 onClick={handleSubmit}
                                 className="w-full index__btn_colors  py-2 rounded-lg transition-colors duration-300 "
                             >
-                                {submitted ? 'Message Sent! ✓' : 'Send Message'}
+                                {submitted ? dict.btn_success : dict.btn}
                             </button>
                         </div>
 

@@ -12,7 +12,7 @@ import { useParams } from "next/navigation";
 
 interface BlogPostProps {
     dict: {
-        [key: string]: unknown;
+        [key: string]: any;
     };
 }
 
@@ -39,9 +39,9 @@ const BlogPost = ({dict}: BlogPostProps) => {
                 transition={{ type: "spring", stiffness: 300 }}
                 className="w-full flex flex-col sm:flex-row justify-baseline items-center mb-12" >
                 <div className="flex flex-col w-full sm:w-2/3 justify-center items-start">
-                    <TitleUI text={"Blog Post"}/>
+                    <TitleUI text={dict.title}/>
                     <h2 className="font-dm m-0 p-0 font-bold text-[32px] sm:text-[36px] md:text-[44px] lg:text-[50px] leading-tight text-[#222222]">
-                        Stories Woven with <br/> Purpose and Grace
+                        {dict.subtitle}
                     </h2>
                 </div>
                 <div className="w-full mt-5 sm:mt-0 sm:w-1/3 flex justify-start items-start sm:justify-end sm:items-end">

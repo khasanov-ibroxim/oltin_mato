@@ -23,11 +23,7 @@ const Globe = dynamic(() => import('@/app/components/globe/GlobeRegion'), {
 });
 
 interface OurServicesProps {
-    dict?: {
-        subtitle?: string;
-        title?: string;
-        title_desc?: string;
-        tabs?: string[];
+    dict: {
         [key: string]: any;
     };
     type_component: string;
@@ -39,6 +35,7 @@ interface Service {
     icon: React.ElementType;
     description: string;
     countries?: string[];
+    btn:string,
     images?: StaticImageData | string;
     content?: string;
 }
@@ -144,12 +141,13 @@ const OurServices = ({dict, type_component}: OurServicesProps) => {
         const titleDesc = dict?.title_desc || "";
         const tabs = dict?.tabs || [];
 
-        const services: Service[] = tabs.map((tab: string, index: number) => ({
+        const services: Service[] = tabs.map((tab: any, index: number) => ({
             id: index,
-            title: tab,
+            title: tab.title,
             icon: serviceIcons[index % serviceIcons.length],
-            description: titleDesc,
-            content: titleDesc,
+            description: tab.text,
+            content: tab.text,
+            btn:tab.btn,
             images: `/images/Our_services/our_${index + 1}.jpg`, // Placeholder images
         }));
 
@@ -247,7 +245,7 @@ const OurServices = ({dict, type_component}: OurServicesProps) => {
                                         href="/contact"
                                         className="inline-flex items-center justify-center bg-[#CBA655] hover:bg-[#222222] text-white font-manrope font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
                                     >
-                                        Contact Us
+                                        {services[activeService].btn}
                                     </Link>
                                 </motion.div>
                             </div>

@@ -18,6 +18,6 @@ export default async function LangLayout({children, params}: LangLayoutProps) {
     return(<>
         <Navbar dict={dict} lang={lang}/>
         {children}
-        <Footer dict={dict}/>
+        <Footer dict={dict.footer}/>
     </>)
 }

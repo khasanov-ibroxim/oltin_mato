@@ -12,7 +12,7 @@ import our4 from "@/assets/component/Our_Projects/our_p_4.jpg";
 
 interface OurProjectProps {
     dict: {
-        [key: string]: unknown;
+        [key: string]: any;
     };
 }
 interface IContent {
@@ -23,10 +23,10 @@ interface IContent {
 
 const OurProjects = ({dict}:OurProjectProps) => {
     const content: IContent[] = [
-        { title: "Heritage Weave Collection", year: 2022, img: our1 },
-        { title: "Atelier X Maison Verre", year: 2023, img: our2 },
-        { title: "The Conscious Thread", year: 2024, img: our3 },
-        { title: "Looma x Armon Studio", year: 2025, img: our4 },
+        { title: dict.i_1.title, year: 2022, img: our1 },
+        { title: dict.i_2.title, year: 2023, img: our2 },
+        { title: dict.i_3.title, year: 2024, img: our3 },
+        { title: dict.i_4.title, year: 2025, img: our4 },
     ];
     const fadeInUp: Variants = {
         hidden: { opacity: 0, y: 30 },
@@ -40,9 +40,9 @@ const OurProjects = ({dict}:OurProjectProps) => {
         <section className="container py-16">
             {/* Title */}
             <div className="w-full flex flex-col items-center text-center gap-4 mb-12">
-                <TitleUI text="Our Projects" />
+                <TitleUI text={dict.title} />
                 <h2 className="font-dm font-bold text-[32px] sm:text-[36px] md:text-[44px] lg:text-[50px] leading-tight text-[#222222]">
-                    Weaving ideas into reality.
+                    {dict.subtitle}
                 </h2>
             </div>
 
@@ -70,7 +70,7 @@ const OurProjects = ({dict}:OurProjectProps) => {
                             <h3 className="font-dm text-lg font-bold text-[32px] text-[#222]">
                                 {item.title}
                             </h3>
-                            <p className="font-dm text-lg font-bold text-[32px] text-[#222]">{item.year}</p>
+                            <p className="inline-flex items-center justify-center bg-[#CBA655] hover:bg-[#222222] text-white font-manrope font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer">{dict.btn}</p>
                         </div>
                     </motion.div>
                 ))}

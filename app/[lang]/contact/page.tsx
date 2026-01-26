@@ -14,9 +14,9 @@ export default async function  Contact({params}: ContactParams){
     const { lang } = await params;
     const dict = await getDictionary(lang as Locale);  // ✅ Type assertion
     return(<>
-        <SectionHeader title={"Get In Touch"} linkName={"contact"} titleImage={AboutHeader}/>
-        <ContactForm dict={dict}/>
-        <Questions dict={dict}/>
-        <Testimonials dict={dict}/>
+        <SectionHeader title={dict.contact.title} linkName={dict.contact.title} titleImage={AboutHeader} badge={dict.badge}/>
+        <ContactForm dict={dict.contact.form}/>
+        <Questions dict={dict.home.questions}/>
+        <Testimonials dict={dict.home.testimonials}/>
     </>)
 }

@@ -5,7 +5,7 @@ import { Variants, motion, AnimatePresence } from "framer-motion";
 
 interface QuestionsProps {
     dict: {
-        [key: string]: unknown;
+        [key: string]: any;
     };
 }
 
@@ -24,31 +24,31 @@ const Questions = ({dict}: QuestionsProps) => {
 
     const leftFaqs = [
         {
-            question: "WHAT TYPES OF TEXTILES DO YOU SPECIALIZE IN?",
-            answer: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam. Each weave feels personal, timeless, and deliberate."
+            question: dict.i_1.title,
+            answer: dict.i_1.text
         },
         {
-            question: "DO YOU ACCEPT SMALL OR CUSTOM ORDERS?",
-            answer: "Yes, we accept both small and custom orders. Our flexible approach allows us to work with projects of various scales."
+            question: dict.i_2.title,
+            answer: dict.i_2.text
         },
         {
-            question: "HOW LONG DOES PRODUCTION USUALLY TAKE?",
-            answer: "Production time varies depending on the complexity and scale of your project, typically ranging from 7-10 days for standard orders."
+            question: dict.i_3.title,
+            answer: dict.i_3.text
         }
     ];
 
     const rightFaqs = [
         {
-            question: "CAN I REQUEST SAMPLES BEFORE FULL PRODUCTION?",
-            answer: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam. Each weave feels personal, timeless, and deliberate."
+            question: dict.i_4.title,
+            answer: dict.i_4.text
         },
         {
-            question: "WHERE ARE YOUR FABRICS MADE?",
-            answer: "Our fabrics are crafted in our dedicated atelier, combining traditional techniques with modern innovation."
+            question: dict.i_5.title,
+            answer: dict.i_5.text
         },
         {
-            question: "DO YOU OFFER INTERNATIONAL SHIPPING?",
-            answer: "Yes, we ship internationally and ensure your textiles arrive safely with proper packaging and handling."
+            question: dict.i_6.title,
+            answer: dict.i_6.text
         }
     ];
 
@@ -68,9 +68,9 @@ const Questions = ({dict}: QuestionsProps) => {
                 viewport={{ once: true, amount: 0.3 }}
                 variants={fadeInUp}
                 className="flex flex-col w-full justify-center items-center mb-12">
-                <TitleUI text={"FAQS"}/>
+                <TitleUI text={dict.title}/>
                 <h2 className="font-dm m-0 p-0 font-bold text-[32px] sm:text-[36px] md:text-[44px] lg:text-[50px] leading-tight text-[#222222] text-center">
-                    Questions, Woven with Clarity.
+                    {dict.subtitle}
                 </h2>
             </motion.div>
 
@@ -236,10 +236,10 @@ const Questions = ({dict}: QuestionsProps) => {
                 className="mt-16 bg-[#2C2C2C] rounded-3xl p-5 text-center"
             >
                 <h3 className="font-dm font-bold text-[20px] md:text-[40px] lg:text-[48px] text-white mb-2 leading-tight">
-                    Didn`t find what you need? Contact us.
+                    {dict.box_title}
                 </h3>
                 <button className="index__btn_colors transition-colors px-8 py-2 rounded-xl text-[#2C2C2C] font-medium text-[14px]">
-                    Contact Us
+                    {dict.btn}
                 </button>
             </motion.div>
         </div>

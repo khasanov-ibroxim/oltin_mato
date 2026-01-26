@@ -1,14 +1,14 @@
-
 import Image, {StaticImageData} from "next/image";
 import Link from "next/link";
 
 interface SectionHeaderProps {
     title: string;
-    linkName:string
+    linkName: string
+    badge: string,
     titleImage: StaticImageData;
 }
 
-const SectionHeader = ({ title, linkName, titleImage}:SectionHeaderProps) => {
+const SectionHeader = ({title, linkName, badge, titleImage}: SectionHeaderProps) => {
     return (
         <div className="bg-amber-200 h-[50vh] w-full relative">
             <div className="bg-black opacity-50 absolute z-10 top-0 left-0 w-full h-full"></div>
@@ -19,7 +19,8 @@ const SectionHeader = ({ title, linkName, titleImage}:SectionHeaderProps) => {
                         <div className="flex w-full justify-between items-center">
                             <h1 className="text-white text-6xl md:text-7xl font-bold font-dm">{title}</h1>
                             <div className="text-white text-lg font-manrope">
-                                <Link href={"/"} className="hover:text-[#CBA655] transition cursor-pointer uppercase">HOME</Link>
+                                <Link href={"/"}
+                                      className="hover:text-[#CBA655] transition cursor-pointer uppercase">{badge}</Link>
                                 <span className="text-[#CBA655] mx-3">✕</span>
                                 <span className="text-[#CBA655] uppercase">{linkName}</span>
                             </div>

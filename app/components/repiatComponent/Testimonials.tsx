@@ -14,7 +14,7 @@ import {Variants , motion} from "framer-motion";
 
 interface testimonialsProps {
     dict: {
-        [key: string]: unknown;
+        [key: string]: any;
     };
 }
 
@@ -30,21 +30,21 @@ const Testimonials = ({dict}:testimonialsProps) => {
     const testimonials = [
         {
             id: 1,
-            quote: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. The artistry behind each piece is unmatched.",
-            author: "Sofia Lindberg",
-            role: "INTERIOR STYLIST"
+            quote: dict.i_1.text,
+            author: dict.i_1.name,
+            role: dict.i_1.country
         },
         {
             id: 2,
-            quote: "The attention to detail and quality of craftsmanship exceeded all my expectations. Each textile tells its own unique story.",
-            author: "Marcus Chen",
-            role: "FASHION DESIGNER"
+            quote: dict.i_2.text,
+            author: dict.i_2.name,
+            role: dict.i_2.country
         },
         {
             id: 3,
-            quote: "Working with this team transformed my vision into reality. The custom weaves brought an unparalleled elegance to my collection.",
-            author: "Isabella Rossi",
-            role: "BOUTIQUE OWNER"
+            quote: dict.i_3.text,
+            author: dict.i_3.name,
+            role: dict.i_3.country
         }
     ];
 
@@ -58,9 +58,9 @@ const Testimonials = ({dict}:testimonialsProps) => {
                 transition={{ type: "spring", stiffness: 300 }}
                 className="w-full flex flex-col sm:flex-row justify-baseline items-center mb-12" >
                 <div className="flex flex-col w-full sm:w-2/3 justify-center items-start">
-                    <TitleUI text={"testimonials"}/>
+                    <TitleUI text={dict.title}/>
                     <h2 className="font-dm m-0 p-0 font-bold text-[32px] sm:text-[36px] md:text-[44px] lg:text-[50px] leading-tight text-[#222222]">
-                        Stories Sewn in Every Thread.
+                        {dict.subtitle}
                     </h2>
                 </div>
                 <div className="w-full mt-5 sm:mt-0 sm:w-1/3 flex justify-start items-start sm:justify-end sm:items-center">
