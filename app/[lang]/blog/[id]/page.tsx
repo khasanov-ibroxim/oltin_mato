@@ -34,6 +34,7 @@ export default async function BlogDetail({ params }: BlogDetailProps) {
                 title={blog.title}
                 linkName="Blog"
                 titleImage={AboutHeader}
+                badge={dict.badge}
             />
 
             <div className="container py-16">
