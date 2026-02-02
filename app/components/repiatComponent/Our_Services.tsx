@@ -32,6 +32,7 @@ interface OurServicesProps {
 interface Service {
     id: number;
     title: string;
+    title_box: string;
     icon: React.ElementType;
     description: string;
     countries?: string[];
@@ -144,6 +145,7 @@ const OurServices = ({dict, type_component}: OurServicesProps) => {
         const services: Service[] = tabs.map((tab: any, index: number) => ({
             id: index,
             title: tab.title,
+            title_box: tab.title_box,
             icon: serviceIcons[index % serviceIcons.length],
             description: tab.text,
             content: tab.text,
@@ -156,9 +158,9 @@ const OurServices = ({dict, type_component}: OurServicesProps) => {
                 <div className="max-w-[1600px] mx-auto">
                     <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 mb-12">
                         <div>
-                            <TitleUI text={subtitle}/>
+                            <TitleUI text={title}/>
                             <h2 className="font-dm font-bold text-[32px] sm:text-[30px] md:text-[40px] lg:text-[50px] leading-tight text-[#222222]">
-                                {title}
+                                {subtitle}
                             </h2>
                         </div>
 
@@ -224,7 +226,7 @@ const OurServices = ({dict, type_component}: OurServicesProps) => {
                                     transition={{delay: 0.3}}
                                     className="font-dm font-bold text-[36px] sm:text-[42px] md:text-[52px] text-white mb-4"
                                 >
-                                    {services[activeService].title}
+                                    {services[activeService].title_box}
                                 </motion.h2>
 
                                 <motion.p
