@@ -2,7 +2,7 @@
 const PageDyeing = () => {
     return (
         <div>
-
+            Крашение
         </div>
     );
 };

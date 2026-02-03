@@ -2,7 +2,7 @@
 const PageSpinning = () => {
     return (
         <div>
-asdasd
+            Прядение
         </div>
     );
 };
