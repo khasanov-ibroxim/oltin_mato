@@ -38,7 +38,7 @@ const WrappedGlDyn = dynamic(
                                    forwardedRef,
                                    ...properties
                                }: WGlProperties<ExtractReferenceType<typeof Gl_>>) => (
-                <Gl_ {...properties} ref={forwardedRef} canvasStyle={{display: 'block'}}/>
+                <Gl_ {...properties} ref={forwardedRef} />
             )
 
             return WrappedGl
