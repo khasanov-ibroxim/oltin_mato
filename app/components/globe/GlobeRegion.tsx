@@ -21,17 +21,24 @@ type WGlProperties<T> = {
     forwardedRef: MutableRefObject<T>
 } & GlobeProps
 
+// ✅ Canvas options: low power, no antialias — reduces GPU pressure & context loss risk
+const CANVAS_ATTRIBUTES = {
+    antialias: false,
+    powerPreference: 'low-power' as const,
+    preserveDrawingBuffer: false,
+    alpha: true,
+}
+
 const WrappedGlDyn = dynamic(
     async () => {
         try {
             const {default: Gl_} = await import('react-globe.gl')
-            const {MeshBasicMaterial} = await import('three')
 
             const WrappedGl = ({
                                    forwardedRef,
                                    ...properties
                                }: WGlProperties<ExtractReferenceType<typeof Gl_>>) => (
-                <Gl_ {...properties} ref={forwardedRef}/>
+                <Gl_ {...properties} ref={forwardedRef} canvasStyle={{display: 'block'}}/>
             )
 
             return WrappedGl
@@ -69,22 +76,89 @@ interface GlobeRegionProps {
     activeCountries: string[];
 }
 
-// ✅ Region center coordinates for camera view (adjusted to center active regions)
 const regionCenters: { [key: number]: { lat: number; lng: number; altitude: number } } = {
-    0: { lat: 50, lng: 60, altitude: 1.5 },      // CIS Countries (show Russia/Kazakhstan centered)
-    1: { lat: 50, lng: 10, altitude: 1.5 },      // Europe (show Europe centered)
-    2: { lat: -15, lng: -60, altitude: 1.5 },    // South America (show South America centered)
-    3: { lat: 30, lng: 45, altitude: 1.5 },      // Middle East (show Middle East centered)
-    4: { lat: 30, lng: 100, altitude: 1.5 },     // Asia (show Asia centered)
-    5: { lat: 20, lng: 0, altitude: 2.0 },       // International (global view)
+    0: {lat: 50, lng: 60, altitude: 1.5},
+    1: {lat: 50, lng: 10, altitude: 1.5},
+    2: {lat: -15, lng: -60, altitude: 1.5},
+    3: {lat: 30, lng: 45, altitude: 1.5},
+    4: {lat: 30, lng: 100, altitude: 1.5},
+    5: {lat: 20, lng: 0, altitude: 2.0},
 }
 
-const GlobeRegion = ({ activeRegion, activeCountries }: GlobeRegionProps) => {
+// ✅ WebGL support check
+function isWebGLSupported(): boolean {
+    if (typeof window === 'undefined') return false
+    try {
+        const canvas = document.createElement('canvas')
+        const ctx =
+            canvas.getContext('webgl2', CANVAS_ATTRIBUTES) ||
+            canvas.getContext('webgl', CANVAS_ATTRIBUTES)
+        return !!ctx
+    } catch {
+        return false
+    }
+}
+
+// ✅ Fallback UI — shows when WebGL is not available or context is lost
+const GlobeFallback = () => (
+    <div className="w-full h-full flex flex-col items-center justify-center bg-[#151515] rounded-3xl">
+        <div className="w-24 h-24 rounded-full border-4 border-[#CBA655] flex items-center justify-center mb-4">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#CBA655" strokeWidth="1.5">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+        </div>
+        <p className="font-manrope text-white/70 text-sm text-center px-4">
+            Globe is not available in your browser.<br/>
+            Please try a different browser or device.
+        </p>
+    </div>
+)
+
+const GlobeRegion = ({activeRegion, activeCountries}: GlobeRegionProps) => {
     const reference = useRef<GlobeMethods>(null!)
     const containerRef = useRef<HTMLDivElement>(null)
     const [activeCountriesSet, setActiveCountriesSet] = useState(new Set(activeCountries))
     const [globeMaterial, setGlobeMaterial] = useState<any>(null)
-    const [dimensions, setDimensions] = useState({ width: 800, height: 600 })
+    const [dimensions, setDimensions] = useState({width: 800, height: 600})
+
+    // ✅ WebGL availability state
+    const [webglSupported, setWebglSupported] = useState<boolean | null>(null) // null = checking
+    // ✅ Context lost state
+    const [contextLost, setContextLost] = useState(false)
+
+    // ✅ Check WebGL on mount (client-only)
+    useEffect(() => {
+        setWebglSupported(isWebGLSupported())
+    }, [])
+
+    // ✅ Listen for webglcontextlost / webglcontextrestored on the canvas
+    useEffect(() => {
+        const container = containerRef.current
+        if (!container) return
+
+        const canvas = container.querySelector('canvas')
+        if (!canvas) return
+
+        const onLost = (e: Event) => {
+            e.preventDefault() // prevent default destroy behaviour
+            console.warn('WebGL context lost — showing fallback')
+            setContextLost(true)
+        }
+
+        const onRestored = () => {
+            console.info('WebGL context restored')
+            setContextLost(false)
+        }
+
+        canvas.addEventListener('webglcontextlost', onLost)
+        canvas.addEventListener('webglcontextrestored', onRestored)
+
+        return () => {
+            canvas.removeEventListener('webglcontextlost', onLost)
+            canvas.removeEventListener('webglcontextrestored', onRestored)
+        }
+    }) // run every render so it catches the canvas after dynamic import resolves
 
     // ✅ Get container dimensions
     useEffect(() => {
@@ -104,16 +178,18 @@ const GlobeRegion = ({ activeRegion, activeCountries }: GlobeRegionProps) => {
 
     // ✅ Load Three.js material dynamically
     useEffect(() => {
+        if (webglSupported === false) return // skip if no WebGL
+
         const loadMaterial = async () => {
             try {
                 const {MeshBasicMaterial} = await import('three')
-                setGlobeMaterial(new MeshBasicMaterial({ color: color.globe }))
+                setGlobeMaterial(new MeshBasicMaterial({color: color.globe}))
             } catch (error) {
                 console.error('Failed to load Three.js:', error)
             }
         }
         loadMaterial()
-    }, [])
+    }, [webglSupported])
 
     // ✅ Update active countries when props change
     useEffect(() => {
@@ -139,7 +215,6 @@ const GlobeRegion = ({ activeRegion, activeCountries }: GlobeRegionProps) => {
                 reference.current.controls().minDistance = 150
                 reference.current.controls().maxDistance = 500
 
-                // Initial position - centered
                 if (regionCenters[activeRegion]) {
                     reference.current.pointOfView(regionCenters[activeRegion])
                 }
@@ -147,6 +222,39 @@ const GlobeRegion = ({ activeRegion, activeCountries }: GlobeRegionProps) => {
         )
     }, [reference, activeRegion])
 
+    // ─── RENDER GUARDS ──────────────────────────────────────────────
+
+    // Still checking WebGL
+    if (webglSupported === null) {
+        return (
+            <div ref={containerRef} className="w-full h-full flex items-center justify-center">
+                <div className="text-white text-center">
+                    <div className="w-16 h-16 border-4 border-[#CBA655] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                    <p className="font-manrope text-sm">Loading Globe...</p>
+                </div>
+            </div>
+        )
+    }
+
+    // WebGL not supported at all
+    if (webglSupported === false) {
+        return (
+            <div ref={containerRef} className="w-full h-full">
+                <GlobeFallback/>
+            </div>
+        )
+    }
+
+    // WebGL context was lost at runtime
+    if (contextLost) {
+        return (
+            <div ref={containerRef} className="w-full h-full">
+                <GlobeFallback/>
+            </div>
+        )
+    }
+
+    // ─── MAIN RENDER ────────────────────────────────────────────────
     return (
         <div ref={containerRef} className="w-full h-full flex items-center justify-center">
             {globeMaterial ? (
@@ -174,11 +282,7 @@ const GlobeRegion = ({ activeRegion, activeCountries }: GlobeRegionProps) => {
                             : color.main
                     }}
                     polygonStrokeColor={() => color.line}
-                    polygonAltitude={(d) => {
-                        //@ts-ignore
-                        const countryCode = d.properties.ISO_A2
-                        return activeCountriesSet.has(countryCode) ? 0.01 : 0.01
-                    }}
+                    polygonAltitude={() => 0.01}
                 />
             ) : (
                 <div className="text-white text-center">

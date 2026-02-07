@@ -2,7 +2,24 @@
   "nav": {
     "home": "Home",
     "about": "About",
-    "contact": "Contact"
+    "contact": "Contact",
+    "production": {
+      "hero_link": "Production",
+      "links": [
+        {
+          "name": "Spinning",
+          "link": "/Spinning"
+        },
+        {
+          "name": "Dyeing",
+          "link": "/Dyeing"
+        },
+        {
+          "name": "Sewing",
+          "link": "/Sewing"
+        }
+      ]
+    }
   },
   "footer": {
     "item_1":{

@@ -2,7 +2,24 @@
   "nav": {
     "home": "Главная",
     "about": "О нас",
-    "contact": "Контакты"
+    "contact": "Контакты",
+    "production": {
+      "hero_link": "Производства",
+      "links": [
+        {
+          "name": "Прядение",
+          "link": "/Spinning"
+        },
+        {
+          "name": "Крашение",
+          "link": "/Dyeing"
+        },
+        {
+          "name": "Швейный цех",
+          "link": "/Sewing"
+        }
+      ]
+    }
   },
   "footer": {
     "item_1": {
@@ -382,7 +399,7 @@
       "email": "Email",
       "msg": "Сообщение",
       "btn": "Отправить",
-      "btn_success":"сообщение отправлено"
+      "btn_success": "сообщение отправлено"
     }
   }
 }
