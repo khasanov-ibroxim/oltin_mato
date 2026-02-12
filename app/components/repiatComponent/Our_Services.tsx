@@ -7,7 +7,7 @@ import dynamic from 'next/dynamic';
 import {AnimatePresence, motion} from 'framer-motion';
 import Image, {StaticImageData} from 'next/image';
 import Link from 'next/link';
-
+import AboutPage from "@/assets/about/ourServices/aboutpage.jpg"
 
 
 const Globe = dynamic(() => import('@/app/components/globe/GlobeRegion'), {
@@ -44,14 +44,13 @@ interface Service {
 const OurServices = ({dict, type_component}: OurServicesProps) => {
     const serviceIcons = [Layers, Sparkles, Droplet, Shirt, Ruler, GlobeIcon];
 
-    // Region country codes mapping
+    // Region country codes mapping - Each tab shows one specific country
     const regionCountries: { [key: number]: string[] } = {
-        0: ['RU', 'KZ', 'UZ', 'BY', 'AM', 'KG', 'TJ'], // CIS Countries
-        1: ['IT', 'DE', 'FR', 'GB', 'ES', 'PL', 'NL'], // Europe
-        2: ['BR', 'AR', 'CL', 'CO', 'PE', 'VE', 'EC'], // South America
-        3: ['TR', 'AE', 'SA', 'IQ', 'IR', 'JO', 'LB'], // Middle East
-        4: ['CN', 'IN', 'JP', 'KR', 'VN', 'TH', 'ID'], // Regional Markets (Asia)
-        5: ['US', 'CA', 'AU', 'NZ', 'MX', 'ZA', 'EG'], // International Partners
+        0: ['UZ'], // Uzbekistan
+        1: ['RU'], // Russia
+        2: ['BY'], // Belarus
+        3: ['KG'], // Kyrgyzstan
+        4: ['KZ'], // Kazakhstan
     };
 
     const [activeService, setActiveService] = useState<number>(0);
@@ -150,7 +149,7 @@ const OurServices = ({dict, type_component}: OurServicesProps) => {
             description: tab.text,
             content: tab.text,
             btn:tab.btn,
-            images: `/images/Our_services/our_${index + 1}.jpg`, // Placeholder images
+            images: AboutPage, // Placeholder images
         }));
 
         return (

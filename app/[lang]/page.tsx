@@ -23,8 +23,8 @@ export default async function IndexPage({params, searchParams}: HomeProps) {
 
     return (<div className={"w-full"}>
         <HomeHeader dict={dict}/>
-        <AboutUs dict={dict.home.about}/>
-        <WhyChooseUs dict={dict.home.why_choose}/>
+        <AboutUs dict={dict.home.about} page={"home"}/>
+        <WhyChooseUs dict={dict.home.why_choose} page={"home"}/>
         <OurServices dict={dict.home.ourServices.globe} type_component="globe"/>
         <OurProjects dict={dict.home.ourProject}/>
         <GetInTouch dict={dict.home.get_in_touch}/>

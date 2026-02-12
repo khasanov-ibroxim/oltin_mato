@@ -6,14 +6,16 @@ import { motion, Variants } from 'framer-motion';
 import { Scissors, Sparkles, Ruler, Layers, Users } from 'lucide-react';
 import TitleUI from "@/app/components/UI/titleUI";
 import centerImg from "@/assets/component/Why_Choose_US/why_choose_us.jpg"
+import centerImgAbout from "@/assets/component/Why_Choose_US/whyAbout.jpg"
 
 interface WhyChooseUsProps {
     dict: {
         [key: string]: any;
     };
+    page: string;
 }
 
-const WhyChooseUs = ({ dict }: WhyChooseUsProps) => {
+const WhyChooseUs = ({ dict , page }: WhyChooseUsProps) => {
     // Animation variants
     const fadeInUp: Variants = {
         hidden: { opacity: 0, y: 30 },
@@ -153,7 +155,7 @@ const WhyChooseUs = ({ dict }: WhyChooseUsProps) => {
                         className="lg:col-span-4 relative h-[400px] sm:h-[500px] lg:h-full rounded-3xl overflow-hidden shadow-xl"
                     >
                         <Image
-                            src={centerImg}
+                            src={page==="home"?centerImg:centerImgAbout}
                             alt="Textile worker"
                             fill
                             className="object-cover"

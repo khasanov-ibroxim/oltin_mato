@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
 import Image from "next/image";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.svg";
 import { LanguageSwitcher } from "@/app/components/LanguageSwitcher";
 
 interface SubLink {
@@ -55,7 +55,7 @@ export const Navbar = ({ dict, lang }: NavbarProps) => {
                 <div className="container mx-auto px-6 h-16 flex items-center justify-between">
 
                     <Link href={`/${lang}`}>
-                        <Image src={logo} alt="Logo" width={140} height={40} />
+                        <Image src={"/logo.svg"} alt="Logo"  width={70} height={80}  />
                     </Link>
 
                     <div className="hidden md:flex items-center gap-6">

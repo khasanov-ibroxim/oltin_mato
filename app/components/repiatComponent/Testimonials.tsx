@@ -3,7 +3,7 @@
 import React from 'react';
 import TitleUI from "@/app/components/UI/titleUI";
 import titleImg from "@/assets/component/Testimonials/testimonials_title.jpg"
-import bottomImg from "@/assets/home/header/home_header_index.jpg"
+import bottomImg from "@/assets/component/Testimonials/testimonial_bottom.jpg"
 import Image from "next/image";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';

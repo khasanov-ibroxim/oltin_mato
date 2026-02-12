@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import index_img from "@/assets/home/header/home_header_index.jpg";
+import elementImg from "@/assets/home/header/headerElement.jpg"
 import {Badge, MoveRight} from "lucide-react";
 import Link from "next/link";
 import { motion, Variants } from "framer-motion";
@@ -131,14 +132,7 @@ export default function HomeHeader({dict}: HomeHeaderProps) {
                         <div className="">
                             <div
                                 className="absolute z-30 w-full h-full bg-black opacity-20 rounded-2xl top-0 left-0"></div>
-                            <iframe
-                                className="absolute z-20 rounded-2xl border-none top-0 left-0 w-full h-full"
-                                src="https://www.youtube.com/embed/WypyTb-Rw-k?autoplay=1&loop=1&playlist=WypyTb-Rw-k&controls=0&rel=0&modestbranding=1&mute=1"
-                                title="How Garments are Made in a Factory"
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowFullScreen
-                            ></iframe>
+                         <Image src={elementImg} alt={"sdasd"} className="absolute z-20 rounded-2xl border-none top-0 left-0 w-full h-full object-cover"/>
                         </div>
                     </div>
 

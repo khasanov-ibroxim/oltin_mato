@@ -7,6 +7,12 @@ import about_1 from "@/assets/component/aboutUs/aboutUs_1.jpg"
 import about_2 from "@/assets/component/aboutUs/aboutUs_2.jpg"
 import about_3 from "@/assets/component/aboutUs/aboutUs_3.jpg"
 import about_4 from "@/assets/component/aboutUs/aboutUs_4.jpg"
+
+import about_about_1 from "@/assets/home/header/headerElement.jpg"
+import about_about_2 from "@/assets/component/aboutUs/about_about_2.jpg"
+import about_about_3 from "@/assets/component/aboutUs/about_about_3.jpg"
+import about_about_4 from "@/assets/component/aboutUs/about_about_4.jpg"
+
 import Link from 'next/link';
 import {MoveRight} from "lucide-react"
 import TitleUI from "@/app/components/UI/titleUI";
@@ -16,9 +22,10 @@ interface AboutProps {
     dict: {
         [key: string]: any;
     };
+    page: string;
 }
 
-const AboutUs = ({dict}: AboutProps) => {
+const AboutUs = ({dict , page}: AboutProps) => {
     // Animation variants
     const fadeInUp: Variants = {
         hidden: {opacity: 0, y: 30},
@@ -81,7 +88,7 @@ const AboutUs = ({dict}: AboutProps) => {
                         className="relative rotate-[-5deg] h-[300px] sm:h-[350px] rounded-2xl overflow-hidden group"
                     >
                         <Image
-                            src={about_1}
+                            src={page==="home" ? about_1 : about_about_1}
                             alt="Fashion designer working"
                             fill
                             className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -94,7 +101,7 @@ const AboutUs = ({dict}: AboutProps) => {
                         className="relative h-[300px] rotate-[5deg] sm:h-[350px] rounded-2xl overflow-hidden group"
                     >
                         <Image
-                            src={about_2}
+                            src={page==="home" ? about_2 : about_about_2}
                             alt="Team collaboration"
                             fill
                             className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -107,7 +114,7 @@ const AboutUs = ({dict}: AboutProps) => {
                         className="relative rotate-[-5deg] h-[300px] sm:h-[350px] rounded-2xl overflow-hidden group"
                     >
                         <Image
-                            src={about_3}
+                            src={page==="home" ? about_3 : about_about_3}
                             alt="Textile workers"
                             fill
                             className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -120,7 +127,7 @@ const AboutUs = ({dict}: AboutProps) => {
                         className="relative rotate-[5deg] h-[300px] sm:h-[350px] rounded-2xl overflow-hidden group"
                     >
                         <Image
-                            src={about_4}
+                            src={page==="home" ? about_4 : about_about_4}
                             alt="Fashion designer with fabric"
                             fill
                             className="object-cover  transition-transform duration-500 group-hover:scale-110"

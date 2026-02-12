@@ -77,12 +77,11 @@ interface GlobeRegionProps {
 }
 
 const regionCenters: { [key: number]: { lat: number; lng: number; altitude: number } } = {
-    0: {lat: 50, lng: 60, altitude: 1.5},
-    1: {lat: 50, lng: 10, altitude: 1.5},
-    2: {lat: -15, lng: -60, altitude: 1.5},
-    3: {lat: 30, lng: 45, altitude: 1.5},
-    4: {lat: 30, lng: 100, altitude: 1.5},
-    5: {lat: 20, lng: 0, altitude: 2.0},
+    0: {lat: 41.3775, lng: 64.5853, altitude: 1.8},  // Uzbekistan
+    1: {lat: 61.524, lng: 105.3188, altitude: 1.3},   // Russia
+    2: {lat: 53.7098, lng: 27.9534, altitude: 2.2},   // Belarus
+    3: {lat: 41.2044, lng: 74.7661, altitude: 2.2},   // Kyrgyzstan
+    4: {lat: 48.0196, lng: 66.9237, altitude: 1.8},   // Kazakhstan
 }
 
 // ✅ WebGL support check
