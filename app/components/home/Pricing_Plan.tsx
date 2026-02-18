@@ -50,11 +50,11 @@ const PricingPlan = ({dict}: PricingPlanProps) => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5  mt-8">
                 {plans.map((plan, index) => (
                     <div key={index} className=" rounded-3xl  flex flex-col">
-                        <div className="bg-[#DDD5C8] rounded-2xl px-5 py-5">
-                            <h3 className="font-dm font-bold text-[32px] lg:text-[32px] text-[#2C2C2C] mb-0">
+                        <div className="bg-[#2c8295] rounded-2xl px-5 py-5">
+                            <h3 className="font-dm font-bold text-[32px] lg:text-[32px] text-[#f1f1f1] mb-0">
                                 {plan.title}
                             </h3>
-                            <p className="text-[rgb(126,126,126)] font-manrope text-[18px]">
+                            <p className="text-[#fdfdfd] font-manrope text-[18px]">
                                 {plan.subtitle}
                             </p>
                             {/*<div className="flex items-baseline gap-1">*/}
@@ -67,8 +67,8 @@ const PricingPlan = ({dict}: PricingPlanProps) => {
                             {/*</div>*/}
                         </div>
 
-                        <div className="bg-[#DDD5C8] rounded-2xl px-5 py-5 mt-0.5 flex-grow flex flex-col">
-                            <h4 className="text-[#6B6B6B] text-lg mb-6 font-medium">
+                        <div className="bg-[#2c8295] rounded-2xl px-5 py-5 mt-0.5 flex-grow flex flex-col">
+                            <h4 className="text-[#fdfdfd] text-lg mb-6 font-medium">
                                 {dict.teg}
                             </h4>
                             <ul className="space-y-4 mb-8 flex-grow">
@@ -87,7 +87,7 @@ const PricingPlan = ({dict}: PricingPlanProps) => {
                                                 strokeLinejoin="round"
                                             />
                                         </svg>
-                                        <span className="text-[#6B6B6B] text-base leading-relaxed">
+                                        <span className="text-[#fdfdfd] text-base leading-relaxed">
                                             {feature}
                                         </span>
                                     </li>

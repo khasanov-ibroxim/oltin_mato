@@ -92,7 +92,7 @@ const WhyChooseUs = ({ dict , page }: WhyChooseUsProps) => {
     ];
 
     return (
-        <div className="w-full py-16 md:py-24 px-6 sm:px-12 lg:px-24 bg-[#DAD3C8]">
+        <div className="w-full py-16 md:py-24 px-6 sm:px-12 lg:px-24 bg-[#2C8295]">
             <div className="max-w-[1600px] mx-auto">
                 {/* Header */}
                 <motion.div
@@ -102,11 +102,11 @@ const WhyChooseUs = ({ dict , page }: WhyChooseUsProps) => {
                     variants={fadeInUp}
                     className="text-center mb-12 md:mb-16"
                 >
-                    <div className="flex items-center justify-center gap-2 mb-4">
-                        <TitleUI text={dict.subtitle}/>
+                    <div className="flex items-center justify-center gap-2 mb-4 ">
+                        <TitleUI text={dict.subtitle} classNameText={"text-white"}/>
                     </div>
 
-                    <h1 className="font-dm font-bold text-[32px] sm:text-[40px] md:text-[50px] lg:text-[57px] leading-tight text-[#222222]">
+                    <h1 className="font-dm font-bold text-[32px] sm:text-[40px] md:text-[50px] lg:text-[57px] leading-tight text-white">
                         {dict.title}
                     </h1>
                 </motion.div>
@@ -129,8 +129,8 @@ const WhyChooseUs = ({ dict , page }: WhyChooseUsProps) => {
                             >
                                 <div className="flex items-start gap-4">
                                     <div className="flex-shrink-0">
-                                        <div className="w-12 h-12 rounded-lg bg-[#CBA655]/10 flex items-center justify-center">
-                                            <feature.icon className="w-6 h-6 text-[#CBA655]" />
+                                        <div className="w-12 h-12 rounded-lg bg-[#42C0DF]/10 flex items-center justify-center">
+                                            <feature.icon className="w-6 h-6 text-[#42C0DF]" />
                                         </div>
                                     </div>
                                     <div>
@@ -179,8 +179,8 @@ const WhyChooseUs = ({ dict , page }: WhyChooseUsProps) => {
                             >
                                 <div className="flex items-start gap-4">
                                     <div className="flex-shrink-0">
-                                        <div className="w-12 h-12 rounded-lg bg-[#CBA655]/10 flex items-center justify-center">
-                                            <feature.icon className="w-6 h-6 text-[#CBA655]" />
+                                        <div className="w-12 h-12 rounded-lg bg-[#42C0DF]/10 flex items-center justify-center">
+                                            <feature.icon className="w-6 h-6 text-[#42C0DF]" />
                                         </div>
                                     </div>
                                     <div>

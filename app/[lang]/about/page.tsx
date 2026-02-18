@@ -10,6 +10,7 @@ import AboutGroup from "@/app/components/about/About_group";
 import HowItWorks from "@/app/components/about/How_it_Works";
 import Testimonials from "@/app/components/repiatComponent/Testimonials";
 import GetInTouch from "@/app/components/repiatComponent/Get_in_touch";
+import AboutStat from "@/app/components/home/about_stat";
 
 
 interface AboutProps {
@@ -23,13 +24,14 @@ export default async function About({params}: AboutProps) {
     return (<>
         <SectionHeader title={dict.about.title} linkName={dict.about.title} titleImage={AboutHeader} badge={dict.badge}/>
         <AboutUs dict={dict.about.about} page={"about"}/>
-        <OurServices dict={dict.about.ourServices.services} type_component="services"/>
+        <AboutStat dict={dict.about.aboutStat}/>
+
 
         <WhyChooseUs dict={dict.about.why_choose} page={"about"}/>
         <OurProjects dict={dict.home.ourProject}/>
-        <AboutGroup dict={dict}/>
+
         <HowItWorks dict={dict.about.howItWorks}/>
-        <Testimonials dict={dict.home.testimonials}/>
+
         <GetInTouch dict={dict.home.get_in_touch}/>
     </>)
 }

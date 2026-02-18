@@ -77,7 +77,7 @@ const BlogPost = ({dict}: BlogPostProps) => {
                             </div>
 
                             <div className="px-2">
-                                <h3 className="font-dm font-bold text-[28px] md:text-[40px] text-[rgb(90,90,90)] mb-4 group-hover:text-[#B8985F] transition-colors duration-300">
+                                <h3 className="font-dm font-bold text-[28px] md:text-[40px] text-[rgb(90,90,90)] mb-4 group-hover:text-[#42C0DF] transition-colors duration-300">
                                     {post.title}
                                 </h3>
                                 <p className="text-[rgb(34,34,34)] text-[18px] font-manrope leading-relaxed mb-6">

@@ -83,8 +83,8 @@ const ContactForm = ({dict}:ContactFormProps) => {
                     <div className="rounded-3xl p-8 lg:p-12  lg:col-span-3">
                         <div className={`flex items-center gap-3`}>
                             <div className={'flex gap-1'}>
-                                <div className="w-1 h-7 bg-[#CBA655]"></div>
-                                <div className="w-1 h-7 bg-[#CBA655]"></div>
+                                <div className="w-1 h-7 bg-[#42C0DF]"></div>
+                                <div className="w-1 h-7 bg-[#42C0DF]"></div>
                             </div>
 
                             <h3 className={`text-black  font-manrope font-bold text-sm md:text-base tracking-[2px] uppercase`}>

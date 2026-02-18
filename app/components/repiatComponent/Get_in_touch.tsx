@@ -11,16 +11,16 @@ interface GetInTouchProps {
 
 const GetInTouch = ({dict}: GetInTouchProps) => {
     return (
-        <div className={"w-full h-[500px] relative  flex justify-end items-center"}>
+        <div className={"w-full h-[500px] relative  flex justify-start items-center"}>
             <div className="absolute inset-0 z-20   bg-gradient-to-r  from-black/40 via-black/40 to-transparent"></div>
             <Image src={getInTouchImage} alt={"Oltin mato"}
                    className={"w-full object-cover absolute z-10 h-full"}
             />
-            <div className="absolute z-30 w-full px-5 lg:w-1/2 lg:px-0">
+            <div className=" left-0 z-30 w-full  lg:w-1/2 lg:px-0 ml-2 sm:ml-10">
                 <div className="flex items-center gap-3 mb-6">
                     <div className={'flex gap-1'}>
-                        <div className="w-1 h-7 bg-[#CBA655]"></div>
-                        <div className="w-1 h-7 bg-[#CBA655]"></div>
+                        <div className="w-1 h-7 bg-[#42C0DF]"></div>
+                        <div className="w-1 h-7 bg-[#42C0DF]"></div>
                     </div>
 
                     <h3 className="text-[#fff]  font-manrope font-bold text-sm md:text-base tracking-[2px] uppercase">

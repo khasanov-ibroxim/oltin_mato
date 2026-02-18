@@ -63,9 +63,7 @@ const Testimonials = ({dict}:testimonialsProps) => {
                         {dict.subtitle}
                     </h2>
                 </div>
-                <div className="w-full mt-5 sm:mt-0 sm:w-1/3 flex justify-start items-start sm:justify-end sm:items-center">
-                    <Image src={titleImg} alt={"testimonials"} className={"w-full sm:w-[250px] h-[250px] object-cover sm:h-full rounded-2xl"}/>
-                </div>
+
             </motion.div>
 
             <motion.div className="w-full mt-12"
@@ -90,17 +88,17 @@ const Testimonials = ({dict}:testimonialsProps) => {
                         <SwiperSlide key={testimonial.id}>
                             <div className="bg-none group  text-center rounded-3xl p-8 md:p-12 lg:p-16 min-h-[350px] w-full flex flex-col items-center justify-center">
                                 <div className="mb-6 w-full">
-                                    <Quote size={40} className="text-[rgba(126,126,126,0.2)] transition-colors duration-300 group-hover:text-[#cba656]"/>
+                                    <Quote size={40} className="text-[rgba(126,126,126,0.2)] transition-colors duration-300 group-hover:text-[#42C0DF]"/>
                                 </div>
-                                <p className="text-[rgb(126,126,126)] text-[18px] font-normal leading-relaxed mb-8 font-light">
+                                <p className="text-[rgb(126,126,126)] text-[18px] font-normal leading-relaxed mb-8 ">
                                     {testimonial.quote}
                                 </p>
-                                <div className="bg-[#CBA656] w-14 h-0.5 mb-6 group-hover:w-20 "></div>
+                                <div className="bg-[#42C0DF] w-14 h-0.5 mb-6 group-hover:w-20 "></div>
                                 <div>
                                     <h4 className="font-dm font-bold text-[24px]  text-[rgb(34,34,34)] mb-2">
                                         {testimonial.author}
                                     </h4>
-                                    <p className="text-[rgb(218,211,200)] text-sm tracking-[0.2em] font-bold font-manrope text-[14px]">
+                                    <p className="text-[#42C0DF] text-sm tracking-[0.2em] font-bold font-manrope text-[14px]">
                                         {testimonial.role}
                                     </p>
                                 </div>
@@ -122,15 +120,7 @@ const Testimonials = ({dict}:testimonialsProps) => {
                     }
                 `}</style>
             </motion.div>
-            <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
-                variants={fadeInScale}
-                transition={{ type: "spring", stiffness: 300 }}
-                className="w-full mt-5 sm:mt-0 sm:w-1/3 flex justify-start items-start">
-                <Image src={bottomImg} alt={"testimonials"} className={"w-full sm:w-[250px] h-[250px] object-cover sm:h-full rounded-2xl"}/>
-            </motion.div>
+
         </div>
     );
 };

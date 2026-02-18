@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
 import Image from "next/image";
-import logo from "@/assets/logo.svg";
+
 import { LanguageSwitcher } from "@/app/components/LanguageSwitcher";
 
 interface SubLink {

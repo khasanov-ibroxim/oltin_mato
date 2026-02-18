@@ -93,7 +93,7 @@ export default function HomeHeader({dict}: HomeHeaderProps) {
                         variants={childVariant}
                         className="flex font-manrope tracking-[1px] sm:tracking-[2px] md:tracking-[3px] uppercase font-bold text-[12px] sm:text-[14px] md:text-[16px] items-center gap-2"
                     >
-                        <Badge size={20} className="text-[#CBA655]"/> {dict.home_header.box.title}
+                        <Badge size={20} className="text-[#42C0DF]"/> {dict.home_header.box.title}
                     </motion.h2>
 
                     <motion.h1
@@ -137,7 +137,7 @@ export default function HomeHeader({dict}: HomeHeaderProps) {
                     </div>
 
                     <div className="px-5 py-5 flex flex-col gap-4">
-                        <h3 className={"text-black m-0 font-dm text-3xl font-bold"}>{dict.home_header.box.video_title}</h3>
+                        <h3 className={"text-[#42C0DF] m-0 font-dm text-3xl font-bold"}>{dict.home_header.box.video_title}</h3>
                         <p className={"font-manrope text-[19px]"}>{dict.home_header.box.video_text}</p>
                     </div>
                 </motion.div>

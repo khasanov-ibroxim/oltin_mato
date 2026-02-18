@@ -26,7 +26,6 @@ const OurProjects = ({dict}:OurProjectProps) => {
         { title: dict.i_1.title, year: 2022, img: our1 },
         { title: dict.i_2.title, year: 2023, img: our2 },
         { title: dict.i_3.title, year: 2024, img: our3 },
-        { title: dict.i_4.title, year: 2025, img: our4 },
     ];
     const fadeInUp: Variants = {
         hidden: { opacity: 0, y: 30 },
@@ -47,7 +46,7 @@ const OurProjects = ({dict}:OurProjectProps) => {
             </div>
 
             {/* Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
                 {content.map((item, index) => (
                     <motion.div
                         initial="hidden"
@@ -66,11 +65,11 @@ const OurProjects = ({dict}:OurProjectProps) => {
                             />
                         </div>
 
-                        <div className="p-4 flex justify-between">
+                        <div className="p-4 flex flex-col justify-between">
                             <h3 className="font-dm text-lg font-bold text-[32px] text-[#222]">
                                 {item.title}
                             </h3>
-                            <p className="inline-flex h-[40px] items-center justify-center bg-[#CBA655] hover:bg-[#222222] text-white font-manrope font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer">{dict.btn}</p>
+                            <p className="inline-flex h-[40px] items-center justify-center bg-[#42C0DF] hover:bg-[#222222] text-white font-manrope font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer">{dict.btn}</p>
                         </div>
                     </motion.div>
                 ))}
