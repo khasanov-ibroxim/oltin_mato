@@ -149,7 +149,7 @@ const AboutUs = ({dict , page}: AboutProps) => {
                 </div>
             </div>
             <div className="w-full flex justify-center items-center">
-                <Link href={"/about"} className={"index__btn_colors text-center mt-10 w-1/3 py-3 px-20 rounded-2xl "}>
+                <Link href={"/about"} className={"index__btn_colors text-center mt-10 w-full sm:w-1/3 py-3 px-0  sm:py-3 sm:px-20 rounded-2xl "}>
                     {dict?.btn}
                 </Link>
             </div>

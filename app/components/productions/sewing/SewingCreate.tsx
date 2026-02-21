@@ -16,12 +16,12 @@ const SewingCreate = () => {
             />
 
             {/* Soft overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b  z-10" />
+            <div className="absolute inset-0 bg-gradient-to-b bg-gray-800/50  z-10" />
 
             {/* Content */}
             <div className="relative z-20 h-full flex flex-col items-center justify-center px-4 text-center">
 
-                <h2 className="relative inline-block  px-4 text-3xl md:text-5xl font-medium text-white ">
+                <h2 className="relative inline-block  px-4 text-3xl md:text-5xl font-dm font-medium text-white ">
                     Мастерство в каждом стежке
                 </h2>
 
@@ -31,10 +31,10 @@ const SewingCreate = () => {
 
                 {/* Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                    <a className="bg-[#162C43] hover:bg-[#162C43]/90 text-white px-6 py-3 rounded shadow">
+                    <a className="bg-[#162C43] cursor-pointer hover:bg-[#162C43]/90 text-white px-6 py-3 rounded shadow">
                         Свяжитесь
                     </a>
-                    <a className="bg-[#1f2937] hover:bg-[#1f2937]/90 text-white px-6 py-3 rounded shadow">
+                    <a className="bg-[#fff] cursor-pointer hover:bg-[#fff]/90 text-black px-6 py-3 rounded shadow">
                         Заказать
                     </a>
                 </div>

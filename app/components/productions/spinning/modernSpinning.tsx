@@ -54,12 +54,12 @@ const ModernSpinning = () => {
         <>
             <div className="w-full flex flex-col lg:flex-row min-h-[520px]">
                 {/* LEFT CONTENT */}
-                <div className="w-full lg:w-1/2 bg-white p-6 md:p-10 z-20">
+                <div className="w-full lg:w-1/2 bg-[#162C43] text-white p-6 md:p-10 z-20">
                     <div className="container">
                         <h1 className="text-4xl font-bold mb-3">
                             Оптовые поставки пряжи
                         </h1>
-                        <p className="text-gray-600 mb-8">
+                        <p className=" mb-8">
                             Надёжный партнёр по продаже хлопковой пряжи высокого качества с широким ассортиментом и стабильными поставками по всей Средней Азии.
                         </p>
 
@@ -71,7 +71,7 @@ const ModernSpinning = () => {
                                     </div>
                                     <div>
                                         <h4 className="font-medium">{item.h}</h4>
-                                        <p className="text-sm text-gray-600">{item.p}</p>
+                                        <p className="text-sm ">{item.p}</p>
                                     </div>
                                 </div>
                             ))}
@@ -96,8 +96,8 @@ const ModernSpinning = () => {
                         className="
         absolute inset-0
         bg-gradient-to-r
-        lg:from-white
-        lg:via-white/5
+        lg:from-[#162C43]
+        lg:bg-[#162C43]/5
         lg:to-transparent
         z-10
       "
@@ -121,20 +121,20 @@ const ModernSpinning = () => {
                         className="
         absolute inset-0
         bg-gradient-to-r
-        lg:to-white
-        lg:via-white/5
+        lg:to-[#162C43]
+        lg:bg-[#162C43]/5
         lg:from-transparent
         z-10
       "
                     />
                 </div>
                 {/* LEFT CONTENT */}
-                <div className="w-full lg:w-1/2 bg-white p-6 md:p-10 z-20">
+                <div className="w-full lg:w-1/2 bg-[#162C43] text-white p-6 md:p-10 z-20">
                     <div className="container">
                         <h1 className="text-4xl font-bold mb-3">
                             Технологии. Качество. Доверие.
                         </h1>
-                        <p className="text-gray-600 mb-8">
+                        <p className=" mb-8">
                             Основа нашей работы и вашего результата.
                         </p>
 
@@ -146,14 +146,14 @@ const ModernSpinning = () => {
                                     </div>
                                     <div>
                                         <h4 className="font-medium">{item.h}</h4>
-                                        <p className="text-sm text-gray-600">{item.p}</p>
+                                        <p className="text-sm ">{item.p}</p>
                                     </div>
                                 </div>
                             ))}
                         </div>
                     </div>
                     <div className={"flex items-center justify-center flex-col md:flex-row  w-full  gap-3 mt-10"}>
-                        <Link href={"#"} className={"w-1/2 bg-[#162C43] hover:bg-[#162C43]/90 text-center py-2 text-white font-bold rounded-sm"}>
+                        <Link href={"#"} className={"w-1/2 bg-[#932C4D] hover:bg-[#932C4D]/90 text-center py-2 text-white font-bold rounded-sm"}>
                             Свяжитесь
                         </Link>
                         <Link href={"#"} className={"w-1/2 bg-gray-100 hover:bg-gray-100/90 text-black  text-center py-2 rounded-sm"}>

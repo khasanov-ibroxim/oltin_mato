@@ -51,7 +51,7 @@ export const Navbar = ({ dict, lang }: NavbarProps) => {
     return (
         <>
 
-            <nav className="absolute top-0 left-0 z-30 w-full border-b py-3 border-amber-50 bg-transparent">
+            <nav className="absolute top-0 left-0 z-30 w-full border-b py-3 border-white bg-transparent">
                 <div className="container mx-auto px-6 h-16 flex items-center justify-between">
 
                     <Link href={`/${lang}`}>
@@ -72,8 +72,8 @@ export const Navbar = ({ dict, lang }: NavbarProps) => {
                                         className={`flex items-center gap-1 text-lg transition duration-300 hover:text-[#f9f9f8]
                       ${
                                             getPath(link.path) === pathname
-                                                ? "text-[#f9f9f8]"
-                                                : "text-[#DAD3C8]"
+                                                ? "text-[#f3f3f3]"
+                                                : "text-[#f3f3f3]"
                                         }`}
                                     >
                                         {link.name}
@@ -97,7 +97,7 @@ export const Navbar = ({ dict, lang }: NavbarProps) => {
                                             <Link
                                                 key={sub.link}
                                                 href={getPath(sub.link)}
-                                                className={`block px-4 py-2 text-sm transition duration-200
+                                                className={`block  px-4 py-2 text-sm transition duration-200
                           hover:bg-gray-100 hover:text-[#646464]
                           ${
                                                     getPath(sub.link) === pathname
@@ -119,8 +119,8 @@ export const Navbar = ({ dict, lang }: NavbarProps) => {
                                     className={`text-lg transition duration-300 hover:text-[#f9f9f8]
                     ${
                                         getPath(link.path) === pathname
-                                            ? "text-[#f9f9f8]"
-                                            : "text-[#DAD3C8]"
+                                            ? "text-[#f2f2f2]"
+                                            : "text-[#f3f3f3]"
                                     }`}
                                 >
                                     {link.name}

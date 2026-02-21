@@ -33,7 +33,7 @@ const SewingOurTypes = () => {
             <div className="container py-14">
                 <div className="flex flex-col items-center justify-center">
                     <div className="relative w-full max-w-4xl mb-4 flex items-center justify-center">
-                        <h2 className="relative inline-block font-bold  px-4 text-xl md:text-4xl  text-white">Дизайнерский отдел</h2>
+                        <h2 className="relative inline-block font-bold  px-4 text-xl md:text-4xl  text-white font-dm">Дизайнерский отдел</h2>
                     </div>
                     <h3 className="text-lg md:text-2xl font-thin text-white mb-5">цвет, который сохраняется надолго</h3>
                 </div>

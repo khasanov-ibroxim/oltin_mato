@@ -81,7 +81,7 @@ const DyeingPrecision = () => {
                 {/* Content */}
                 <div className="relative z-20 w-full lg:w-1/2 ml-auto p-6 md:p-10 text-white">
                     <div className="container">
-                        <h1 className="text-4xl font-bold mb-3">
+                        <h1 className="text-4xl font-bold mb-3 font-dm">
                             Передовые технологии окрашивания
                         </h1>
                         <p className="mb-8">
@@ -129,7 +129,7 @@ const DyeingPrecision = () => {
                 {/* Content */}
                 <div className="relative z-20 w-full lg:w-1/2 p-6 md:p-10 text-white">
                     <div className="container">
-                        <h1 className="text-4xl font-bold mb-3">
+                        <h1 className="text-4xl font-bold mb-3 font-dm">
                             Передовое оборудование наших заводов
                         </h1>
                         <p className="mb-8">Эффективное производство тканей и нитей высокого качества</p>
@@ -160,7 +160,7 @@ const DyeingPrecision = () => {
 
                     {/* LEFT CONTENT */}
                     <div className="max-w-xl text-center lg:text-left">
-                        <h2 className="text-3xl md:text-4xl font-serif font-semibold text-[#111] mb-2">
+                        <h2 className="text-3xl md:text-4xl font-dm font-serif font-semibold text-[#111] mb-2">
                             Высокие стандарты качества
                         </h2>
                         <p className="text-[#111] mb-6">
@@ -168,10 +168,10 @@ const DyeingPrecision = () => {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                            <button className="px-6 py-3 rounded-md bg-[#162C43] text-white font-medium hover:bg-[#a3834e] transition">
+                            <button className="px-6 py-3 rounded-md bg-[#162C43] text-white font-medium hover:bg-[#162C43]/90 transition">
                                 Свяжитесь
                             </button>
-                            <button className="px-6 py-3 rounded-md bg-[#1f2933] text-white font-medium hover:bg-black transition">
+                            <button className="px-6 py-3 rounded-md bg-[#162C43] text-white font-medium hover:bg-[#162C43]/90 transition">
                                 Заказать
                             </button>
                         </div>

@@ -6,50 +6,20 @@ import Link from "next/link";
 const SewingHeader = () => {
     return (
         <>
-            <div className="relative w-full h-[520px] overflow-hidden">
-                {/* BACKGROUND IMAGE */}
-                <Image
-                    src={card_1}
-                    alt="Garment Manufacturing"
-                    fill
-                    className="object-cover"
-                    priority
-                />
-
-                {/* MARKAZIY OQ GRADIENT BAND */}
-                <div
-                    className="
-      absolute
-      left-0
-      right-0
-      top-1/2
-      -translate-y-1/2
-    w-full
-    bg-gray-800/50
-    h-full
-      z-10
-    "
-                />
-
-                {/* CONTENT */}
-                <div className="absolute inset-0 z-20 flex items-center justify-center px-4">
-                    <div className="text-center max-w-4xl">
-                        <h1 className="text-4xl md:text-7xl font-semibold text-white">
-                            Швейный цех
-                        </h1>
-
-                        <p className="text-base md:text-xl mt-4 text-white">
-                            Точная работа для идеальных готовых изделий
-                        </p>
-
-                        <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
-                            <Link href={"#"}  className="bg-[#162C43] px-6 py-3 rounded-sm text-white">
-                                Заказать
-                            </Link>
-                            <Link href={"#"} className="bg-gray-800 px-6 py-3 rounded-sm text-white">
-                                Подробнее
-                            </Link>
-                        </div>
+            <div className="w-full h-[80vh] relative " style={{
+                background: `url("/images/production/sewing/DSC07406.jpg") center center no-repeat`,
+                backgroundSize: "100%",
+            }}>
+                <div className="absolute top-0 left-0 bottom-0 bg-gray-800/50 w-full h-full z-0"></div>
+                <div className="w-full absolute text-white flex pl-20 justify-center flex-col h-full z-10 ">
+                    <h1 className={"text-3xl md:text-7xl font-medium font-dm"}>Швейный цех</h1>
+                    <p className={"text-base md:text-xl mt-4"}> Точная работа для идеальных готовых изделий</p>
+                    <div
+                        className={"flex items-center justify-center flex-col md:flex-row  w-full md:w-1/3  gap-3 mt-3"}>
+                        <Link href={"#"}
+                              className={"w-1/2 bg-[#162C43] hover:bg-[#162C43]/90 text-center py-2 rounded-sm"}>Заказать </Link>
+                        <Link href={"#"}
+                              className={"w-1/2 bg-gray-100 hover:bg-gray-100/90 text-black text-center py-2 rounded-sm"}>Подробнее</Link>
                     </div>
                 </div>
             </div>
