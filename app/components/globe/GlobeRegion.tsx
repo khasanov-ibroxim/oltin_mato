@@ -65,8 +65,8 @@ const color = {
     globe: '#000',
     main: '#2a2a2a',
     sub: '#1a1a1a',
-    line: '#2c8295',
-    active: '#42C0DF',
+    line: '#44C0E3',
+    active: '#932c4d',
     text: '#fff',
     transparent: '#151515',
 }
@@ -101,8 +101,8 @@ function isWebGLSupported(): boolean {
 // ✅ Fallback UI — shows when WebGL is not available or context is lost
 const GlobeFallback = () => (
     <div className="w-full h-full flex flex-col items-center justify-center bg-[#151515] rounded-3xl">
-        <div className="w-24 h-24 rounded-full border-4 border-[#42C0DF] flex items-center justify-center mb-4">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#42C0DF" strokeWidth="1.5">
+        <div className="w-24 h-24 rounded-full border-4 border-[#162C43] flex items-center justify-center mb-4">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#162C43" strokeWidth="1.5">
                 <circle cx="12" cy="12" r="10"/>
                 <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
             </svg>
@@ -228,7 +228,7 @@ const GlobeRegion = ({activeRegion, activeCountries}: GlobeRegionProps) => {
         return (
             <div ref={containerRef} className="w-full h-full flex items-center justify-center">
                 <div className="text-white text-center">
-                    <div className="w-16 h-16 border-4 border-[#42C0DF] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                    <div className="w-16 h-16 border-4 border-[#162C43] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
                     <p className="font-manrope text-sm">Loading Globe...</p>
                 </div>
             </div>
@@ -285,7 +285,7 @@ const GlobeRegion = ({activeRegion, activeCountries}: GlobeRegionProps) => {
                 />
             ) : (
                 <div className="text-white text-center">
-                    <div className="w-16 h-16 border-4 border-[#42C0DF] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                    <div className="w-16 h-16 border-4 border-[#162C43] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
                     <p className="font-manrope text-sm">Loading Globe...</p>
                 </div>
             )}

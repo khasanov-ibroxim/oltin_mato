@@ -102,13 +102,13 @@ export default async function BlogDetail({ params }: BlogDetailProps) {
                                     Share:
                                 </span>
                                 <div className="flex gap-2">
-                                    <Link href="#" className="w-8 h-8 rounded bg-[#5A5A5A] hover:bg-[#42C0DF] flex items-center justify-center transition">
+                                    <Link href="#" className="w-8 h-8 rounded bg-[#5A5A5A] hover:bg-[#162C43] flex items-center justify-center transition">
                                         <Facebook size={16} className="text-white" />
                                     </Link>
-                                    <Link href="#" className="w-8 h-8 rounded bg-[#5A5A5A] hover:bg-[#42C0DF] flex items-center justify-center transition">
+                                    <Link href="#" className="w-8 h-8 rounded bg-[#5A5A5A] hover:bg-[#162C43] flex items-center justify-center transition">
                                         <Twitter size={16} className="text-white" />
                                     </Link>
-                                    <Link href="#" className="w-8 h-8 rounded bg-[#5A5A5A] hover:bg-[#42C0DF] flex items-center justify-center transition">
+                                    <Link href="#" className="w-8 h-8 rounded bg-[#5A5A5A] hover:bg-[#162C43] flex items-center justify-center transition">
                                         <Linkedin size={16} className="text-white" />
                                     </Link>
                                 </div>
@@ -123,8 +123,8 @@ export default async function BlogDetail({ params }: BlogDetailProps) {
                             <div className="bg-[#DAD3C8] rounded-2xl p-6 mb-6">
                                 <div className="flex items-center gap-3 mb-4">
                                     <div className="flex gap-1">
-                                        <div className="w-1 h-7 bg-[#42C0DF]"></div>
-                                        <div className="w-1 h-7 bg-[#42C0DF]"></div>
+                                        <div className="w-1 h-7 bg-[#162C43]"></div>
+                                        <div className="w-1 h-7 bg-[#162C43]"></div>
                                     </div>
                                     <h3 className="font-manrope font-bold text-sm tracking-[2px] uppercase text-[#222222]">
                                         Post Info
@@ -151,8 +151,8 @@ export default async function BlogDetail({ params }: BlogDetailProps) {
                             <div className="bg-[#DAD3C8] rounded-2xl p-6">
                                 <div className="flex items-center gap-3 mb-6">
                                     <div className="flex gap-1">
-                                        <div className="w-1 h-7 bg-[#42C0DF]"></div>
-                                        <div className="w-1 h-7 bg-[#42C0DF]"></div>
+                                        <div className="w-1 h-7 bg-[#162C43]"></div>
+                                        <div className="w-1 h-7 bg-[#162C43]"></div>
                                     </div>
                                     <h3 className="font-manrope font-bold text-sm tracking-[2px] uppercase text-[#222222]">
                                         Related Posts
@@ -176,7 +176,7 @@ export default async function BlogDetail({ params }: BlogDetailProps) {
                                                     />
                                                 </div>
                                                 <div>
-                                                    <h4 className="font-dm font-bold text-sm text-[#222222] group-hover:text-[#42C0DF] transition line-clamp-2">
+                                                    <h4 className="font-dm font-bold text-sm text-[#222222] group-hover:text-[#162C43] transition line-clamp-2">
                                                         {relatedBlog.title}
                                                     </h4>
                                                     <p className="font-manrope text-xs text-[#666666] mt-1">

@@ -47,7 +47,7 @@ function LanguageSwitcherContent() {
 
   return (
       <div className="relative group">
-        <div className="flex items-center text-white bg-[#42C0DF] hover:bg-[#000]/50  rounded-lg px-2 py-1.5 transition-colors">
+        <div className="flex items-center text-white bg-[#162C43] hover:bg-[#000]/50  rounded-lg px-2 py-1.5 transition-colors">
           <Globe size={18} className="mr-2 text-[#fff]" />
           <select
               value={currentLocale}
@@ -76,8 +76,8 @@ function LanguageSwitcherContent() {
 function LanguageSwitcherFallback() {
   return (
       <div className="relative group">
-        <div className="flex items-center text-slate-600 bg-[#42C0DF] rounded-lg px-2 py-1.5">
-          <Globe size={18} className="mr-2 bg-[#42C0DF]" />
+        <div className="flex items-center text-slate-600 bg-[#162C43] rounded-lg px-2 py-1.5">
+          <Globe size={18} className="mr-2 bg-[#162C43]" />
           <div className="w-20 h-5 bg-slate-200 rounded animate-pulse"></div>
         </div>
       </div>

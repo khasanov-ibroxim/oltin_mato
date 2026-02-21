@@ -1,18 +1,18 @@
 import type {Metadata} from "next";
-import {DM_Serif_Display, Manrope} from "next/font/google";
+import {DM_Serif_Display, Manrope , Playfair_Display} from "next/font/google";
 import "./globals.css";
 
 
 
-const dm = DM_Serif_Display({
-    variable: "--font-DM-Serif-Display",
+const dm = Playfair_Display({
+    variable: "--font-playfair-pisplay",
     subsets: ["latin"],
     weight: "400",
     display: "swap", // ✅ Qo'shing
 });
 
-const manrope = Manrope({
-    variable: "--font-Manrope",
+const manrope = Playfair_Display({
+    variable: "--font-playfair-pisplay",
     subsets: ["latin"],
     display: "swap", // ✅ Qo'shing
 });

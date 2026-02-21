@@ -12,8 +12,8 @@ const TitleUi = ({text, classNameGroup = "" , classNameText=""}: IProps) => {
     return (
         <div className={`flex items-center gap-3 ${classNameGroup}`}>
             <div className={'flex gap-1'}>
-                <div className="w-1 h-7 bg-[#42C0DF]"></div>
-                <div className="w-1 h-7 bg-[#42C0DF]"></div>
+                <div className="w-1 h-7 bg-[#162C43]"></div>
+                <div className="w-1 h-7 bg-[#162C43]"></div>
             </div>
 
             <h3 className={`${classNameText ? classNameText : "text-black"}  font-manrope font-bold text-sm md:text-base tracking-[2px] uppercase`}>

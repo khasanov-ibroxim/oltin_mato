@@ -19,8 +19,8 @@ const GetInTouch = ({dict}: GetInTouchProps) => {
             <div className=" left-0 z-30 w-full  lg:w-1/2 lg:px-0 ml-2 sm:ml-10">
                 <div className="flex items-center gap-3 mb-6">
                     <div className={'flex gap-1'}>
-                        <div className="w-1 h-7 bg-[#42C0DF]"></div>
-                        <div className="w-1 h-7 bg-[#42C0DF]"></div>
+                        <div className="w-1 h-7 bg-[#162C43]"></div>
+                        <div className="w-1 h-7 bg-[#162C43]"></div>
                     </div>
 
                     <h3 className="text-[#fff]  font-manrope font-bold text-sm md:text-base tracking-[2px] uppercase">

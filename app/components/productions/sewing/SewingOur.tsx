@@ -1,8 +1,8 @@
 import React from 'react';
 import Image from "next/image";
 import card_1 from "@/assets/production/sewing/DSC07435.jpg";
-import card_2 from "@/assets/production/sewing/DSC07409.jpg";
-import card_3 from "@/assets/production/sewing/DSC07533.jpg";
+import card_3 from "@/assets/production/sewing/DSC07409.jpg";
+import card_2 from "@/assets/production/sewing/DSC07533.jpg";
 import card_4 from "@/assets/production/sewing/DSC07603.jpg";
 
 const SewingOur = () => {

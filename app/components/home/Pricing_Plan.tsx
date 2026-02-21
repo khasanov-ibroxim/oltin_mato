@@ -50,7 +50,7 @@ const PricingPlan = ({dict}: PricingPlanProps) => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5  mt-8">
                 {plans.map((plan, index) => (
                     <div key={index} className=" rounded-3xl  flex flex-col">
-                        <div className="bg-[#2c8295] rounded-2xl px-5 py-5">
+                        <div className="bg-[#932c4d] rounded-2xl px-5 py-5">
                             <h3 className="font-dm font-bold text-[32px] lg:text-[32px] text-[#f1f1f1] mb-0">
                                 {plan.title}
                             </h3>
@@ -67,7 +67,7 @@ const PricingPlan = ({dict}: PricingPlanProps) => {
                             {/*</div>*/}
                         </div>
 
-                        <div className="bg-[#2c8295] rounded-2xl px-5 py-5 mt-0.5 flex-grow flex flex-col">
+                        <div className="bg-[#162C43] rounded-2xl px-5 py-5 mt-0.5 flex-grow flex flex-col">
                             <h4 className="text-[#fdfdfd] text-lg mb-6 font-medium">
                                 {dict.teg}
                             </h4>
@@ -81,7 +81,7 @@ const PricingPlan = ({dict}: PricingPlanProps) => {
                                         >
                                             <path
                                                 d="M16.7 5.3L8.5 13.5L4.3 9.3"
-                                                stroke="#2C2C2C"
+                                                stroke="#fff"
                                                 strokeWidth="2"
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
@@ -93,9 +93,7 @@ const PricingPlan = ({dict}: PricingPlanProps) => {
                                     </li>
                                 ))}
                             </ul>
-                            <Link href={plan.link} className="w-full text-center index__btn_colors rounded-xl py-2 text-[#2C2C2C] font-medium text-lg">
-                                {dict.btn}
-                            </Link>
+
                         </div>
                     </div>
                 ))}

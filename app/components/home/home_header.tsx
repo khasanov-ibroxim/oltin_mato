@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import index_img from "@/assets/home/header/home_header_index.jpg";
+import index_img from "@/assets/home/header/home_header_index.png";
 import elementImg from "@/assets/home/header/headerElement.jpg"
 import {Badge, MoveRight} from "lucide-react";
 import Link from "next/link";
@@ -93,7 +93,7 @@ export default function HomeHeader({dict}: HomeHeaderProps) {
                         variants={childVariant}
                         className="flex font-manrope tracking-[1px] sm:tracking-[2px] md:tracking-[3px] uppercase font-bold text-[12px] sm:text-[14px] md:text-[16px] items-center gap-2"
                     >
-                        <Badge size={20} className="text-[#42C0DF]"/> {dict.home_header.box.title}
+                        <Badge size={20} className="text-[#fff]"/> {dict.home_header.box.title}
                     </motion.h2>
 
                     <motion.h1
@@ -111,7 +111,7 @@ export default function HomeHeader({dict}: HomeHeaderProps) {
                     <motion.div variants={childVariant}>
                         <Link
                             href="/contact"
-                            className="index__btn_colors inline-flex items-center justify-center rounded-sm px-6 py-2 font-manrope gap-1"
+                            className="index__btn_colors text-white inline-flex items-center justify-center rounded-sm px-6 py-2 font-manrope gap-1"
                         >
                             {dict.home_header.box.btn} <MoveRight/>
                         </Link>
@@ -126,7 +126,7 @@ export default function HomeHeader({dict}: HomeHeaderProps) {
                     variants={fadeInScale}
                     whileHover={{ scale: 1.02 }}
                     transition={{ type: "spring", stiffness: 300 }}
-                    className="flex w-full flex-col lg:w-1/3 gap-2 rounded-2xl items-start justify-start h-full bg-[#2c8295]/70"
+                    className="flex w-full flex-col lg:w-1/3 gap-2 rounded-2xl items-start justify-start h-full bg-[#162C43]/70"
                 >
                     <div className="relative w-full pt-[56.25%]">
                         <div className="">
@@ -137,7 +137,7 @@ export default function HomeHeader({dict}: HomeHeaderProps) {
                     </div>
 
                     <div className="px-5 py-5 flex flex-col gap-4">
-                        <h3 className={"text-[#42C0DF] m-0 font-dm text-3xl font-bold"}>{dict.home_header.box.video_title}</h3>
+                        <h3 className={"text-[#fff] m-0 font-dm text-3xl font-bold"}>{dict.home_header.box.video_title}</h3>
                         <p className={"font-manrope text-[19px]"}>{dict.home_header.box.video_text}</p>
                     </div>
                 </motion.div>

@@ -15,7 +15,7 @@ const Globe = dynamic(() => import('@/app/components/globe/GlobeRegion'), {
     loading: () => (
         <div className="w-full h-full flex items-center justify-center bg-[#151515] rounded-3xl">
             <div className="text-white text-center">
-                <div className="w-16 h-16 border-4 border-[#42C0DF] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                <div className="w-16 h-16 border-4 border-[#162C43] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
                 <p className="font-manrope text-sm">Loading Globe...</p>
             </div>
         </div>
@@ -95,8 +95,8 @@ const OurServices = ({dict, type_component}: OurServicesProps) => {
                                 px-6 py-3 rounded-lg font-manrope font-semibold text-sm md:text-base
                                 transition-all duration-300 whitespace-nowrap cursor-pointer
                                 ${activeService === service.id
-                                    ? 'bg-[#222222] text-white shadow-lg'
-                                    : 'bg-white text-[#222222] hover:bg-[#42C0DF]'
+                                    ? 'bg-[#162C43] text-white shadow-lg'
+                                    : 'bg-white text-[#222222] hover:text-white hover:bg-[#932c4d]'
                                 }
                             `}
                             >
@@ -115,7 +115,7 @@ const OurServices = ({dict, type_component}: OurServicesProps) => {
                         {/* Overlay with region info */}
                         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 sm:p-6 md:p-8">
                             <div className="flex items-center gap-3 sm:gap-4">
-                                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl bg-[#42C0DF] flex items-center justify-center flex-shrink-0">
+                                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl bg-[#162C43] flex items-center justify-center flex-shrink-0">
                                     {React.createElement(servicesGlobe[activeService].icon, {
                                         className: "w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white",
                                         strokeWidth: 1.5
@@ -178,7 +178,7 @@ const OurServices = ({dict, type_component}: OurServicesProps) => {
                                 transition-all duration-300 whitespace-nowrap cursor-pointer
                                 ${activeService === service.id
                                     ? 'bg-[#222222] text-white shadow-lg'
-                                    : 'bg-white text-[#222222] hover:bg-[#42C0DF]'
+                                    : 'bg-white text-[#222222] hover:bg-[#162C43]'
                                 }
                             `}
                             >
@@ -211,7 +211,7 @@ const OurServices = ({dict, type_component}: OurServicesProps) => {
                                     initial={{scale: 0}}
                                     animate={{scale: 1}}
                                     transition={{delay: 0.2, type: "spring", stiffness: 200}}
-                                    className="w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-[#42C0DF] flex items-center justify-center mb-6"
+                                    className="w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-[#162C43] flex items-center justify-center mb-6"
                                 >
                                     {React.createElement(services[activeService].icon, {
                                         className: "w-10 h-10 md:w-12 md:h-12 text-white",
@@ -244,7 +244,7 @@ const OurServices = ({dict, type_component}: OurServicesProps) => {
                                 >
                                     <Link
                                         href="/contact"
-                                        className="inline-flex items-center justify-center bg-[#42C0DF] hover:bg-[#222222] text-white font-manrope font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+                                        className="inline-flex items-center justify-center bg-[#162C43] hover:bg-[#222222] text-white font-manrope font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
                                     >
                                         {services[activeService].btn}
                                     </Link>

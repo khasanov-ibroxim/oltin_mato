@@ -43,7 +43,7 @@ const SewingHeader = () => {
                         </p>
 
                         <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
-                            <Link href={"#"}  className="bg-[#42C0DF] px-6 py-3 rounded-sm text-white">
+                            <Link href={"#"}  className="bg-[#162C43] px-6 py-3 rounded-sm text-white">
                                 Заказать
                             </Link>
                             <Link href={"#"} className="bg-gray-800 px-6 py-3 rounded-sm text-white">

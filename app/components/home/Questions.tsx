@@ -25,30 +25,36 @@ const Questions = ({dict}: QuestionsProps) => {
     const leftFaqs = [
         {
             question: dict.i_1.title,
-            answer: dict.i_1.text
+            answer: dict.i_1.text,
+            bg:"#162C43"
         },
         {
             question: dict.i_2.title,
-            answer: dict.i_2.text
+            answer: dict.i_2.text,
+            bg:"#162C43"
         },
         {
             question: dict.i_3.title,
-            answer: dict.i_3.text
+            answer: dict.i_3.text,
+            bg:"#162C43"
         }
     ];
 
     const rightFaqs = [
         {
             question: dict.i_4.title,
-            answer: dict.i_4.text
+            answer: dict.i_4.text,
+            bg:"#162C43"
         },
         {
             question: dict.i_5.title,
-            answer: dict.i_5.text
+            answer: dict.i_5.text,
+            bg:"#162C43"
         },
         {
             question: dict.i_6.title,
-            answer: dict.i_6.text
+            answer: dict.i_6.text,
+            bg:"#162C43"
         }
     ];
 
@@ -86,14 +92,14 @@ const Questions = ({dict}: QuestionsProps) => {
                             transition={{ delay: index * 0.1 }}
                         >
                             <div className={`rounded-2xl overflow-hidden transition-colors duration-500 ${
-                                openLeftIndex === index ? 'bg-[#2C2C2C]' : 'bg-[#42C0DF]'
+                                openLeftIndex === index ? 'bg-[#932c4d]' : `bg-[${faq.bg}]`
                             }`}>
                                 <button
                                     onClick={() => toggleFAQ(index, 'left')}
                                     className="w-full px-6 py-5 flex items-center justify-between text-left"
                                 >
                                     <span className={`font-medium text-sm tracking-wider transition-colors duration-500 ${
-                                        openLeftIndex === index ? 'text-white' : 'text-[#2C2C2C]'
+                                        openLeftIndex === index ? 'text-white' : 'text-[#fff]'
                                     }`}>
                                         {faq.question}
                                     </span>
@@ -108,7 +114,7 @@ const Questions = ({dict}: QuestionsProps) => {
                                     >
                                         <path
                                             d="M5 7.5L10 12.5L15 7.5"
-                                            stroke={openLeftIndex === index ? 'white' : '#2C2C2C'}
+                                            stroke={openLeftIndex === index ? 'white' : '#fff'}
                                             strokeWidth="2"
                                             strokeLinecap="round"
                                             strokeLinejoin="round"
@@ -161,15 +167,15 @@ const Questions = ({dict}: QuestionsProps) => {
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
                         >
-                            <div className={`rounded-2xl overflow-hidden transition-colors duration-500 ${
-                                openRightIndex === index ? 'bg-[#2C2C2C]' : 'bg-[#42C0DF]'
+                            <div className={`rounded-2xl  overflow-hidden transition-colors duration-500 ${
+                                openRightIndex === index ? 'bg-[#932c4d]' : `bg-[${faq.bg}]`
                             }`}>
                                 <button
                                     onClick={() => toggleFAQ(index, 'right')}
                                     className="w-full px-6 py-5 flex items-center justify-between text-left"
                                 >
                                     <span className={`font-medium text-sm tracking-wider transition-colors duration-500 ${
-                                        openRightIndex === index ? 'text-white' : 'text-[#2C2C2C]'
+                                        openRightIndex === index ? 'text-white' : 'text-[#fff]'
                                     }`}>
                                         {faq.question}
                                     </span>
@@ -184,7 +190,7 @@ const Questions = ({dict}: QuestionsProps) => {
                                     >
                                         <path
                                             d="M5 7.5L10 12.5L15 7.5"
-                                            stroke={openRightIndex === index ? 'white' : '#2C2C2C'}
+                                            stroke={openRightIndex === index ? 'white' : '#fff'}
                                             strokeWidth="2"
                                             strokeLinecap="round"
                                             strokeLinejoin="round"
@@ -233,7 +239,7 @@ const Questions = ({dict}: QuestionsProps) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.6 }}
-                className="mt-16 bg-[#2C2C2C] rounded-3xl p-5 text-center"
+                className="mt-16 bg-[#162C43] rounded-3xl p-5 text-center"
             >
                 <h3 className="font-dm font-bold text-[20px] md:text-[40px] lg:text-[48px] text-white mb-2 leading-tight">
                     {dict.box_title}

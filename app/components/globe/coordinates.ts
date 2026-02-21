@@ -19,7 +19,7 @@ export const countryCoordinates = [
         lng: 27.9534,
     },
     {
-        text: { en: 'Kyrgyzstan', ru: 'Киргизия' },
+        text: { en: 'Kyrgyzstan', ru: 'Кыргызстан' },
         alpha2: 'KG',
         lat: 41.2044,
         lng: 74.7661,

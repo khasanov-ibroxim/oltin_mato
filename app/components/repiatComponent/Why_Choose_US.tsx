@@ -92,7 +92,7 @@ const WhyChooseUs = ({ dict , page }: WhyChooseUsProps) => {
     ];
 
     return (
-        <div className="w-full py-16 md:py-24 px-6 sm:px-12 lg:px-24 bg-[#2C8295]">
+        <div className="w-full py-16 md:py-24 px-6 sm:px-12 lg:px-24 bg-[#162C43]">
             <div className="max-w-[1600px] mx-auto">
                 {/* Header */}
                 <motion.div
@@ -129,8 +129,8 @@ const WhyChooseUs = ({ dict , page }: WhyChooseUsProps) => {
                             >
                                 <div className="flex items-start gap-4">
                                     <div className="flex-shrink-0">
-                                        <div className="w-12 h-12 rounded-lg bg-[#42C0DF]/10 flex items-center justify-center">
-                                            <feature.icon className="w-6 h-6 text-[#42C0DF]" />
+                                        <div className="w-12 h-12 rounded-lg bg-[#162C43]/10 flex items-center justify-center">
+                                            <feature.icon className="w-6 h-6 text-[#162C43]" />
                                         </div>
                                     </div>
                                     <div>
@@ -179,8 +179,8 @@ const WhyChooseUs = ({ dict , page }: WhyChooseUsProps) => {
                             >
                                 <div className="flex items-start gap-4">
                                     <div className="flex-shrink-0">
-                                        <div className="w-12 h-12 rounded-lg bg-[#42C0DF]/10 flex items-center justify-center">
-                                            <feature.icon className="w-6 h-6 text-[#42C0DF]" />
+                                        <div className="w-12 h-12 rounded-lg bg-[#162C43]/10 flex items-center justify-center">
+                                            <feature.icon className="w-6 h-6 text-[#162C43]" />
                                         </div>
                                     </div>
                                     <div>

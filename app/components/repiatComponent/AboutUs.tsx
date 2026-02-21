@@ -136,16 +136,24 @@ const AboutUs = ({dict , page}: AboutProps) => {
                 </motion.div>
             </div>
             <div className="w-full flex flex-col lg:flex-row pt-10">
-                <div className="w-full lg:w-1/2 font-dm text-[25px] lg:text-[30px]  lg:leading-[40px] text-[rgb(90,90,90)] font-bold">
+                {page === "about" ? <p className={"font-manrope pr-2 lg:w-1/2 text-[18px] text-[rgb(126,126,126)]"}>
                     {dict?.left_title}
-                </div>
+                </p> : <div className="w-full lg:w-1/2 font-dm text-[25px] lg:text-[30px]  lg:leading-[40px] text-[rgb(90,90,90)] font-bold">
+                    {dict?.left_title}
+                </div>}
+
                 <div className="w-full lg:w-1/2 flex flex-col gap-5 lg:gap-20">
                     <p className={"font-manrope text-[18px] text-[rgb(126,126,126)]"}>
                         {dict?.right_text}
                     </p>
-                   <LinkUI text={dict?.btn} link={'/about'}/>
                 </div>
             </div>
+            <div className="w-full flex justify-center items-center">
+                <Link href={"/about"} className={"index__btn_colors text-center mt-10 w-1/3 py-3 px-20 rounded-2xl "}>
+                    {dict?.btn}
+                </Link>
+            </div>
+
         </div>
     );
 };

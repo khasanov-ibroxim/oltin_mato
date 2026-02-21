@@ -55,7 +55,7 @@ const AboutStat = ({dict}:any) => {
             className="
         mt-[100px]
         min-h-[40vh]
-        bg-[#2C8295]
+        bg-[#162C43]
 
         bg-no-repeat
         bg-bottom
@@ -164,7 +164,7 @@ const AboutStat = ({dict}:any) => {
                             >
                                 <Link
                                     href="/contact"
-                                    className="inline-flex items-center justify-center bg-[#42C0DF] hover:bg-[#222222] text-white font-manrope font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+                                    className="inline-flex items-center justify-center bg-[#932c4d] hover:bg-[#222222] text-white font-manrope font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
                                 >
                                     {dict.btn}
                                 </Link>

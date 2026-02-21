@@ -88,17 +88,17 @@ const Testimonials = ({dict}:testimonialsProps) => {
                         <SwiperSlide key={testimonial.id}>
                             <div className="bg-none group  text-center rounded-3xl p-8 md:p-12 lg:p-16 min-h-[350px] w-full flex flex-col items-center justify-center">
                                 <div className="mb-6 w-full">
-                                    <Quote size={40} className="text-[rgba(126,126,126,0.2)] transition-colors duration-300 group-hover:text-[#42C0DF]"/>
+                                    <Quote size={40} className="text-[rgba(126,126,126,0.2)] transition-colors duration-300 group-hover:text-[#162C43]"/>
                                 </div>
                                 <p className="text-[rgb(126,126,126)] text-[18px] font-normal leading-relaxed mb-8 ">
                                     {testimonial.quote}
                                 </p>
-                                <div className="bg-[#42C0DF] w-14 h-0.5 mb-6 group-hover:w-20 "></div>
+                                <div className="bg-[#162C43] w-14 h-0.5 mb-6 group-hover:w-20 "></div>
                                 <div>
                                     <h4 className="font-dm font-bold text-[24px]  text-[rgb(34,34,34)] mb-2">
                                         {testimonial.author}
                                     </h4>
-                                    <p className="text-[#42C0DF] text-sm tracking-[0.2em] font-bold font-manrope text-[14px]">
+                                    <p className="text-[#162C43] text-sm tracking-[0.2em] font-bold font-manrope text-[14px]">
                                         {testimonial.role}
                                     </p>
                                 </div>

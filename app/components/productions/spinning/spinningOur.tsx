@@ -24,7 +24,7 @@ const SpinningOur = () => {
                 </div>
                 <div className="w-full mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {imageData.map((it, i) => (
-                        <div key={i} className="relative rounded-sm  bg-white flex flex-col  border-b-[#42C0DF] border-b-5">
+                        <div key={i} className="relative rounded-sm  bg-white flex flex-col  border-b-[#162C43] border-b-5">
                             {/* IMAGE */}
                             <div className="h-[260px] overflow-hidden rounded-xl">
                                 <Image
@@ -35,7 +35,7 @@ const SpinningOur = () => {
                             </div>
 
                             <div className="absolute -bottom-4 left-1/2 -translate-x-1/2">
-                                <div className="w-16 h-6 bg-[#42C0DF] rounded-full shadow-sm"></div>
+                                <div className="w-16 h-6 bg-[#162C43] rounded-full shadow-sm"></div>
                             </div>
                         </div>
 

@@ -19,13 +19,14 @@ interface IContent {
     title: string;
     year: number;
     img: StaticImageData;
+    bg:string
 }
 
 const OurProjects = ({dict}:OurProjectProps) => {
     const content: IContent[] = [
-        { title: dict.i_1.title, year: 2022, img: our1 },
-        { title: dict.i_2.title, year: 2023, img: our2 },
-        { title: dict.i_3.title, year: 2024, img: our3 },
+        { title: dict.i_1.title, year: 2022, img: our1 , bg:"#932c4d"},
+        { title: dict.i_2.title, year: 2023, img: our2 , bg: "#932c4d"},
+        { title: dict.i_3.title, year: 2024, img: our3 , bg: "#932c4d"},
     ];
     const fadeInUp: Variants = {
         hidden: { opacity: 0, y: 30 },
@@ -66,10 +67,11 @@ const OurProjects = ({dict}:OurProjectProps) => {
                         </div>
 
                         <div className="p-4 flex flex-col justify-between">
-                            <h3 className="font-dm text-lg font-bold text-[32px] text-[#222]">
+                            <h3 className="font-dm text-[25px] font-bold mb-5 text-center  text-[#222]">
                                 {item.title}
                             </h3>
-                            <p className="inline-flex h-[40px] items-center justify-center bg-[#42C0DF] hover:bg-[#222222] text-white font-manrope font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer">{dict.btn}</p>
+                            <p className={`
+                            inline-flex h-[40px] items-center justify-center bg-[${item.bg}] hover:bg-[#162C43] text-white font-manrope font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer`}>{dict.btn}</p>
                         </div>
                     </motion.div>
                 ))}

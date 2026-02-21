@@ -2,7 +2,7 @@ import React from 'react';
 import Image from "next/image";
 import icon_1 from "@/assets/production/spinning/ball.png";
 import card_1 from "@/assets/production/spinning/bakan_2.jpg";
-import top_img from "@/assets/production/dyeing/DSC07229.jpg"
+import top_img from "@/assets/production/dyeing/IMG_9724.jpg"
 import bottom_img from "@/assets/production/dyeing/DSC07384.jpg"
 import footer_img from "@/assets/production/dyeing/DSC07394.jpg"
 import iso from "@/assets/production/dyeing/iso.png"
@@ -72,8 +72,8 @@ const DyeingPrecision = () => {
                     className="
       absolute inset-0 z-10
       bg-gradient-to-l
-      from-[#2C8295]/90
-      via-[#2C8295]/80
+      from-[#162C43]/90
+      via-[#162C43]/80
       to-transparent
     "
                 />
@@ -120,8 +120,8 @@ const DyeingPrecision = () => {
                     className="
       absolute inset-0 z-10
       bg-gradient-to-r
-      from-[#2C8295]/90
-      via-[#2C8295]/80
+      from-[#162C43]/90
+      via-[#162C43]/80
       to-transparent
     "
                 />
@@ -168,7 +168,7 @@ const DyeingPrecision = () => {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                            <button className="px-6 py-3 rounded-md bg-[#42C0DF] text-white font-medium hover:bg-[#a3834e] transition">
+                            <button className="px-6 py-3 rounded-md bg-[#162C43] text-white font-medium hover:bg-[#a3834e] transition">
                                 Свяжитесь
                             </button>
                             <button className="px-6 py-3 rounded-md bg-[#1f2933] text-white font-medium hover:bg-black transition">
