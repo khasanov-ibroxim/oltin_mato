@@ -19,31 +19,31 @@ import Link from "next/link";
 const AboutStat = ({dict}:any) => {
     const items = [
         {
-            value: dict.i1.t,
+            value: "3070",
 
             label: dict.i1.desc,
             icon: i1,
         },
         {
-            value: dict.i2.t,
+            value: "500",
 
             label: dict.i2.desc,
             icon: i2,
         },
         {
-            value: dict.i3.t,
+            value: "26 426",
 
             label: dict.i3.desc,
             icon: i3,
         },
         {
-            value: dict.i4.t,
+            value: "8 000 000",
 
             label: dict.i4.desc,
             icon: i4,
         },
         {
-            value: dict.i5.t,
+            value: "98 000",
 
             label: dict.i5.desc,
             icon: i5,
