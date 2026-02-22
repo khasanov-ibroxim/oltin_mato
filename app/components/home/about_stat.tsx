@@ -20,31 +20,31 @@ const AboutStat = ({dict}:any) => {
     const items = [
         {
             value: dict.i1.t,
-            unit: "",
+
             label: dict.i1.desc,
             icon: i1,
         },
         {
             value: dict.i2.t,
-            unit: "",
+
             label: dict.i2.desc,
             icon: i2,
         },
         {
             value: dict.i3.t,
-            unit: "",
+
             label: dict.i3.desc,
             icon: i3,
         },
         {
             value: dict.i4.t,
-            unit: "",
+
             label: dict.i4.desc,
             icon: i4,
         },
         {
             value: dict.i5.t,
-            unit: "",
+
             label: dict.i5.desc,
             icon: i5,
         },
@@ -102,7 +102,7 @@ const AboutStat = ({dict}:any) => {
                             {/* text */}
                             <div className="text-center">
                                 <h2 className="text-[25px] font-bold text-[#fff]">
-                                    {item.value} {item.unit}
+                                    {item.value}
                                 </h2>
                                 <p className="text-[18px] font-medium text-[#fff]">
                                     {item.label}
