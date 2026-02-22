@@ -28,7 +28,7 @@ export default async function About({params}: AboutProps) {
 
 
         <WhyChooseUs dict={dict.about.why_choose} page={"about"}/>
-        <OurProjects dict={dict.home.ourProject}/>
+        <OurProjects dict={dict.home.ourProject} lang={lang}/>
 
         <HowItWorks dict={dict.about.howItWorks}/>
 

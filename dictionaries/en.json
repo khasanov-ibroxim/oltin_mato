@@ -26,23 +26,23 @@
       "title": "Быстрые ссылки",
       "list": [
         {
-          "link": "#",
+          "link": "/",
           "text": "Главная"
         },
         {
-          "link": "#",
+          "link": "/about",
           "text": "О компании"
         },
         {
-          "link": "#",
+          "link": "/#project",
           "text": "Услуги"
         },
         {
-          "link": "#",
+          "link": "/#price",
           "text": "Цены"
         },
         {
-          "link": "#",
+          "link": "/contact",
           "text": "Контакты"
         }
       ]

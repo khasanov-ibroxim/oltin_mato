@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import TitleUI from "@/app/components/UI/titleUI";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import i1 from "@/assets/about/aboutStat/i1.png"
 import i2 from "@/assets/about/aboutStat/i2.png"
@@ -14,40 +14,67 @@ import boxBg from "@/assets/about/aboutStat/boxBg.jpg"
 import {AnimatePresence, motion} from "framer-motion";
 import Link from "next/link";
 
+// ─── Count-up hook ───────────────────────────────────────────────────────────
+function useCountUp(target: number, duration = 1000, start = true) {
+    const [count, setCount] = useState(0);
 
+    useEffect(() => {
+        if (!start) return;
+        let startTime: number | null = null;
 
-const AboutStat = ({dict}:any) => {
+        const step = (timestamp: number) => {
+            if (!startTime) startTime = timestamp;
+            const progress = Math.min((timestamp - startTime) / duration, 1);
+            // easeOutExpo for a snappy feel
+            const eased = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+            setCount(Math.floor(eased * target));
+            if (progress < 1) requestAnimationFrame(step);
+        };
+
+        requestAnimationFrame(step);
+    }, [target, duration, start]);
+
+    return count;
+}
+
+// ─── Animated number value ───────────────────────────────────────────────────
+function StatValue({ value }: { value: string }) {
+    // Strip spaces and parse, e.g. "26 426" → 26426
+    const numericValue = parseInt(value.replace(/\s/g, ""), 10);
+    const [inView, setInView] = useState(false);
+    const ref = useRef<HTMLHeadingElement>(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) setInView(true);
+            },
+            { threshold: 0.3 }
+        );
+        if (ref.current) observer.observe(ref.current);
+        return () => observer.disconnect();
+    }, []);
+
+    const count = useCountUp(numericValue, 1000, inView);
+
+    // Re-apply the original space-separated formatting ("8 000 000")
+    const formatted = count.toLocaleString("ru-RU");
+
+    return (
+        <h2 ref={ref} className="text-[25px] font-bold text-[#fff]">
+            {formatted}
+        </h2>
+    );
+}
+
+// ─── Main component ──────────────────────────────────────────────────────────
+const AboutStat = ({dict}: any) => {
     const items = [
-        {
-            value: "3070",
-
-            label: dict.i1.desc,
-            icon: i1,
-        },
-        {
-            value: "500",
-
-            label: dict.i2.desc,
-            icon: i2,
-        },
-        {
-            value: "26 426",
-
-            label: dict.i3.desc,
-            icon: i3,
-        },
-        {
-            value: "8 000 000",
-
-            label: dict.i4.desc,
-            icon: i4,
-        },
-        {
-            value: "98 000",
-
-            label: dict.i5.desc,
-            icon: i5,
-        },
+        { value: "3070",     label: dict.i1.desc, icon: i1 },
+        { value: "500",      label: dict.i2.desc, icon: i2 },
+        { value: "26 426",   label: dict.i3.desc, icon: i3 },
+        { value: "8 000 000",label: dict.i4.desc, icon: i4 },
+        { value: "98 000",   label: dict.i5.desc, icon: i5 },
     ];
 
     return (
@@ -56,7 +83,6 @@ const AboutStat = ({dict}:any) => {
         mt-[100px]
         min-h-[40vh]
         bg-[#162C43]
-
         bg-no-repeat
         bg-bottom
       "
@@ -84,7 +110,6 @@ const AboutStat = ({dict}:any) => {
                             <div
                                 className="
                   w-20 h-20
-
                   rounded-lg
                   p-2
                   flex items-center justify-center
@@ -101,9 +126,8 @@ const AboutStat = ({dict}:any) => {
 
                             {/* text */}
                             <div className="text-center">
-                                <h2 className="text-[25px] font-bold text-[#fff]">
-                                    {item.value}
-                                </h2>
+                                {/* 👇 animated number */}
+                                <StatValue value={item.value} />
                                 <p className="text-[18px] font-medium text-[#fff]">
                                     {item.label}
                                 </p>
@@ -111,6 +135,7 @@ const AboutStat = ({dict}:any) => {
                         </div>
                     ))}
                 </div>
+
                 <AnimatePresence mode="wait">
                     <motion.div
                         initial={{opacity: 0, y: 20}}
@@ -134,9 +159,9 @@ const AboutStat = ({dict}:any) => {
                                 initial={{scale: 0}}
                                 animate={{scale: 1}}
                                 transition={{delay: 0.2, type: "spring", stiffness: 200}}
-                                className="w-20 h-20 md:w-24 md:h-24 rounded-2xl  flex items-center justify-center mb-6"
+                                className="w-20 h-20 md:w-24 md:h-24 rounded-2xl flex items-center justify-center mb-6"
                             >
-                            <img src={"/logo.svg"} alt={"asdasd"}/>
+                                <img src={"/logo.svg"} alt={"asdasd"}/>
                             </motion.div>
 
                             <motion.h2

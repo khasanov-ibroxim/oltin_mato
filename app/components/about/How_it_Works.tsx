@@ -2,6 +2,15 @@
 import React from 'react';
 import TitleUI from "@/app/components/UI/titleUI";
 
+import p1 from "@/assets/partnior/1.png"
+import p2 from "@/assets/partnior/2.png"
+import p3 from "@/assets/partnior/3.png"
+import p4 from "@/assets/partnior/4.png"
+import p5 from "@/assets/partnior/5.png"
+import p6 from "@/assets/partnior/6.png"
+import p7 from "@/assets/partnior/7.png"
+import Image from "next/image";
+
 interface HowItWorksProps {
     dict: {
         [key: string]: any;
@@ -11,10 +20,7 @@ interface HowItWorksProps {
 const HowItWorks = ({dict}:HowItWorksProps) => {
 
     const contentWorks=[
-        {title:"Consultation & Concept" , text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit."},
-        {title:"Design & Material Selection" , text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit."},
-        {title:"Crafting & Sampling" , text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit."},
-        {title:"Production & Delivery" , text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit."}
+        p1 , p2 , p3 , p4, p5 , p6 , p7
     ]
 
     return (
@@ -26,12 +32,10 @@ const HowItWorks = ({dict}:HowItWorksProps) => {
                 </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5">
                 {contentWorks.map((item, index) => (
-                    <div key={index} className="w-full rounded-3xl py-5 px-4 bg-[#222] flex flex-col items-center text-center text-white gap-4">
-                       <span className={"text-[40px] font-bold font-dm text-[rgb(249,249,248)]"}>0{index+1}.</span>
-                        <h3 className={"text-[32px] leading-tight font-bold font-dm text-[rgb(249,249,248)]"}>{item.title}</h3>
-                        <h3 className={"text-[18px] font-manrope text-[rgb(218,211,200)]"}>{item.text}</h3>
+                    <div key={index} className="w-full rounded-3xl py-5 px-4  flex flex-col items-center text-center text-white gap-4">
+                      <Image src={item} alt={"sadasd"}  className={"object-cover"}/>
                     </div>
                 ))}
             </div>

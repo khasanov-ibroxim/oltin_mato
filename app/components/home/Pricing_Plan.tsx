@@ -40,7 +40,7 @@ const PricingPlan = ({dict}: PricingPlanProps) => {
     ];
 
     return (
-        <div className={"py-16 container"}>
+        <div className={"py-16 container"} id={"price"}>
             <div className="w-full flex flex-col items-center justify-center mb-12">
                 <TitleUI text={dict.title}/>
                 <h2 className="font-dm text-center font-bold text-[32px] sm:text-[36px] md:text-[44px] lg:text-[50px] leading-tight text-[#222222]">

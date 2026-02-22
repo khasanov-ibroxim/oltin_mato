@@ -26,7 +26,7 @@ export default async function IndexPage({params, searchParams}: HomeProps) {
         <AboutUs dict={dict.home.about} page={"home"}/>
         <WhyChooseUs dict={dict.home.why_choose} page={"home"}/>
         <OurServices dict={dict.home.ourServices.globe} type_component="globe"/>
-        <OurProjects dict={dict.home.ourProject}/>
+        <OurProjects dict={dict.home.ourProject} lang={lang}/>
         <GetInTouch dict={dict.home.get_in_touch}/>
         <PricingPlan dict={dict.home.price}/>
         <Testimonials dict={dict.home.testimonials}/>
