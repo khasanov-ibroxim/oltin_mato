@@ -68,7 +68,7 @@ const color = {
     line: '#44C0E3',
     active: '#1FB6C9',
     text: '#fff',
-    transparent: '#151515',
+    transparent: 'rgba(0,0,0,0)',
 }
 
 interface GlobeRegionProps {
@@ -208,7 +208,7 @@ const GlobeRegion = ({activeRegion, activeCountries}: GlobeRegionProps) => {
             () => {
                 if (!reference.current) return
 
-                reference.current.controls().enableZoom = true
+                reference.current.controls().enableZoom = false
                 reference.current.controls().enableRotate = true
                 reference.current.controls().autoRotate = false
                 reference.current.controls().minDistance = 150

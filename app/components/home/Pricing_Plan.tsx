@@ -49,12 +49,12 @@ const PricingPlan = ({dict}: PricingPlanProps) => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5  mt-8">
                 {plans.map((plan, index) => (
-                    <div key={index} className=" rounded-3xl  flex flex-col">
+                    <div key={index} className="rounded-3xl  flex flex-col">
                         <div className="bg-[#08CB00] rounded-2xl px-5 py-5">
-                            <h3 className="font-dm font-bold text-[32px] lg:text-[32px] text-[#f1f1f1] mb-0">
+                            <h3 className="font-dm font-bold text-[32px] lg:text-[32px] text-[#0E1E2F] mb-0">
                                 {plan.title}
                             </h3>
-                            <p className="text-[#fdfdfd] font-manrope text-[18px]">
+                            <p className="text-[#0E1E2F] font-manrope text-[18px]">
                                 {plan.subtitle}
                             </p>
                             {/*<div className="flex items-baseline gap-1">*/}

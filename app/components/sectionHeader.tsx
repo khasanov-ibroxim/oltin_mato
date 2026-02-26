@@ -20,9 +20,9 @@ const SectionHeader = ({title, linkName, badge, titleImage}: SectionHeaderProps)
                             <h1 className="text-white text-6xl md:text-7xl font-bold font-dm">{title}</h1>
                             <div className="text-white text-lg font-manrope">
                                 <Link href={"/"}
-                                      className="hover:text-[#162C43] transition cursor-pointer uppercase">{badge}</Link>
-                                <span className="text-[#162C43] mx-3">✕</span>
-                                <span className="text-[#162C43] uppercase">{linkName}</span>
+                                      className="hover:text-[#08CB00] transition cursor-pointer uppercase">{badge}</Link>
+                                <span className="text-[#08CB00] mx-3">✕</span>
+                                <span className="text-[#08CB00] uppercase">{linkName}</span>
                             </div>
                         </div>
                     </div>

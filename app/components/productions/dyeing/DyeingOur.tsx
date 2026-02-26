@@ -116,7 +116,7 @@ const DyeingOur = () => {
                             {looped.map((img, i) => (
                                 <div
                                     key={i}
-                                    className="relative flex-shrink-0 rounded-xl overflow-hidden shadow-xl bg-white"
+                                    className="relative flex-shrink-0 rounded-xl overflow-hidden shadow-xl shadow-black/20"
                                     style={{ width: `${CARD_WIDTH}px`, height: "360px" }}
                                 >
                                     <Image

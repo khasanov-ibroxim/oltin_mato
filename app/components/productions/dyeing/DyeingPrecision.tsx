@@ -93,8 +93,8 @@ const DyeingPrecision = () => {
                                 <div key={i} className="flex gap-4">
 
                                     <div>
-                                        <h4 className="font-medium">{item.h}</h4>
-                                        <p className="text-sm opacity-80">{item.p}</p>
+                                        <h4 className="font-medium text-xl">{item.h}</h4>
+                                        <p className=" opacity-80 text-base">{item.p}</p>
                                     </div>
                                 </div>
                             ))}
@@ -138,8 +138,8 @@ const DyeingPrecision = () => {
                             {bottom_array.map((it, i) => (
                                 <div key={i} className="flex gap-4">
                                     <div>
-                                        <h4 className="font-medium">{it.h}</h4>
-                                        <p className="text-sm opacity-80">{it.p}</p>
+                                        <h4 className="font-medium text-xl">{it.h}</h4>
+                                        <p className=" opacity-80 text-base">{it.p}</p>
                                     </div>
                                 </div>
                             ))}
@@ -168,10 +168,10 @@ const DyeingPrecision = () => {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                            <button className="px-6 py-3 rounded-md bg-[#162C43] text-white font-medium hover:bg-[#1598A8]/90 transition">
+                            <button className="px-6 py-3 rounded-md bg-[#08CB00] text-white font-medium hover:bg-[#078c02]/90 transition">
                                 Свяжитесь
                             </button>
-                            <button className="px-6 py-3 rounded-md bg-[#162C43] text-white font-medium hover:bg-[#1598A8]/90 transition">
+                            <button className="px-6 py-3 rounded-md bg-[#08CB00] text-white font-medium hover:bg-[#078c02]/90 transition">
                                 Заказать
                             </button>
                         </div>

@@ -73,7 +73,7 @@ const OurProjects = ({dict,lang}:OurProjectProps) => {
                                 {item.title}
                             </h3>
                             <a href={item.link} className={`
-                            inline-flex h-[40px] items-center justify-center bg-[${item.bg}] hover:bg-[#1598A8] text-white font-manrope font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer`}>{dict.btn}</a>
+                            inline-flex h-[40px] items-center justify-center bg-[${item.bg}] hover:bg-[#078c02] text-white font-manrope font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer`}>{dict.btn}</a>
                         </div>
                     </motion.div>
                 ))}

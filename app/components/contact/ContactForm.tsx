@@ -100,10 +100,10 @@ const ContactForm = ({dict}:ContactFormProps) => {
                             {dict.text}
                         </p>
 
-                        <div className="space-y-6 bg-[#DAD3C8] p-5 rounded-2xl">
+                        <div className="space-y-6 bg-[#0F2B46] p-5 rounded-2xl">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
                                 <div>
-                                    <label className="block text-sm font-semibold text-gray-700 mb-2 tracking-wide">
+                                    <label className="block text-sm font-semibold text-white mb-2 tracking-wide">
                                         {dict.name}
                                     </label>
                                     <input
@@ -117,7 +117,7 @@ const ContactForm = ({dict}:ContactFormProps) => {
                                 </div>
 
                                 <div>
-                                    <label className="block text-sm font-semibold text-gray-700 mb-2 tracking-wide">
+                                    <label className="block text-sm font-semibold text-white mb-2 tracking-wide">
                                         {dict.phone}
                                     </label>
                                     <input
@@ -132,7 +132,7 @@ const ContactForm = ({dict}:ContactFormProps) => {
                             </div>
 
                             <div>
-                                <label className="block text-sm font-semibold text-gray-700 mb-2 tracking-wide">
+                                <label className="block text-sm font-semibold text-white mb-2 tracking-wide">
                                     {dict.email}
                                 </label>
                                 <input
@@ -146,7 +146,7 @@ const ContactForm = ({dict}:ContactFormProps) => {
                             </div>
 
                             <div>
-                                <label className="block text-sm font-semibold text-gray-700 mb-2 tracking-wide">
+                                <label className="block text-sm font-semibold text-white mb-2 tracking-wide">
                                     {dict.msg}
                                 </label>
                                 <textarea
@@ -169,17 +169,17 @@ const ContactForm = ({dict}:ContactFormProps) => {
 
                         {/* Social Icons */}
                         <div className="flex gap-4 mt-8">
-                            <a href="#" className="w-12 h-12 hover:translate-y-[5px] bg-[#6b6b6b] hover:bg-[#c9a961] rounded-lg flex items-center justify-center transition duration-500">
+                            <a href="#" className="w-12 h-12 hover:translate-y-[5px] bg-[#08CB00] hover:bg-[#0F2B46] rounded-lg flex items-center justify-center transition duration-500">
                                 <Facebook size={20} className="text-white" />
                             </a>
-                            <a href="#" className="w-12 h-12 bg-[#6b6b6b] hover:translate-y-[5px] hover:bg-[#c9a961] rounded-lg flex items-center justify-center transition duration-500">
+                            <a href="#" className="w-12 h-12 bg-[#08CB00] hover:translate-y-[5px] hover:bg-[#0F2B46] rounded-lg flex items-center justify-center transition duration-500">
                                 <Instagram size={20} className="text-white" />
                             </a>
-                            <a href="#" className="w-12 h-12 bg-[#6b6b6b] hover:translate-y-[5px] hover:bg-[#c9a961] rounded-lg flex items-center justify-center transition duration-500">
+                            <a href="#" className="w-12 h-12 bg-[#08CB00] hover:translate-y-[5px] hover:bg-[#0F2B46] rounded-lg flex items-center justify-center transition duration-500">
                                 <Youtube size={20} className="text-white" />
                             </a>
-                            <a href="#" className="w-12 h-12 bg-[#6b6b6b] hover:translate-y-[5px] hover:bg-[#c9a961] rounded-lg flex items-center justify-center transition duration-500">
-                                <Linkedin size={20} className="text-white" />
+                            <a href="#" className="w-12 h-12 bg-[#08CB00] hover:translate-y-[5px] hover:bg-[#0F2B46] rounded-lg flex items-center justify-center transition duration-500">
+                                    <Linkedin size={20} className="text-white" />
                             </a>
                         </div>
                     </div>

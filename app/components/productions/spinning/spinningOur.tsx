@@ -24,21 +24,13 @@ const SpinningOur = () => {
                 </div>
                 <div className="w-full mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {imageData.map((it, i) => (
-                        <div key={i} className="relative rounded-sm  bg-white flex flex-col  border-b-[#162C43] border-b-5">
-                            {/* IMAGE */}
-                            <div className="h-[260px] overflow-hidden rounded-xl">
-                                <Image
-                                    src={it}
-                                    alt="card"
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
-
-                            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2">
-                                <div className="w-16 h-6 bg-[#162C43] rounded-full shadow-sm"></div>
-                            </div>
+                        <div key={i} className="h-[260px] overflow-hidden rounded-xl shadow-2xl shadow-black/20">
+                            <Image
+                                src={it}
+                                alt="card"
+                                className="w-full h-full object-cover"
+                            />
                         </div>
-
                     ))}
                 </div>
             </div>

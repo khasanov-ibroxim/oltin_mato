@@ -32,10 +32,10 @@ const HowItWorks = ({dict}:HowItWorksProps) => {
                 </h2>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div className="flex flex-wrap justify-center gap-5">
                 {contentWorks.map((item, index) => (
-                    <div key={index} className="w-full rounded-3xl py-5 px-4  flex flex-col items-center text-center text-white gap-4">
-                      <Image src={item} alt={"sadasd"}  className={"object-cover"}/>
+                    <div key={index} className="w-[calc(50%-10px)] md:w-[calc(25%-15px)] rounded-3xl py-5 px-4 flex flex-col items-center text-center gap-4">
+                        <Image src={item} alt={"partner"} className={"object-cover"} />
                     </div>
                 ))}
             </div>

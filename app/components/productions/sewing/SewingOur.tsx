@@ -149,7 +149,7 @@ const SewingOur = () => {
                         {looped.map((img, i) => (
                             <div
                                 key={i}
-                                className="relative flex-shrink-0 rounded-xl overflow-hidden shadow-xl"
+                                className="relative flex-shrink-0 rounded-xl overflow-hidden shadow-xl shadow-black/20"
                                 style={{ width: `${CARD_WIDTH}px`, height: "380px" }}
                             >
                                 <Image

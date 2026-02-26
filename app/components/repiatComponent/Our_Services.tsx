@@ -95,8 +95,8 @@ const OurServices = ({dict, type_component}: OurServicesProps) => {
                                 px-6 py-3 rounded-lg font-manrope font-semibold text-sm md:text-base
                                 transition-all duration-300 whitespace-nowrap cursor-pointer
                                 ${activeService === service.id
-                                    ? 'bg-[#162C43] text-white shadow-lg'
-                                    : 'bg-white text-[#222222] hover:text-white hover:bg-[#1FB6C9]'
+                                    ? 'bg-[#08CB00] text-white shadow-lg'
+                                    : 'bg-white text-[#222222] hover:text-white hover:bg-[#08CB00]'
                                 }
                             `}
                             >
@@ -106,26 +106,26 @@ const OurServices = ({dict, type_component}: OurServicesProps) => {
                     </div>
 
                     {/* Globe Display */}
-                    <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] rounded-3xl overflow-hidden shadow-2xl bg-[#151515]">
+                    <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] rounded-3xl  ">
                         <Globe
                             activeRegion={activeService}
                             activeCountries={servicesGlobe[activeService].countries || []}
                         />
 
                         {/* Overlay with region info */}
-                        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 sm:p-6 md:p-8">
+                        <div className="absolute bottom-[-50px] left-0 right-0  p-4 sm:p-6 md:p-8">
                             <div className="flex items-center gap-3 sm:gap-4">
-                                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl bg-[#162C43] flex items-center justify-center flex-shrink-0">
+                                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl bg-[#08CB00]  flex items-center justify-center flex-shrink-0">
                                     {React.createElement(servicesGlobe[activeService].icon, {
-                                        className: "w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white",
+                                        className: "w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-[#162C43]",
                                         strokeWidth: 1.5
                                     })}
                                 </div>
                                 <div>
-                                    <h3 className="font-dm font-bold text-xl sm:text-2xl md:text-3xl text-white mb-1 sm:mb-2">
+                                    <h3 className="font-dm font-bold text-xl sm:text-2xl md:text-3xl text-[#0E1E2F] mb-1 sm:mb-2">
                                         {servicesGlobe[activeService].title}
                                     </h3>
-                                    <p className="font-manrope text-white/80 text-xs sm:text-sm md:text-base">
+                                    <p className="font-manrope text-[#5C6B7A] text-xs sm:text-sm md:text-base">
                                         {servicesGlobe[activeService].description}
                                     </p>
                                 </div>
