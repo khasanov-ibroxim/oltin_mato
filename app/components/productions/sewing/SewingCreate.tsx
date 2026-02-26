@@ -31,7 +31,7 @@ const SewingCreate = () => {
 
                 {/* Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                    <a className="bg-[#162C43] cursor-pointer hover:bg-[#162C43]/90 text-white px-6 py-3 rounded shadow">
+                    <a className="bg-[#162C43] cursor-pointer hover:bg-[#1598A8]/90 text-white px-6 py-3 rounded shadow">
                         Свяжитесь
                     </a>
                     <a className="bg-[#fff] cursor-pointer hover:bg-[#fff]/90 text-black px-6 py-3 rounded shadow">

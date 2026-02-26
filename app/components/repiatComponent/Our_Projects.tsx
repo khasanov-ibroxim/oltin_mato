@@ -26,9 +26,9 @@ interface IContent {
 
 const OurProjects = ({dict,lang}:OurProjectProps) => {
     const content: IContent[] = [
-        { title: dict.i_1.title, year: 2022, img: our1 , bg:"#932c4d" , link:`${lang}/Spinning`},
-        { title: dict.i_2.title, year: 2023, img: our2 , bg: "#932c4d" , link: `${lang}/Dyeing`},
-        { title: dict.i_3.title, year: 2024, img: our3 , bg: "#932c4d" , link: `${lang}/Sewing`},
+        { title: dict.i_1.title, year: 2022, img: our1 , bg:"#08CB00" , link:`${lang}/Spinning`},
+        { title: dict.i_2.title, year: 2023, img: our2 , bg: "#08CB00" , link: `${lang}/Dyeing`},
+        { title: dict.i_3.title, year: 2024, img: our3 , bg: "#08CB00" , link: `${lang}/Sewing`},
     ];
     const fadeInUp: Variants = {
         hidden: { opacity: 0, y: 30 },
@@ -39,7 +39,7 @@ const OurProjects = ({dict,lang}:OurProjectProps) => {
         }
     };
     return (
-        <section className="container py-16" id={"project"}>
+        <section className="container py-16 bg-[#F4F7FA]" id={"project"}>
             {/* Title */}
             <div className="w-full flex flex-col items-center text-center gap-4 mb-12">
                 <TitleUI text={dict.title} />
@@ -57,7 +57,7 @@ const OurProjects = ({dict,lang}:OurProjectProps) => {
                         viewport={{ once: true, amount: 0.3 }}
                         variants={fadeInUp}
                         key={index}
-                        className="group overflow-hidden rounded-2xl"
+                        className="group bg-white shadow-lg shadow-black/20 overflow-hidden rounded-2xl"
                     >
                         <div className="relative w-full h-[400px]">
                             <Image
@@ -73,7 +73,7 @@ const OurProjects = ({dict,lang}:OurProjectProps) => {
                                 {item.title}
                             </h3>
                             <a href={item.link} className={`
-                            inline-flex h-[40px] items-center justify-center bg-[${item.bg}] hover:bg-[#162C43] text-white font-manrope font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer`}>{dict.btn}</a>
+                            inline-flex h-[40px] items-center justify-center bg-[${item.bg}] hover:bg-[#1598A8] text-white font-manrope font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer`}>{dict.btn}</a>
                         </div>
                     </motion.div>
                 ))}

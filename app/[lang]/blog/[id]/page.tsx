@@ -102,13 +102,13 @@ export default async function BlogDetail({ params }: BlogDetailProps) {
                                     Share:
                                 </span>
                                 <div className="flex gap-2">
-                                    <Link href="#" className="w-8 h-8 rounded bg-[#5A5A5A] hover:bg-[#162C43] flex items-center justify-center transition">
+                                    <Link href="#" className="w-8 h-8 rounded bg-[#5A5A5A] hover:bg-[#1598A8] flex items-center justify-center transition">
                                         <Facebook size={16} className="text-white" />
                                     </Link>
-                                    <Link href="#" className="w-8 h-8 rounded bg-[#5A5A5A] hover:bg-[#162C43] flex items-center justify-center transition">
+                                    <Link href="#" className="w-8 h-8 rounded bg-[#5A5A5A] hover:bg-[#1598A8] flex items-center justify-center transition">
                                         <Twitter size={16} className="text-white" />
                                     </Link>
-                                    <Link href="#" className="w-8 h-8 rounded bg-[#5A5A5A] hover:bg-[#162C43] flex items-center justify-center transition">
+                                    <Link href="#" className="w-8 h-8 rounded bg-[#5A5A5A] hover:bg-[#1598A8] flex items-center justify-center transition">
                                         <Linkedin size={16} className="text-white" />
                                     </Link>
                                 </div>

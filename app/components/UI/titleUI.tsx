@@ -16,7 +16,7 @@ const TitleUi = ({text, classNameGroup = "" , classNameText=""}: IProps) => {
                 <div className="w-1 h-7 bg-[#162C43]"></div>
             </div>
 
-            <h3 className={`${classNameText ? classNameText : "text-black"}  font-manrope font-bold text-sm md:text-base tracking-[2px] uppercase`}>
+            <h3 className={`${classNameText ? classNameText : "text-[#0E1E2F]"}  font-manrope font-bold text-sm md:text-base tracking-[2px] uppercase`}>
                 {text}
             </h3>
         </div>

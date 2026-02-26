@@ -22,7 +22,7 @@ const Footer = ({dict , lang}: FooterProps) => {
                     <ul className="space-y-3 font-manrope text-[18px]">
                         {dict.item_1.list.map((item: any, index: number) => (
                             <li key={index}>
-                                <a href={`${lang}${item.link}`} className="hover:text-[#932C4D] transition">{item.text}</a>
+                                <a href={`${lang}${item.link}`} className="hover:text-[#1FB6C9] transition">{item.text}</a>
                             </li>
                         ))}
                     </ul>
@@ -34,7 +34,7 @@ const Footer = ({dict , lang}: FooterProps) => {
                     <ul className="space-y-3 font-manrope text-[18px]">
                         {dict.item_2.list.map((item: any, index: number) => (
                             <li key={index}>
-                                <a href={`${lang}${item.link}`} className="hover:text-[#932C4D] transition">{item.text}</a>
+                                <a href={`${lang}${item.link}`} className="hover:text-[#1FB6C9] transition">{item.text}</a>
                             </li>
                         ))}
                     </ul>
@@ -47,13 +47,13 @@ const Footer = ({dict , lang}: FooterProps) => {
                         <div className="flex items-center gap-3">
                             <span className="text-[#fff]"><PhoneCall/></span>
                             <div className="flex flex-col">
-                                {dict.item_3.tel.map((item: string, index: number) => (<a href={`tel:${item}`} className="hover:text-[#932C4D] transition" key={index}>{item}</a>))}
+                                {dict.item_3.tel.map((item: string, index: number) => (<a href={`tel:${item}`} className="hover:text-[#1FB6C9] transition" key={index}>{item}</a>))}
                             </div>
                         </div>
                         <div className="flex items-center gap-3">
                             <span className="text-[#fff]"><Mail/></span>
                             <div className="flex flex-col">
-                                {dict.item_3.mail.map((item: string, index: number) => (<a href={`mailto:${item}`} className="hover:text-[#932C4D] transition" key={index}>{item}</a>))}
+                                {dict.item_3.mail.map((item: string, index: number) => (<a href={`mailto:${item}`} className="hover:text-[#1FB6C9] transition" key={index}>{item}</a>))}
                             </div>
                         </div>
                     </div>

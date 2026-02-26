@@ -153,7 +153,7 @@ const ModernSpinning = () => {
                         </div>
                     </div>
                     <div className={"flex items-center justify-center flex-col md:flex-row  w-full  gap-3 mt-10"}>
-                        <Link href={"#"} className={"w-1/2 bg-[#932C4D] hover:bg-[#932C4D]/90 text-center py-2 text-white font-bold rounded-sm"}>
+                        <Link href={"#"} className={"w-1/2 bg-[#1FB6C9] hover:bg-[#1FB6C9]/90 text-center py-2 text-white font-bold rounded-sm"}>
                             Свяжитесь
                         </Link>
                         <Link href={"#"} className={"w-1/2 bg-gray-100 hover:bg-gray-100/90 text-black  text-center py-2 rounded-sm"}>

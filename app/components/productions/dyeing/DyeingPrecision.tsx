@@ -168,10 +168,10 @@ const DyeingPrecision = () => {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                            <button className="px-6 py-3 rounded-md bg-[#162C43] text-white font-medium hover:bg-[#162C43]/90 transition">
+                            <button className="px-6 py-3 rounded-md bg-[#162C43] text-white font-medium hover:bg-[#1598A8]/90 transition">
                                 Свяжитесь
                             </button>
-                            <button className="px-6 py-3 rounded-md bg-[#162C43] text-white font-medium hover:bg-[#162C43]/90 transition">
+                            <button className="px-6 py-3 rounded-md bg-[#162C43] text-white font-medium hover:bg-[#1598A8]/90 transition">
                                 Заказать
                             </button>
                         </div>

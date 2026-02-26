@@ -96,7 +96,7 @@ const OurServices = ({dict, type_component}: OurServicesProps) => {
                                 transition-all duration-300 whitespace-nowrap cursor-pointer
                                 ${activeService === service.id
                                     ? 'bg-[#162C43] text-white shadow-lg'
-                                    : 'bg-white text-[#222222] hover:text-white hover:bg-[#932c4d]'
+                                    : 'bg-white text-[#222222] hover:text-white hover:bg-[#1FB6C9]'
                                 }
                             `}
                             >
@@ -178,7 +178,7 @@ const OurServices = ({dict, type_component}: OurServicesProps) => {
                                 transition-all duration-300 whitespace-nowrap cursor-pointer
                                 ${activeService === service.id
                                     ? 'bg-[#222222] text-white shadow-lg'
-                                    : 'bg-white text-[#222222] hover:bg-[#162C43]'
+                                    : 'bg-white text-[#222222] hover:bg-[#1598A8]'
                                 }
                             `}
                             >

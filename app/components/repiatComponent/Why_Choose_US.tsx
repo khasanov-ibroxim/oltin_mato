@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion, Variants } from 'framer-motion';
-import { Scissors, Sparkles, Ruler, Layers, Users } from 'lucide-react';
+import { ShieldCheck , Sparkles, Ruler, Layers, Users } from 'lucide-react';
 import TitleUI from "@/app/components/UI/titleUI";
 import centerImg from "@/assets/component/Why_Choose_US/why_choose_us.jpg"
 import centerImgAbout from "@/assets/component/Why_Choose_US/whyAbout.jpg"
@@ -57,7 +57,7 @@ const WhyChooseUs = ({ dict , page }: WhyChooseUsProps) => {
 
     const features = [
         {
-            icon: Scissors,
+            icon: ShieldCheck,
             title: dict.features.i_1.title,
             description: dict.features.i_1.desc
         },
@@ -92,7 +92,7 @@ const WhyChooseUs = ({ dict , page }: WhyChooseUsProps) => {
     ];
 
     return (
-        <div className="w-full py-16 md:py-24 px-6 sm:px-12 lg:px-24 bg-[#162C43]">
+        <div className="w-full py-16 md:py-24 px-6 sm:px-12 lg:px-24 bg-[#0F2B46]">
             <div className="max-w-[1600px] mx-auto">
                 {/* Header */}
                 <motion.div
@@ -129,7 +129,7 @@ const WhyChooseUs = ({ dict , page }: WhyChooseUsProps) => {
                             >
                                 <div className="flex items-start gap-4">
                                     <div className="flex-shrink-0">
-                                        <div className="w-12 h-12 rounded-lg bg-[#162C43]/10 flex items-center justify-center">
+                                        <div className="w-12 h-12 rounded-lg bg-[#08CB00]/50 flex items-center justify-center">
                                             <feature.icon className="w-6 h-6 text-[#162C43]" />
                                         </div>
                                     </div>
@@ -152,13 +152,13 @@ const WhyChooseUs = ({ dict , page }: WhyChooseUsProps) => {
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.3 }}
                         variants={imageVariant}
-                        className="lg:col-span-4 relative h-[400px] sm:h-[500px] lg:h-full rounded-3xl overflow-hidden shadow-xl"
+                        className="lg:col-span-4 shadow-2xl shadow-white/10 relative h-[400px] sm:h-[500px] lg:h-full rounded-3xl overflow-hidden shadow-xl"
                     >
                         <Image
                             src={page==="home"?centerImg:centerImgAbout}
                             alt="Textile worker"
                             fill
-                            className="object-cover"
+                            className="object-cover   "
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                     </motion.div>
@@ -179,7 +179,7 @@ const WhyChooseUs = ({ dict , page }: WhyChooseUsProps) => {
                             >
                                 <div className="flex items-start gap-4">
                                     <div className="flex-shrink-0">
-                                        <div className="w-12 h-12 rounded-lg bg-[#162C43]/10 flex items-center justify-center">
+                                        <div className="w-12 h-12 rounded-lg bg-[#08CB00]/50 flex items-center justify-center">
                                             <feature.icon className="w-6 h-6 text-[#162C43]" />
                                         </div>
                                     </div>

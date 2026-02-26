@@ -56,7 +56,7 @@ export default function HomeHeader({dict}: HomeHeaderProps) {
     return (
         <div className="w-full h-[220vh] relative">
             {/* Overlay */}
-            <div className="bg-black opacity-40 absolute z-10 top-0 left-0 w-full h-full"></div>
+            <div className="bg-[#0F2B46] opacity-40 absolute z-10 top-0 left-0 w-full h-full"></div>
 
             {/* Background Image */}
             <Image

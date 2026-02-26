@@ -92,7 +92,7 @@ const Questions = ({dict}: QuestionsProps) => {
                             transition={{ delay: index * 0.1 }}
                         >
                             <div className={`rounded-2xl overflow-hidden transition-colors duration-500 ${
-                                openLeftIndex === index ? 'bg-[#932c4d]' : `bg-[${faq.bg}]`
+                                openLeftIndex === index ? 'bg-[#08CB00]' : `bg-[${faq.bg}]`
                             }`}>
                                 <button
                                     onClick={() => toggleFAQ(index, 'left')}
@@ -168,7 +168,7 @@ const Questions = ({dict}: QuestionsProps) => {
                             transition={{ delay: index * 0.1 }}
                         >
                             <div className={`rounded-2xl  overflow-hidden transition-colors duration-500 ${
-                                openRightIndex === index ? 'bg-[#932c4d]' : `bg-[${faq.bg}]`
+                                openRightIndex === index ? 'bg-[#08CB00]' : `bg-[${faq.bg}]`
                             }`}>
                                 <button
                                     onClick={() => toggleFAQ(index, 'right')}

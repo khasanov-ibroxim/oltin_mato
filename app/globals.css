@@ -49,6 +49,7 @@
   }
 }
 
+
 /* ✅ To'g'ri font class-lari */
 .font-dm {
   font-family: var(--font-playfair-pisplay);
@@ -63,7 +64,7 @@
 }
 
 .index__btn_colors{
-  background: #932c4d;
+  background: #08CB00;
   color: #fff;
   font-weight: 600;
   font-size: 16px;

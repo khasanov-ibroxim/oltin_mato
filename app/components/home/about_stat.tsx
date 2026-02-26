@@ -189,7 +189,7 @@ const AboutStat = ({dict}: any) => {
                             >
                                 <Link
                                     href="/contact"
-                                    className="inline-flex items-center justify-center bg-[#932c4d] hover:bg-[#222222] text-white font-manrope font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+                                    className="inline-flex items-center justify-center bg-[#1FB6C9] hover:bg-[#222222] text-white font-manrope font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
                                 >
                                     {dict.btn}
                                 </Link>

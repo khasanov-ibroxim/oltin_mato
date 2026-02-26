@@ -66,7 +66,7 @@ const color = {
     main: '#2a2a2a',
     sub: '#1a1a1a',
     line: '#44C0E3',
-    active: '#932c4d',
+    active: '#1FB6C9',
     text: '#fff',
     transparent: '#151515',
 }

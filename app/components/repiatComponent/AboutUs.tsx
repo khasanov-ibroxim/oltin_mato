@@ -69,7 +69,7 @@ const AboutUs = ({dict , page}: AboutProps) => {
                 >
                     <TitleUI text={dict?.subtitle} />
 
-                    <h1 className="font-dm mt-3 font-bold text-[25px] sm:text-[40px] md:text-[50px] lg:text-[57px] lg:leading-[57px] leading-[45px] text-[#222222] w-full">
+                    <h1 className="font-dm mt-3 font-bold text-[25px] sm:text-[40px] md:text-[50px] lg:text-[57px] lg:leading-[57px] leading-[45px] text-[#0E1E2F] w-full">
                         {dict?.title}
                     </h1>
                 </motion.div>
@@ -85,7 +85,7 @@ const AboutUs = ({dict , page}: AboutProps) => {
                     {/* Image 1 */}
                     <motion.div
                         variants={imageVariant}
-                        className="relative rotate-[-5deg] h-[300px] sm:h-[350px] rounded-2xl overflow-hidden group"
+                        className="relative rotate-[-5deg] shadow-lg shadow-black/20 h-[300px] sm:h-[350px] rounded-2xl overflow-hidden group"
                     >
                         <Image
                             src={page==="home" ? about_1 : about_about_1}
@@ -98,7 +98,7 @@ const AboutUs = ({dict , page}: AboutProps) => {
                     {/* Image 2 */}
                     <motion.div
                         variants={imageVariant}
-                        className="relative h-[300px] rotate-[5deg] sm:h-[350px] rounded-2xl overflow-hidden group"
+                        className="relative h-[300px] shadow-lg shadow-black/20 rotate-[5deg] sm:h-[350px] rounded-2xl overflow-hidden group"
                     >
                         <Image
                             src={page==="home" ? about_2 : about_about_2}
@@ -111,26 +111,26 @@ const AboutUs = ({dict , page}: AboutProps) => {
                     {/* Image 3 */}
                     <motion.div
                         variants={imageVariant}
-                        className="relative rotate-[-5deg] h-[300px] sm:h-[350px] rounded-2xl overflow-hidden group"
+                        className="relative rotate-[-5deg] shadow-lg shadow-black/20 h-[300px] sm:h-[350px] rounded-2xl overflow-hidden group"
                     >
                         <Image
                             src={page==="home" ? about_3 : about_about_3}
                             alt="Textile workers"
                             fill
-                            className="object-cover transition-transform duration-500 group-hover:scale-110"
+                            className="object-cover shadow-lg shadow-black/20 transition-transform duration-500 group-hover:scale-110"
                         />
                     </motion.div>
 
                     {/* Image 4 */}
                     <motion.div
                         variants={imageVariant}
-                        className="relative rotate-[5deg] h-[300px] sm:h-[350px] rounded-2xl overflow-hidden group"
+                        className="relative rotate-[5deg] shadow-lg shadow-black/20 h-[300px] sm:h-[350px] rounded-2xl overflow-hidden group"
                     >
                         <Image
                             src={page==="home" ? about_4 : about_about_4}
-                            alt="Fashion designer with fabric"
+                            alt="Fashion shadow-md designer with fabric"
                             fill
-                            className="object-cover  transition-transform duration-500 group-hover:scale-110"
+                            className="object-cover shadow-lg shadow-black/20  transition-transform duration-500 group-hover:scale-110"
                         />
                     </motion.div>
                 </motion.div>
