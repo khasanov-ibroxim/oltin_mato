@@ -39,7 +39,7 @@ const OurProjects = ({dict,lang}:OurProjectProps) => {
         }
     };
     return (
-        <section className="container py-16 bg-[#F4F7FA]" id={"project"}>
+        <section className="container pt-24 pb-16 bg-[#F4F7FA]" id={"project"}>
             {/* Title */}
             <div className="w-full flex flex-col items-center text-center gap-4 mb-12">
                 <TitleUI text={dict.title} />

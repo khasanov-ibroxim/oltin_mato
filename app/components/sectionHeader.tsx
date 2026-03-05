@@ -19,10 +19,7 @@ const SectionHeader = ({title, linkName, badge, titleImage}: SectionHeaderProps)
                         <div className="flex w-full justify-between items-center">
                             <h1 className="text-white text-6xl md:text-7xl font-bold font-dm">{title}</h1>
                             <div className="text-white text-lg font-manrope">
-                                <Link href={"/"}
-                                      className="hover:text-[#08CB00] transition cursor-pointer uppercase">{badge}</Link>
-                                <span className="text-[#08CB00] mx-3">✕</span>
-                                <span className="text-[#08CB00] uppercase">{linkName}</span>
+
                             </div>
                         </div>
                     </div>

@@ -113,7 +113,7 @@ const OurServices = ({dict, type_component}: OurServicesProps) => {
                         />
 
                         {/* Overlay with region info */}
-                        <div className="absolute bottom-[-50px] left-0 right-0  p-4 sm:p-6 md:p-8">
+                        <div className="absolute bottom-[-150px] left-0 right-0  p-4 sm:p-6 md:p-8">
                             <div className="flex items-center gap-3 sm:gap-4">
                                 <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl bg-[#08CB00]  flex items-center justify-center flex-shrink-0">
                                     {React.createElement(servicesGlobe[activeService].icon, {

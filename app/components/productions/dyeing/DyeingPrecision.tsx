@@ -58,7 +58,6 @@ const DyeingPrecision = () => {
         <>
             <div className="relative w-full min-h-[520px] flex items-center">
 
-                {/* Background image */}
                 <Image
                     src={top_img}
                     alt="factory"
@@ -67,11 +66,10 @@ const DyeingPrecision = () => {
                     priority
                 />
 
-                {/* Gradient overlay (RIGHT → LEFT) */}
                 <div
                     className="
       absolute inset-0 z-10
-      bg-gradient-to-l
+      bg-gradient-to-r
       from-[#162C43]/90
       via-[#162C43]/80
       to-transparent
@@ -79,7 +77,7 @@ const DyeingPrecision = () => {
                 />
 
                 {/* Content */}
-                <div className="relative z-20 w-full lg:w-1/2 ml-auto p-6 md:p-10 text-white">
+                <div className="relative z-20 w-full lg:w-1/2 p-6 md:p-10 text-white">
                     <div className="container">
                         <h1 className="text-4xl font-bold mb-3 font-dm">
                             Передовые технологии окрашивания
@@ -119,7 +117,7 @@ const DyeingPrecision = () => {
                 <div
                     className="
       absolute inset-0 z-10
-      bg-gradient-to-r
+      bg-gradient-to-l
       from-[#162C43]/90
       via-[#162C43]/80
       to-transparent
@@ -127,7 +125,7 @@ const DyeingPrecision = () => {
                 />
 
                 {/* Content */}
-                <div className="relative z-20 w-full lg:w-1/2 p-6 md:p-10 text-white">
+                <div className="relative z-20 w-full ml-auto lg:w-1/2 p-6 md:p-10 text-white">
                     <div className="container">
                         <h1 className="text-4xl font-bold mb-3 font-dm">
                             Передовое оборудование наших заводов
