@@ -13,6 +13,7 @@ interface FooterProps {
 }
 
 const Footer = ({dict , lang}: FooterProps) => {
+    const getPath = (path: string) => `/${lang}${path === "/" ? "" : path}`;
     return (
         <footer className="bg-[#162C43] text-white py-12 px-6">
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -22,7 +23,7 @@ const Footer = ({dict , lang}: FooterProps) => {
                     <ul className="space-y-3 font-manrope text-[18px]">
                         {dict.item_1.list.map((item: any, index: number) => (
                             <li key={index}>
-                                <a href={`${lang}${item.link}`} className="hover:text-[#1FB6C9] transition">{item.text}</a>
+                                <a href={getPath(item.link)} className="hover:text-[#1FB6C9] transition">{item.text}</a>
                             </li>
                         ))}
                     </ul>
@@ -34,7 +35,7 @@ const Footer = ({dict , lang}: FooterProps) => {
                     <ul className="space-y-3 font-manrope text-[18px]">
                         {dict.item_2.list.map((item: any, index: number) => (
                             <li key={index}>
-                                <a href={`${lang}${item.link}`} className="hover:text-[#1FB6C9] transition">{item.text}</a>
+                                <a href={getPath(item.link)} className="hover:text-[#1FB6C9] transition">{item.text}</a>
                             </li>
                         ))}
                     </ul>
