@@ -24,7 +24,7 @@ export function middleware(request: NextRequest) {
   }
 
   // ✅ FIXED: Always redirect to Russian (default)
-  const defaultLocale = 'en';
+  const defaultLocale = 'ru';
 
   // Redirect root to Russian
   if (pathname === '/') {
