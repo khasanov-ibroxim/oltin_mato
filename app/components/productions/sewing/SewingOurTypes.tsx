@@ -25,7 +25,7 @@ const SewingOurTypes = () => {
         {
             image: card_4,
             h:"Гладильная",
-            p:"Идеальная обработка и финишная отделка тканей"
+            p:"Финишная обработка и придание изделиям безупречного внешнего вида"
         }
     ]
     return (
@@ -33,9 +33,9 @@ const SewingOurTypes = () => {
             <div className="container py-14">
                 <div className="flex flex-col items-center justify-center">
                     <div className="relative w-full max-w-4xl mb-4 flex items-center justify-center">
-                        <h2 className="relative inline-block font-bold  px-4 text-xl md:text-4xl  text-white font-dm">Дизайнерский отдел</h2>
+                        <h2 className="relative inline-block font-bold  px-4 text-xl md:text-4xl  text-white font-dm">Технология создания</h2>
                     </div>
-                    <h3 className="text-lg md:text-2xl font-thin text-white mb-5">цвет, который сохраняется надолго</h3>
+                    <h3 className="text-lg md:text-2xl font-thin text-white mb-5">Современные технологии и опыт мастеров формируют высокое качество продукции.</h3>
                 </div>
                 <div className="w-full mt-10 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     {contents.map((it, i) => (

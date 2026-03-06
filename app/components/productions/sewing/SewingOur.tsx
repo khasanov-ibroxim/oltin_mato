@@ -107,10 +107,10 @@ const SewingOur = () => {
                 <div className="relative w-full max-w-4xl mb-4 flex items-center justify-center">
                     <div className="absolute inset-y-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent" />
                     <h2 className="relative inline-block bg-white px-4 text-xl md:text-3xl font-medium text-gray-800 font-dm">
-                        Our Production Process
+                        Производственный процесс
                     </h2>
                 </div>
-                <h3 className="text-lg md:text-2xl text-gray-700">цвет, который сохраняется надолго</h3>
+                <h3 className="text-lg md:text-2xl text-gray-700">От раскроя до готового изделия — каждый этап под контролем специалистов.</h3>
             </div>
 
             {/* Carousel wrapper */}
