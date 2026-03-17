@@ -54,7 +54,7 @@ export default function HomeHeader({dict}: HomeHeaderProps) {
     };
 
     return (
-        <div className="w-full h-[220vh] relative">
+        <div className="w-full h-[140vh] lg:h-[170vh] relative">
             {/* Overlay */}
             <div className="bg-[#0F2B46] opacity-40 absolute z-10 top-0 left-0 w-full h-full"></div>
 
@@ -71,7 +71,7 @@ export default function HomeHeader({dict}: HomeHeaderProps) {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
                 variants={childVariant}
-                className="relative text-center font-medium flex z-20 w-full h-screen items-center justify-center text-white font-dm
+                className="relative hidden lg:flex text-center font-medium  z-20 w-full h-screen items-center justify-center text-white font-dm
                text-[50px] sm:text-[100px] md:text-[120px] lg:text-[100px]"
             >
                 {title[0]} <br/> {title[1]}
@@ -79,7 +79,7 @@ export default function HomeHeader({dict}: HomeHeaderProps) {
 
             {/* Content Section */}
             <div
-                className="absolute px-6 sm:px-12 md:px-24 text-[rgb(249,249,248)] z-20 bottom-10 flex flex-col lg:flex-row justify-between items-start gap-10 w-full">
+                className="absolute px-6 sm:px-12 md:px-24 text-[rgb(249,249,248)] z-20 top-32 lg:bottom-10 lg:top-auto flex flex-col lg:flex-row justify-between items-start gap-10 w-full">
 
                 {/* Left Text - Slide from left with stagger */}
                 <motion.div
@@ -128,7 +128,7 @@ export default function HomeHeader({dict}: HomeHeaderProps) {
                     transition={{ type: "spring", stiffness: 300 }}
                     className="flex w-full flex-col lg:w-1/3 gap-2 rounded-2xl items-start justify-start h-full bg-[#162C43]/70"
                 >
-                    <div className="relative w-full pt-[56.25%]">
+                    <div className="relative w-full pt-[30%] lg:pt-[56%]">
                         <div className="">
                             <div
                                 className="absolute z-30 w-full h-full bg-black opacity-20 rounded-2xl top-0 left-0"></div>
