@@ -51,11 +51,11 @@ export const Navbar = ({ dict, lang }: NavbarProps) => {
     return (
         <>
 
-            <nav className="absolute top-0 left-0 z-30 w-full border-b py-3 border-white bg-transparent">
-                <div className="container mx-auto px-6 h-16 flex items-center justify-between">
+            <nav className="absolute top-0 h-[120px] left-0 z-30 w-full border-b py-3 border-white bg-transparent">
+                <div className="container mx-auto h-full px-6  flex items-center justify-between">
 
                     <Link href={`/${lang}`}>
-                        <Image src={logoFull} alt="Logo"  width={130} height={80}  />
+                        <Image src={logoFull} alt="Logo"  width={150} height={80}  />
                     </Link>
 
                     <div className="hidden md:flex items-center gap-6">
