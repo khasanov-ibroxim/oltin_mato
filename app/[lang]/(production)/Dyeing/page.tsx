@@ -1,20 +1,23 @@
 import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import bg from "@/assets/production/spinning/bakan_2.jpg";
-import card_1 from "@/assets/production/spinning/bakan_2.jpg";
 import DyeingHeader from "@/app/components/productions/dyeing/DyeingHeader";
 import DyeingOur from "@/app/components/productions/dyeing/DyeingOur";
 import DyeingPrecision from "@/app/components/productions/dyeing/DyeingPrecision";
+import {getDictionary} from "@/lib/dictionary";
+import {Locale} from "@/i18n-config";
 
-const PageDyeing = () => {
+interface AboutProps {
+    params: Promise<{ lang: Locale }>;
+}
+
+export default async function PageDyeing({params}: AboutProps) {
+    const {lang} = await params;
+    const dict = await getDictionary(lang);
     return (
         <>
-            <DyeingHeader/>
-            <DyeingOur/>
-            <DyeingPrecision/>
+            <DyeingHeader dict={dict.productions.dyeing}/>
+            <DyeingOur dict={dict.productions.dyeing}/>
+            <DyeingPrecision dict={dict.productions.dyeing}/>
         </>
     );
 };
 
-export default PageDyeing;

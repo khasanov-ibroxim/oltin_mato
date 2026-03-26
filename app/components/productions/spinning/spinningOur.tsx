@@ -4,13 +4,10 @@ import card_2 from "@/assets/production/spinning/DSC06349.jpg"
 import card_3 from "@/assets/production/spinning/DSC06317.jpg"
 import Image from "next/image";
 
-const SpinningOur = () => {
+const SpinningOur = ({ dict }: { dict: any }) => {
 
-    const imageData = [
-        card_1 ,
-        card_2 ,
-        card_3 ,
-    ]
+    const imageData = [card_1, card_2, card_3];
+
     return (
         <>
             <div className={"container py-20"}>
@@ -18,9 +15,9 @@ const SpinningOur = () => {
                     <div className="w-full text-center flex relative items-center justify-center">
                         <div
                             className="w-full h-px absolute bg-gradient-to-r from-transparent via-black to-transparent"></div>
-                        <div className="absolute bg-[#F9F9F8] px-2 text-2xl md:text-5xl font-medium">Производственный процесс</div>
+                        <div className="absolute bg-[#F9F9F8] px-2 text-2xl md:text-5xl font-medium">{dict.our.title}</div>
                     </div>
-                    <p className={"mt-8 text-base md:text-xl"}>От подготовки сырья до готовой пряжи — полный цикл на одной площадке</p>
+                    <p className={"mt-8 text-base md:text-xl"}>{dict.our.subtitle}</p>
                 </div>
                 <div className="w-full mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {imageData.map((it, i) => (

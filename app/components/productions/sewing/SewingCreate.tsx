@@ -1,8 +1,8 @@
 import React from 'react';
 import bg from "@/assets/production/sewing/DSC07429.jpg"
 import Image from "next/image";
-import icon1 from "@/assets/production/spinning/ball.png"
-const SewingCreate = () => {
+
+const SewingCreate = ({ dict }: { dict: any }) => {
     return (
         <section className="relative w-full h-[420px] md:h-[480px] overflow-hidden">
 
@@ -22,28 +22,25 @@ const SewingCreate = () => {
             <div className="relative z-20 h-full flex flex-col items-center justify-center px-4 text-center">
 
                 <h2 className="relative inline-block  px-4 text-3xl md:text-5xl font-dm font-medium text-white ">
-                    Мастерство в каждом стежке
+                    {dict.create.title}
                 </h2>
 
                 <h3 className="text-lg md:text-2xl text-white mb-6">
-                    современный швейный цех для идеального результата
+                    {dict.create.subtitle}
                 </h3>
 
                 {/* Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                     <a className="bg-[#08CB00] cursor-pointer hover:bg-[#078c02]/90 text-white px-6 py-3 rounded shadow">
-                        Свяжитесь
+                        {dict.create.btn_contact}
                     </a>
                     <a className="bg-[#fff] cursor-pointer hover:bg-[#fff]/90 text-black px-6 py-3 rounded shadow">
-                        Заказать
+                        {dict.create.btn_order}
                     </a>
                 </div>
 
-
-
             </div>
         </section>
-
     );
 };
 

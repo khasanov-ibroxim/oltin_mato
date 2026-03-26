@@ -5,37 +5,22 @@ import card_2 from "@/assets/production/sewing/DSC07626.jpg";
 import card_3 from "@/assets/production/sewing/DSC07409.jpg";
 import card_4 from "@/assets/production/sewing/DSC07484.jpg";
 
-const SewingOurTypes = () => {
+const SewingOurTypes = ({ dict }: { dict: any }) => {
     const contents = [
-        {
-            image: card_1,
-            h:"Дизайнерский отдел",
-            p:"Создание уникальных моделей и профессиональный контроль качества"
-        },
-        {
-            image: card_2,
-            h:"Раскройная",
-            p:"Точное и эффективное раскроивание полотна"
-        },
-        {
-            image: card_3,
-            h:"Швейный цех",
-            p:"Точная сборка и пошив готовых изделий"
-        },
-        {
-            image: card_4,
-            h:"Гладильная",
-            p:"Финишная обработка и придание изделиям безупречного внешнего вида"
-        }
-    ]
+        { image: card_1, h: dict.our_types.items.i_1.title, p: dict.our_types.items.i_1.desc },
+        { image: card_2, h: dict.our_types.items.i_2.title, p: dict.our_types.items.i_2.desc },
+        { image: card_3, h: dict.our_types.items.i_3.title, p: dict.our_types.items.i_3.desc },
+        { image: card_4, h: dict.our_types.items.i_4.title, p: dict.our_types.items.i_4.desc },
+    ];
+
     return (
         <div className={"w-full min-h-[300px] bg-gray-800 flex items-center justify-center"}>
             <div className="container py-14">
                 <div className="flex flex-col items-center justify-center">
                     <div className="relative w-full max-w-4xl mb-4 flex items-center justify-center">
-                        <h2 className="relative inline-block font-bold  px-4 text-xl md:text-4xl  text-white font-dm">Технология создания</h2>
+                        <h2 className="relative inline-block font-bold  px-4 text-xl md:text-4xl  text-white font-dm">{dict.our_types.title}</h2>
                     </div>
-                    <h3 className="text-lg md:text-2xl font-thin text-white mb-5">Современные технологии и опыт мастеров формируют высокое качество продукции.</h3>
+                    <h3 className="text-lg md:text-2xl font-thin text-white mb-5">{dict.our_types.subtitle}</h3>
                 </div>
                 <div className="w-full mt-10 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     {contents.map((it, i) => (
@@ -58,9 +43,7 @@ const SewingOurTypes = () => {
                                     {it.p}
                                 </p>
                             </div>
-
                         </div>
-
                     ))}
                 </div>
             </div>

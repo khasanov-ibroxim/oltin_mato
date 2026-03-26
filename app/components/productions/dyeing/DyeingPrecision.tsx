@@ -1,58 +1,25 @@
 import React from 'react';
 import Image from "next/image";
 import icon_1 from "@/assets/production/spinning/ball.png";
-import card_1 from "@/assets/production/spinning/bakan_2.jpg";
 import top_img from "@/assets/production/dyeing/IMG_9724.jpg"
 import bottom_img from "@/assets/production/dyeing/DSC07384.jpg"
-import footer_img from "@/assets/production/dyeing/DSC07394.jpg"
 import iso from "@/assets/production/dyeing/iso.png"
 
-const DyeingPrecision = () => {
+const DyeingPrecision = ({ dict }: { dict: any }) => {
 
     const top_array = [
-        {
-            icon: icon_1,
-            h:"Точный подбор цвета",
-            p:"Максимальная точность воспроизведения заданных оттенков."
-        },
-        {
-            icon: icon_1,
-            h:"Равномерное окрашивание",
-            p:"Стабильный цвет по всей длине и в каждой партии."
-        },
-        {
-            icon: icon_1,
-            h:"Современное оборудование",
-            p:"Новейшие линии для эффективного и контролируемого процесса."
-        },
-        {
-            icon: icon_1,
-            h:"Экологичный подход",
-            p:"Безопасные технологии и забота об окружающей среде."
-        }
-    ]
+        { icon: icon_1, h: dict.precision.top.features.i_1.title, p: dict.precision.top.features.i_1.desc },
+        { icon: icon_1, h: dict.precision.top.features.i_2.title, p: dict.precision.top.features.i_2.desc },
+        { icon: icon_1, h: dict.precision.top.features.i_3.title, p: dict.precision.top.features.i_3.desc },
+        { icon: icon_1, h: dict.precision.top.features.i_4.title, p: dict.precision.top.features.i_4.desc },
+    ];
+
     const bottom_array = [
-        {
-            icon: icon_1,
-            h:"Лаборатория и обработка полотна",
-            p:"контроль качества и разматывание полотна"
-        },
-        {
-            icon: icon_1,
-            h:"Крашение тканей ",
-            p:"равномерное окрашивание"
-        },
-        {
-            icon: icon_1,
-            h:"Отжим полотна",
-            p:"быстрая сушка"
-        },
-        {
-            icon: icon_1,
-            h:"Производительность",
-            p:"20 тонн ткани и 5 тонн нити в день"
-        }
-    ]
+        { icon: icon_1, h: dict.precision.bottom.features.i_1.title, p: dict.precision.bottom.features.i_1.desc },
+        { icon: icon_1, h: dict.precision.bottom.features.i_2.title, p: dict.precision.bottom.features.i_2.desc },
+        { icon: icon_1, h: dict.precision.bottom.features.i_3.title, p: dict.precision.bottom.features.i_3.desc },
+        { icon: icon_1, h: dict.precision.bottom.features.i_4.title, p: dict.precision.bottom.features.i_4.desc },
+    ];
 
     return (
         <>
@@ -80,16 +47,15 @@ const DyeingPrecision = () => {
                 <div className="relative z-20 w-full lg:w-1/2 p-6 md:p-10 text-white">
                     <div className="container">
                         <h1 className="text-4xl font-bold mb-3 font-dm">
-                            Передовые технологии окрашивания
+                            {dict.precision.top.title}
                         </h1>
                         <p className="mb-8">
-                            Современное оборудование и турецкие технологии обеспечивают точную цветопередачу, равномерное окрашивание и экологичную обработку пряжи.
+                            {dict.precision.top.subtitle}
                         </p>
 
                         <div className="grid grid-cols-2 gap-6">
                             {top_array.map((item, i) => (
                                 <div key={i} className="flex gap-4">
-
                                     <div>
                                         <h4 className="font-medium text-xl">{item.h}</h4>
                                         <p className=" opacity-80 text-base">{item.p}</p>
@@ -128,9 +94,9 @@ const DyeingPrecision = () => {
                 <div className="relative z-20 w-full ml-auto lg:w-1/2 p-6 md:p-10 text-white">
                     <div className="container">
                         <h1 className="text-4xl font-bold mb-3 font-dm">
-                            Передовое оборудование наших заводов
+                            {dict.precision.bottom.title}
                         </h1>
-                        <p className="mb-8">Эффективное производство тканей и нитей высокого качества</p>
+                        <p className="mb-8">{dict.precision.bottom.subtitle}</p>
 
                         <div className="grid grid-cols-2 gap-6">
                             {bottom_array.map((it, i) => (
@@ -150,7 +116,6 @@ const DyeingPrecision = () => {
 
             <div className="relative w-full min-h-[260px] flex items-center overflow-hidden pt-5">
 
-
                 {/* Soft overlay */}
                 <div className="absolute inset-0 bg-[#fff]/90 z-10" />
 
@@ -159,18 +124,18 @@ const DyeingPrecision = () => {
                     {/* LEFT CONTENT */}
                     <div className="max-w-xl text-center lg:text-left">
                         <h2 className="text-3xl md:text-4xl font-dm font-serif font-semibold text-[#111] mb-2">
-                            Высокие стандарты качества
+                            {dict.precision.quality.title}
                         </h2>
                         <p className="text-[#111] mb-6">
-                            Равномерный цвет и долговечность по международным нормам
+                            {dict.precision.quality.subtitle}
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                             <button className="px-6 py-3 rounded-md bg-[#08CB00] text-white font-medium hover:bg-[#078c02]/90 transition">
-                                Свяжитесь
+                                {dict.precision.quality.btn_contact}
                             </button>
                             <button className="px-6 py-3 rounded-md bg-[#08CB00] text-white font-medium hover:bg-[#078c02]/90 transition">
-                                Заказать
+                                {dict.precision.quality.btn_order}
                             </button>
                         </div>
                     </div>

@@ -7,15 +7,15 @@
       "hero_link": "Production",
       "links": [
         {
-          "name": "Spinning",
+          "name": "Spinning Mill",
           "link": "/Spinning"
         },
         {
-          "name": "Dyeing",
+          "name": "Dyeing Facility",
           "link": "/Dyeing"
         },
         {
-          "name": "Sewing",
+          "name": "Sewing Department",
           "link": "/Sewing"
         }
       ]
@@ -23,7 +23,7 @@
   },
   "footer": {
     "item_1": {
-      "title": "Меню",
+      "title": "Menu",
       "list": [
         {
           "link": "/",
@@ -31,7 +31,7 @@
         },
         {
           "link": "/about",
-          "text": "About"
+          "text": "About the Company"
         },
         {
           "link": "/contact",
@@ -40,215 +40,215 @@
       ]
     },
     "item_2": {
-      "title": "Производство",
+      "title": "Production",
       "list": [
         {
           "link": "/Spinning",
-          "text": "Прядильное производство"
+          "text": "Spinning Production"
         },
         {
           "link": "/Dyeing",
-          "text": "Красильное производство"
+          "text": "Dyeing Production"
         },
         {
           "link": "/Sewing",
-          "text": "Швейный цех"
+          "text": "Sewing Workshop"
         }
       ]
     },
     "item_3": {
-      "title": "Контакты",
+      "title": "Contacts",
 
       "tel": ["+998 90 759-77-99" , "+998 97 273-07-35" , "+998 97 990-00-79"],
       "mail": ["info@omgroup.uz" , "sales@omgroup.uz"]
     },
     "item_4": {
-      "title": "Адрес",
+      "title": "Location",
       "address": "170100, Узбекистан, город Андижан, ул. Бабур, 73\nАндижанская область, Пахтаабадский район, ул. Сохил, 20\nНодирабегимский микрорайон"
     }
   },
   "home_header": {
     "title": ["OLTIN MATO"," GROUP"],
     "box": {
-      "title": "Текстиль полного цикла",
-      "subtitle": "Надёжное производство от пряжи до готовых изделий",
-      "p": "OLTIN MATO GROUP — современная текстильная фабрика Узбекистана, объединяющая производство пряжи, крашение полотна и швейное направление с гарантией качества и стабильности.",
-      "btn": "Подробно",
-      "video_title": "Производство без компромиссов",
-      "video_text": "Контроль качества на каждом этапе — от сырья до готовой продукции."
+      "title": "Full-Cycle Textile Production",
+      "subtitle": "Reliable manufacturing — from yarn to finished garments",
+      "p": "Oltin Mato Group is a modern textile factory in Uzbekistan, integrating yarn production, fabric dyeing, and garment manufacturing with a strong commitment to quality and consistency.",
+      "btn": "Learn more",
+      "video_title": "Uncompromising Production",
+      "video_text": "Strict quality control at every stage — from raw materials to finished products."
     }
   },
   "home": {
     "about": {
-      "subtitle": "О нас",
-      "title": "Мы создаём текстиль полного цикла, объединяя технологии и мастерство в едином производственном процессе.",
-      "left_title": "ООО «OLTIN MATO GROUP» работает в текстильной отрасли с 2006 года, выстраивая надёжные партнёрские отношения на годы вперёд. Наш подход основан на стабильности, качестве и прозрачности каждого этапа производства.",
-      "right_text": "Собственные хлопковые поля позволяют нам контролировать качество продукции с самого начала — от выращивания сырья. Современное оборудование и передовые технологии обеспечивают высокие стандарты производства ткани. Опытная команда специалистов превращает сырьё в конкурентоспособный текстиль, востребованный как на внутреннем, так и на международном рынках.",
-      "btn": "О нас"
+      "subtitle": "About Us",
+      "title": "We create full-cycle textile production, combining technology and craftsmanship within a unified manufacturing process.",
+      "left_title": "OLTIN MATO GROUP LLC has been active in the textile industry since 2006, fostering strong, long-term partnerships. Our philosophy is built on consistency, quality, and full transparency at every stage of the manufacturing process.",
+      "right_text": "With our own cotton fields, we ensure complete quality control from the earliest stage — raw material cultivation. State-of-the-art equipment and advanced technologies guarantee exceptional standards in fabric production. Our experienced team transforms raw materials into high-quality, competitive textiles востребованные both locally and globally.",
+      "btn": "About Us"
     },
     "why_choose": {
-      "subtitle": "Наши преимущества",
-      "title": "Надёжность, качество и партнёрство без компромиссов.",
+      "subtitle": "Our Strengths",
+      "title": "Reliability, exceptional quality, and truly uncompromising partnerships.",
       "features": {
         "i_1": {
-          "title": "Премиум-качество",
-          "desc": "Многоступенчатый контроль на каждом этапе производства."
+          "title": "Premium Quality",
+          "desc": "Rigorous multi-stage quality control throughout the entire production process. "
         },
         "i_2": {
-          "title": "Соблюдение сроков",
-          "desc": "Точное выполнение договорённостей и обязательств."
+          "title": "Reliable Delivery",
+          "desc": "Consistent and timely fulfillment of all commitments. "
         },
         "i_3": {
-          "title": "Оптимальная цена",
-          "desc": "Честная стоимость при стабильно высоком качестве."
+          "title": "Competitive Pricing",
+          "desc": "Fair and transparent pricing with uncompromising quality"
         }
       },
       "rightFeatures": {
         "i_1": {
-          "title": "Индивидуальные решения",
-          "desc": "Гибкий подход под задачи каждого клиента."
+          "title": "Tailored Solutions",
+          "desc": "A flexible, client-centric approach to every project. "
         },
         "i_2": {
-          "title": "Полный цикл",
-          "desc": "Производство от сырья до готового изделия."
+          "title": "End-to-End Production",
+          "desc": "Fully integrated manufacturing — from raw materials to finished goods. "
         },
         "i_3": {
-          "title": "Долгосрочный фокус",
-          "desc": "Ориентация на устойчивое сотрудничество и рост."
+          "title": "Long-Term Vision",
+          "desc": "Focused on sustainable partnerships and continuous growth."
         }
       }
     },
     "ourServices": {
       "globe":{
-        "subtitle": "География экспорта",
-        "title": "Мировое партнёрство сегодня",
-        "title_desc": "OLTIN MATO GROUP активно развивает экспортные направления, сотрудничая с партнёрами в ключевых регионах мира. Гибкость, стабильные объёмы и соответствие международным стандартам позволяют нам работать с заказами любой сложности.",
-        "tabs": ["Узбекистан", "Россия", "Беларусь","Кыргызстан", "Казахстан"]
+        "subtitle": "Export Geography",
+        "title": "Global Partnership Today",
+        "title_desc": "OLTIN MATO GROUP is actively expanding its export направления, partnering with clients across key global regions. Our flexibility, consistent production volumes, and compliance with international standards enable us to handle orders of any complexity.",
+        "tabs": [" Uzbekistan ", "Russia", " Belarus ","Kyrgyzstan", "Kazakhstan"]
       },
       "services": {
-        "subtitle": "География экспорта",
-        "title": "Мировое партнёрство сегодня",
-        "title_desc": "OLTIN MATO GROUP активно развивает экспортные направления, сотрудничая с партнёрами в ключевых регионах мира. Гибкость, стабильные объёмы и соответствие международным стандартам позволяют нам работать с заказами любой сложности.",
-        "tabs": ["Узбекистан", "Россия", "Беларусь","Кыргызстан", "Казахстан"]
+        "subtitle": "Export Geography",
+        "title": "Global Partnership Today",
+        "title_desc": "OLTIN MATO GROUP is actively expanding its export направления, partnering with clients across key global regions. Our flexibility, consistent production volumes, and compliance with international standards enable us to handle orders of any complexity.",
+        "tabs": [" Uzbekistan ", "Russia", " Belarus ","Kyrgyzstan", "Kazakhstan"]
       }
     },
     "ourProject": {
-      "title": "Производство",
-      "subtitle": "Надёжное текстильное производство",
-      "btn": "Подробно",
+      "title": "Manufacturing",
+      "subtitle": "Reliable textile production",
+      "btn": "Learn more",
       "i_1": {
-        "title": "Вязальное производство"
+        "title": "Spinning Mill "
       },
       "i_2": {
-        "title": "Красильное производство"
+        "title": "Dyeing Facility "
       },
       "i_3": {
-        "title": "Швейное производство"
+        "title": "Sewing Department"
       },
       "i_4": {
         "title": "Склады"
       }
     },
     "get_in_touch": {
-      "title": "Международные сертификаты",
-      "subtitle": "Гарантия качества производства",
-      "p": "OLTIN MATO GROUP сертифицирована по ISO и OEKO-TEX, обеспечивая экологичность, надёжность и прозрачность производства. ",
-      "btn": "Сертификаты"
+      "title": "International Certifications",
+      "subtitle": "Quality Assurance in Manufacturing",
+      "p": "OLTIN MATO GROUP is certified according to ISO and OEKO-TEX standards, demonstrating environmental responsibility, reliability, and transparency in production.",
+      "btn": "Certificates"
     },
     "price": {
-      "title": "Объёмы производства",
-      "subtitle": "Полный цикл текстильного производства нового поколения",
+      "title": "Production Capacity",
+      "subtitle": "A Full-Cycle Next-Generation Textile Production",
       "btn": "Свяжитесь",
-      "teg": "Включает:",
+      "teg": "Includes:",
       "i_1": {
-        "title": "Запуск производства",
-        "subtitle": "Базовое производство тканей",
-        "list": ["Консультация по материалу и цвету" , "Выбор базовой структуры ткани" , "До 5 образцов ткани" , "Стандартный выбор волокон" , "Короткие сроки производства" , "Контроль качества"]
+        "title": "Production Launch",
+        "subtitle": "Production of Basic Fabrics",
+        "list": ["Consultation on material and color " , "Selection of fabric structure and form " , "Up to 5 fabric samples" , "Standard yarn selection " , "Short production lead times " , "Quality control"]
       },
       "i_2": {
-        "title": "Промышленная линия",
-        "subtitle": "Массовое производство",
-        "list": ["Индивидуальная техническая спецификация" ,
-          "Современная переработка ткани" ,
-          "Гибкость объёмов производства" ,
-          "Автоматизированные линии" ,
-          "Постоянный контроль качества" ,
-          "Своевременная доставка"]
+        "title": "Industrial Line",
+        "subtitle": "Mass Production",
+        "list": ["Custom technical specifications" ,
+          "Advanced fabric processing" ,
+          "Flexible production volumes" ,
+          "Automated production lines" ,
+          "Continuous quality control" ,
+          "On-time delivery"]
       },
       "i_3": {
-        "title": "Полный цикл",
-        "subtitle": "От хлопка до изделия",
-        "list": ["Управление полным циклом производства" ,
-          "Контроль сырья на всех этапах" ,
-          "Крашение и отделка тканей" ,
-          "Швейное производство и сборка" ,
-          "Соответствие международным стандартам" ,
-          "Производство готовое к экспорту"]
+        "title": "Full-Cycle Production",
+        "subtitle": "From Cotton to Finished Product",
+        "list": ["End-to-end production management" ,
+          "Control sample at every stage" ,
+          "Fabric dyeing and finishing" ,
+          "Garment manufacturing and assembly" ,
+          "Compliance with international standards" ,
+          "Export-ready production"]
       }
     },
     "testimonials": {
-      "title": "Отзывы",
-      "subtitle": "Доверие партнёров со всего мира",
+      "title": "Reviews",
+      "subtitle": "Trusted by Partners Worldwide",
       "i_1": {
-        "name": "Дмитрий",
-        "country":"Россия",
-        "text": "«Сотрудничество с OLTIN MATO GROUP — это уверенность в качестве и сроках. Их команда понимает наши потребности с первого контакта.»"
+        "name": "Dmitry ",
+        "country":"Russia",
+        "text": "«Working with OLTIN MATO GROUP gives us confidence in both quality and deadlines. Their team understands our needs from the very first contact.»"
       },
       "i_2": {
-        "name": "Мария",
-        "country":"Грузия",
-        "text": "«Высокий уровень автоматизации и профессионализм специалистов впечатляют. Продукция полностью соответствует нашим стандартам.»"
+        "name": "Maria",
+        "country":"Georgia",
+        "text": "«The high level of automation and the professionalism of the specialists are impressive. The products fully meet our standards.»"
       },
       "i_3": {
-        "name": "Акира",
-        "country":"Турция",
-        "text": "«Компания обеспечивает полный цикл производства, и это делает работу с ними удобной и надёжной. Каждый заказ всегда приходит точно в срок.»"
+        "name": "Akira",
+        "country":"Turkey",
+        "text": "«The company provides a full production cycle, which makes working with them convenient and reliable. Every order is always delivered on time.»"
       }
     },
     "questions": {
-      "title": "Часто задаваемые вопросы",
-      "subtitle": "Вопросы и ответы:",
-      "box_title": "Не нашли нужного ответа? Свяжитесь с нами!",
-      "btn": "Свяжитесь",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Questions & Answers:",
+      "box_title": "Didn’t find the answer you were looking for? Contact us!",
+      "btn": "Get in touch",
       "i_1": {
-        "title": "Какие виды продукции вы выпускаете?",
-        "text": "От пряжи и ткани до готовых швейных изделий."
+        "title": "What types of products do you manufacture?",
+        "text": "From yarn and fabric to finished garments."
       },
       "i_2": {
-        "title": "Где производится ваш текстиль?",
-        "text": "На собственных фабриках с полным циклом производства в Узбекистане."
+        "title": "Where is your textile produced?",
+        "text": "At our own full-cycle production facilities in Uzbekistan."
       },
       "i_3": {
-        "title": "Есть ли у вас сертификаты качества?",
-        "text": "Да, ISO и OEKO-TEX подтверждают экологичность и безопасность продукции."
+        "title": "Do you have quality certifications?",
+        "text": "Yes, ISO and OEKO-TEX certifications confirm the environmental friendliness and safety of our products."
       },
       "i_4": {
-        "title": "Можно ли сделать индивидуальный заказ?",
-        "text": "Да, мы предлагаем гибкие решения под потребности каждого клиента."
+        "title": "Is it possible to place a custom order?",
+        "text": "Yes, we offer flexible solutions tailored to each client’s needs."
       },
       "i_5": {
-        "title": "Как быстро вы выполняете заказы?",
-        "text": "Сроки зависят от объёма, но мы обеспечиваем оперативное производство."
+        "title": "How quickly do you fulfill orders?",
+        "text": "Lead times depend on the volume, but we ensure fast and efficient production."
       },
       "i_6": {
-        "title": "Вы работаете с экспортом?",
-        "text": "Да, мы сотрудничаем с партнёрами в СНГ, Европе, Азии и Южной Америке."
+        "title": "Do you work with exports?",
+        "text": "Yes, we cooperate with partners across the CIS, Europe, Asia, and South America."
       }
     },
     "blog": {
-      "title": "Выставки",
-      "subtitle": "Участие в выставках"
+      "title": "Exhibitions",
+      "subtitle": "Participation in Exhibitions"
     }
   },
-  "badge": "Главная",
+  "badge": "Home",
   "about": {
-    "title": "О нас",
+    "title": "About Us",
     "about": {
-      "subtitle": "О нас",
-      "title": "OLTIN MATO GROUP — надёжный партнёр в текстильной отрасли с полным циклом производства и вниманием к каждой детали",
-      "left_title": "Компания OLTIN MATO GROUP — динамично развивающийся лидер текстильной отрасли Узбекистана, основанный профессионалами, для которых качество и доверие клиентов всегда на первом месте. С самого начала наша цель — создавать современные и конкурентоспособные изделия, востребованные как на национальном, так и на международном рынке.",
-      "right_text": "За годы работы мы выросли из небольшого предприятия в крупного производителя с полным производственным циклом, постоянно инвестируя в технологии, обучение команды и расширение ассортимента. Наш бизнес строится на достижениях, успешных проектах и долгосрочных партнёрствах, которые укрепляют позиции среди профессиональной индустрии. Ответственный подход, внедрение лучших мировых практик и забота о коллективе позволяют нам создавать текстиль, которому доверяют клиенты по всему миру.",
-      "btn": "О нас"
+      "subtitle": "About Us",
+      "title": "OLTIN MATO GROUP is a reliable partner in the textile industry, offering a full-cycle production process and attention to every detail.",
+      "left_title": "OLTIN MATO GROUP is a dynamically growing leader in Uzbekistan’s textile industry, founded by professionals for whom quality and customer trust have always been top priorities. From the very beginning, our goal has been to create modern, competitive products that are in demand both in domestic and international markets.",
+      "right_text": "Over the years, we have grown from a small enterprise into a large manufacturer with a full production cycle, continuously investing in technology, team development, and product range expansion. Our business is built on achievements, successful projects, and long-term partnerships that strengthen our position within the professional industry. A responsible approach, the implementation of global best practices, and care for our team enable us to produce textiles trusted by clients worldwide.",
+      "btn": "About Us"
     },
     "ourServices": {
       "globe": {
@@ -258,18 +258,18 @@
         "tabs":["Узбекистан", "Россия", "Беларусь","Кыргызстан", "Казахстан"]
       },
       "services": {
-        "subtitle": "Масштабы производства",
-        "title": "От хлопка до готового текстиля ",
+        "subtitle": "Production Scale",
+        "title": "From Cotton to Finished Textile",
         "title_desc": "Современное автоматизированное производство выпускает десятки тысяч метров полотен и изделий с стабильным качеством. Более 400 специалистов обеспечивают высокую производительность, гибкость и быструю реакцию на требования рынка.",
         "tabs": [
           {
-            "title": "3070 Работников",
+            "title": "3070 Employees",
             "title_box": "Ассортимент продукции OLTIN MATO GROUP",
             "text": "Мы предлагаем широкий выбор высококачественных трикотажных полотен и готовых изделий. Изделия подходят как для массового производства, так и для индивидуальных заказов. Продукция охватывает сегменты от повседневной и корпоративной одежды до спортивной и специализированной.",
             "btn": "Каталог"
           },
           {
-            "title": "500 Оборудования",
+            "title": "500 Units of Equipment",
             "title_box": "Ассортимент продукции OLTIN MATO GROUP",
             "text": "Мы предлагаем широкий выбор высококачественных трикотажных полотен и готовых изделий. Изделия подходят как для массового производства, так и для индивидуальных заказов. Продукция охватывает сегменты от повседневной и корпоративной одежды до спортивной и специализированной.",
             "btn": "Каталог"
@@ -296,82 +296,245 @@
       }
     },
     "aboutStat":{
-      "title": "Масштабы производства",
-      "subtitle": "От хлопка до готового текстиля ",
+      "title": "Production Scale",
+      "subtitle": "From Cotton to Finished Textile",
       "desc": "Современное автоматизированное производство выпускает десятки тысяч метров полотен и изделий с стабильным качеством. Более 400 специалистов обеспечивают высокую производительность, гибкость и быструю реакцию на требования рынка.",
-      "box_title": "Ассортимент продукции OLTIN MATO GROUP",
-      "box_desc": "Мы предлагаем широкий выбор высококачественных трикотажных полотен и готовых изделий. Изделия подходят как для массового производства, так и для индивидуальных заказов. Продукция охватывает сегменты от повседневной и корпоративной одежды до спортивной и специализированной.",
-      "btn": "Каталог",
+      "box_title": "OLTIN MATO GROUP Product Range",
+      "box_desc": "We offer a wide selection of high-quality knitted fabrics and finished products. Our products are suitable for both mass production and custom orders, covering segments from casual and corporate wear to sportswear and specialized apparel.",
+      "btn": "Catalog",
       "i1": {
         "t": "3070",
-        "desc": "Работников"
+        "desc": "Employees"
       } ,
       "i2": {
         "t": "500",
-        "desc": "Оборудования"
+        "desc": "Units of Equipment"
       },
       "i3": {
         "t": "26 426",
-        "desc": "Площадь (га)"
+        "desc": "Area (ha)"
       },
       "i4": {
         "t": "8 000 000",
-        "desc": "Продукции"
+        "desc": "Production Output"
       },
       "i5": {
         "t": "98 000",
-        "desc": "Тонн сбор хлопка"
+        "desc": "Tons of Cotton Harvested"
       }
     } ,
     "why_choose": {
-      "subtitle": "Почему выбирают нас",
-      "title": "Надёжный партнёр с современными технологиями и гибким подходом",
+      "subtitle": "Why Choose Us",
+      "title": "A reliable partner with modern technologies and a flexible approach",
       "features": {
         "i_1": {
-          "title": "Современное оборудование",
-          "desc": "Используем тяжёлое, красильное, вязальное и швейное оборудование ведущих брендов."
+          "title": "Modern Equipment",
+          "desc": "We use advanced spinning, dyeing, knitting, and sewing equipment from leading global brands."
         },
         "i_2": {
-          "title": "Высокое качество продукции",
-          "desc": "Технологии и опыт обеспечивают стабильное качество и продукцию любой сложности."
+          "title": "High Product Quality",
+          "desc": "Our technologies and expertise ensure consistent quality and the ability to produce items of any complexity."
         },
         "i_3": {
-          "title": "Эффективность и экономичность",
-          "desc": "Комплексные решения повышают производительность и снижают затраты."
+          "title": "Efficiency and Cost-Effectiveness",
+          "desc": "Comprehensive solutions increase productivity and reduce costs."
         }
       },
       "rightFeatures": {
         "i_1": {
-          "title": "Постоянное обновление",
-          "desc": "Техническое обновление и обучение персонала поддерживают высокие стандарты."
+          "title": "Continuous Improvement",
+          "desc": "Ongoing technological upgrades and staff training help maintain high standards."
         },
         "i_2": {
-          "title": "Гибкие условия сотрудничества",
-          "desc": "Мы открыты к новым проектам и предлагаем выгодные условия для партнёров."
+          "title": "Flexible Cooperation Terms",
+          "desc": "We are open to new projects and offer favorable conditions for our partners."
         },
         "i_3": {
-          "title": "Прозрачное партнёрство",
-          "desc": "Развиваем компетенции для взаимовыгодного и доверительного сотрудничества."
+          "title": "Transparent Partnership",
+          "desc": "We develop competencies to ensure mutually beneficial and trust-based cooperation."
         }
       }
     },
     "howItWorks": {
-      "title": "Надёжные партнёры — успешное сотрудничество",
-      "subtitle": "Мы ценим доверие и строим долгосрочные отношения для взаимного роста"
+      "title": "Reliable Partners — Successful Cooperation",
+      "subtitle": "We value trust and build long-term relationships for mutual growth"
     }
   },
   "contact": {
-    "title": "Контакты",
+    "title": "Contacts",
     "form": {
-      "title": "Свяжитесь с нами",
-      "subtitle": "Мы всегда готовы ответить на ваши вопросы и обсудить сотрудничество.",
-      "text": "Пишите или звоните — мы ценим каждый ваш запрос и стремимся находить лучшие решения вместе.",
-      "name": "Имя",
-      "phone": "Телефон",
+      "title": "Contact Us",
+      "subtitle": "We are always ready to answer your questions and discuss cooperation.",
+      "text": "Write or call us — we value every request and strive to find the best solutions together.",
+      "name": "Name",
+      "phone": "Phone",
       "email": "Email",
-      "msg": "Сообщение",
-      "btn": "Отправить",
-      "btn_success":"сообщение отправлено"
+      "msg": "Message",
+      "btn": "Send",
+      "btn_success":"success"
+    }
+  },
+  "productions": {
+    "dyeing": {
+      "header": {
+        "title": "Dyeing Production",
+        "subtitle": "Uniform dyeing, precise color matching, and control at every stage of the production process.",
+        "btn": "Order Now"
+      },
+      "our": {
+        "title": "Flawless Results",
+        "subtitle": "Color that lasts long"
+      },
+      "precision": {
+        "top": {
+          "title": "Advanced Dyeing Technologies",
+          "subtitle": "Modern equipment and Turkish technologies ensure precise color matching, uniform dyeing, and environmentally friendly yarn processing.",
+          "features": {
+            "i_1": {
+              "title": "Precise Color Matching",
+              "desc": "Maximum accuracy in reproducing required shades."
+            },
+            "i_2": {
+              "title": "Uniform Dyeing",
+              "desc": "Consistent color throughout the entire length and across every batch."
+            },
+            "i_3": {
+              "title": "Modern Equipment",
+              "desc": "State-of-the-art lines for an efficient and controlled process."
+            },
+            "i_4": {
+              "title": "Eco-Friendly Approach",
+              "desc": "Safe technologies with care for the environment."
+            }
+          }
+        },
+        "bottom": {
+          "title": "Advanced Equipment at Our Facilities",
+          "subtitle": "Efficient production of high-quality fabrics and yarns",
+          "features": {
+            "i_1": {
+              "title": "Laboratory and Fabric Processing",
+              "desc": "Quality control and fabric unwinding"
+            },
+            "i_2": {
+              "title": "Fabric Dyeing",
+              "desc": "Uniform coloration"
+            },
+            "i_3": {
+              "title": "Fabric Extraction",
+              "desc": "Rapid moisture removal and drying"
+            },
+            "i_4": {
+              "title": "Production Capacity",
+              "desc": "20 tons of fabric and 5 tons of yarn per day"
+            }
+          }
+        },
+        "quality": {
+          "title": "High Quality Standards",
+          "subtitle": "Uniform color and durability in accordance with international standards",
+          "btn_contact": "Contact Us",
+          "btn_order": "Order Now"
+        }
+      }
+    },
+    "sewing": {
+      "header": {
+        "title": "Sewing Workshop",
+        "subtitle": "Precision craftsmanship for perfectly finished garments",
+        "btn": "Order Now"
+      },
+      "our": {
+        "title": "Production Process",
+        "subtitle": "From cutting to the finished garment — every stage is supervised by specialists."
+      },
+      "our_types": {
+        "title": "Production Technology",
+        "subtitle": "Modern technologies and skilled craftsmanship ensure high product quality.",
+        "items": {
+          "i_1": {
+            "title": "Design Department",
+            "desc": "Creation of unique designs and professional quality control"
+          },
+          "i_2": {
+            "title": "Cutting Department",
+            "desc": "Precise and efficient fabric cutting"
+          },
+          "i_3": {
+            "title": "Sewing Workshop",
+            "desc": "Accurate assembly and garment production"
+          },
+          "i_4": {
+            "title": "Finishing Department",
+            "desc": "Final processing and giving products a flawless appearance"
+          }
+        }
+      },
+      "create": {
+        "title": "Craftsmanship in Every Stitch",
+        "subtitle": "A modern sewing workshop for perfect results",
+        "btn_contact": "Contact Us",
+        "btn_order": "Order Now"
+      }
+    },
+    "spinning": {
+      "header": {
+        "title": "Spinning Production",
+        "subtitle": "A full-cycle yarn production process with guaranteed consistent quality  and compliance with international standards.",
+        "btn": "Order Now"
+      },
+      "our": {
+        "title": "Production Process",
+        "subtitle": "From raw material preparation to finished yarn — a full cycle at a single facility"
+      },
+      "modern": {
+        "top": {
+          "title": "Wholesale Yarn Supply",
+          "subtitle": "A reliable partner for high-quality cotton yarn, offering a wide ассортимент and stable deliveries across Central Asia.",
+          "features": {
+            "i_1": {
+              "title": "Fast Service",
+              "desc": "Prompt order processing and timely shipment."
+            },
+            "i_2": {
+              "title": "High-Quality Yarn",
+              "desc": "Carefully selected raw materials and strict quality control at every stage of production."
+            },
+            "i_3": {
+              "title": "Competitive Pricing",
+              "desc": "Direct supply from the manufacturer with no unnecessary markups."
+            },
+            "i_4": {
+              "title": "Wide Range",
+              "desc": "White and dyed yarn with various specifications and applications."
+            }
+          }
+        },
+        "bottom": {
+          "title": "Technology. Quality. Trust.",
+          "subtitle": "The foundation of our work and your results.",
+          "features": {
+            "i_1": {
+              "title": "High Quality",
+              "desc": "Control at every stage of production."
+            },
+            "i_2": {
+              "title": "Innovative Technologies",
+              "desc": "Modern solutions for consistent yarn performance."
+            },
+            "i_3": {
+              "title": "Product Variety",
+              "desc": "A wide range to meet any client requirements and applications."
+            },
+            "i_4": {
+              "title": "Responsible Approach",
+              "desc": "Ethics, reliability, and long-term cooperation."
+            }
+          },
+          "btn_contact": "Contact Us",
+          "btn_order": "Order Now"
+        }
+      }
     }
   }
 }

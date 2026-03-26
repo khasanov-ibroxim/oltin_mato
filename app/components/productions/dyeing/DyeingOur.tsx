@@ -14,7 +14,7 @@ const GAP = 24;
 const STEP = CARD_WIDTH + GAP;
 const AUTO_INTERVAL = 2500;
 
-const DyeingOur = () => {
+const DyeingOur = ({ dict }: { dict: any }) => {
     const [offset, setOffset] = useState(images.length * STEP);
     const [transitioning, setTransitioning] = useState(true);
     const autoTimer = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -76,10 +76,10 @@ const DyeingOur = () => {
                 <div className="relative w-full max-w-4xl mb-4">
                     <div className="absolute inset-y-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent" />
                     <h2 className="relative inline-block bg-white px-4 text-xl md:text-3xl font-medium text-gray-800 font-dm">
-                        Безупречный результат
+                        {dict.our.title}
                     </h2>
                 </div>
-                <h3 className="text-lg md:text-2xl text-gray-700 mb-6">цвет, который сохраняется надолго</h3>
+                <h3 className="text-lg md:text-2xl text-gray-700 mb-6">{dict.our.subtitle}</h3>
 
                 {/* Carousel */}
                 <div className="relative w-full mt-5">

@@ -7,21 +7,19 @@ import card_2 from "@/assets/production/sewing/DSC07533.jpg";
 import card_4 from "@/assets/production/sewing/DSC07603.jpg";
 
 const images = [card_1, card_2, card_3, card_4];
-// Triple the array so we can seamlessly loop
 const looped = [...images, ...images, ...images];
 
-const CARD_WIDTH = 320;  // px
-const GAP = 24;          // px  (gap-6 = 1.5rem = 24px)
+const CARD_WIDTH = 320;
+const GAP = 24;
 const STEP = CARD_WIDTH + GAP;
-const AUTO_INTERVAL = 2500; // ms
+const AUTO_INTERVAL = 2500;
 
-const SewingOur = () => {
+const SewingOur = ({ dict }: { dict: any }) => {
     const trackRef = useRef<HTMLDivElement>(null);
-    const [offset, setOffset] = useState(images.length * STEP); // start in the middle clone
+    const [offset, setOffset] = useState(images.length * STEP);
     const [transitioning, setTransitioning] = useState(true);
     const autoTimer = useRef<ReturnType<typeof setInterval> | null>(null);
 
-    // Touch / drag
     const touchStartX = useRef<number | null>(null);
     const dragStartX = useRef<number | null>(null);
     const isDragging = useRef(false);
@@ -31,7 +29,6 @@ const SewingOur = () => {
         setOffset((prev) => prev + delta);
     }, []);
 
-    // After transition ends, silently jump if we've drifted into first or third copy
     const handleTransitionEnd = useCallback(() => {
         setOffset((prev) => {
             const min = images.length * STEP;
@@ -48,7 +45,6 @@ const SewingOur = () => {
         });
     }, []);
 
-    // Auto-play
     const startAuto = useCallback(() => {
         stopAuto();
         autoTimer.current = setInterval(() => slideBy(STEP), AUTO_INTERVAL);
@@ -63,11 +59,7 @@ const SewingOur = () => {
         return stopAuto;
     }, [startAuto]);
 
-    // Touch
-    const onTouchStart = (e: React.TouchEvent) => {
-        stopAuto();
-        touchStartX.current = e.touches[0].clientX;
-    };
+    const onTouchStart = (e: React.TouchEvent) => { stopAuto(); touchStartX.current = e.touches[0].clientX; };
     const onTouchEnd = (e: React.TouchEvent) => {
         if (touchStartX.current === null) return;
         const diff = touchStartX.current - e.changedTouches[0].clientX;
@@ -76,16 +68,9 @@ const SewingOur = () => {
         startAuto();
     };
 
-    // Mouse drag
-    const onMouseDown = (e: React.MouseEvent) => {
-        stopAuto();
-        dragStartX.current = e.clientX;
-        isDragging.current = false;
-    };
+    const onMouseDown = (e: React.MouseEvent) => { stopAuto(); dragStartX.current = e.clientX; isDragging.current = false; };
     const onMouseMove = (e: React.MouseEvent) => {
-        if (dragStartX.current !== null && Math.abs(e.clientX - dragStartX.current) > 5) {
-            isDragging.current = true;
-        }
+        if (dragStartX.current !== null && Math.abs(e.clientX - dragStartX.current) > 5) isDragging.current = true;
     };
     const onMouseUp = (e: React.MouseEvent) => {
         if (dragStartX.current !== null && isDragging.current) {
@@ -97,7 +82,6 @@ const SewingOur = () => {
         startAuto();
     };
 
-    // Current dot index (relative to original images)
     const dotIndex = Math.round(offset / STEP) % images.length;
 
     return (
@@ -107,10 +91,10 @@ const SewingOur = () => {
                 <div className="relative w-full max-w-4xl mb-4 flex items-center justify-center">
                     <div className="absolute inset-y-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent" />
                     <h2 className="relative inline-block bg-white px-4 text-xl md:text-3xl font-medium text-gray-800 font-dm">
-                        Производственный процесс
+                        {dict.our.title}
                     </h2>
                 </div>
-                <h3 className="text-lg md:text-2xl text-gray-700">От раскроя до готового изделия — каждый этап под контролем специалистов.</h3>
+                <h3 className="text-lg md:text-2xl text-gray-700">{dict.our.subtitle}</h3>
             </div>
 
             {/* Carousel wrapper */}
