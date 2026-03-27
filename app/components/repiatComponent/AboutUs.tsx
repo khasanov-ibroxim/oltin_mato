@@ -135,7 +135,7 @@ const AboutUs = ({dict , page}: AboutProps) => {
                     </motion.div>
                 </motion.div>
             </div>
-            <div className="w-full flex flex-col lg:flex-row pt-10">
+            <div className="w-full gap-2 flex flex-col lg:flex-row pt-10">
                 {page === "about" ? <p className={"font-manrope pr-2 lg:w-1/2 text-[18px] text-[rgb(126,126,126)]"}>
                     {dict?.left_title}
                 </p> : <div className="w-full lg:w-1/2 font-dm text-[25px] lg:text-[30px]  lg:leading-[40px] text-[rgb(90,90,90)] font-bold">
