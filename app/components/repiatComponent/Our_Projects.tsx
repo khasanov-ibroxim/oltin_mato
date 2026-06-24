@@ -26,9 +26,9 @@ interface IContent {
 
 const OurProjects = ({dict,lang}:OurProjectProps) => {
     const content: IContent[] = [
-        { title: dict.i_1.title, year: 2022, img: our1 , bg:"#08CB00" , link:`${lang}/Spinning`},
-        { title: dict.i_2.title, year: 2023, img: our2 , bg: "#08CB00" , link: `${lang}/Dyeing`},
-        { title: dict.i_3.title, year: 2024, img: our3 , bg: "#08CB00" , link: `${lang}/Sewing`},
+        { title: dict.i_1.title, year: 2022, img: our1 , bg:"#08CB00" , link:`/${lang}/Spinning`},
+        { title: dict.i_2.title, year: 2023, img: our2 , bg: "#08CB00" , link: `/${lang}/Dyeing`},
+        { title: dict.i_3.title, year: 2024, img: our3 , bg: "#08CB00" , link: `/${lang}/Sewing`},
     ];
     const fadeInUp: Variants = {
         hidden: { opacity: 0, y: 30 },

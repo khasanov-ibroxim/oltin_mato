@@ -1,8 +1,9 @@
 import React from 'react';
 import bg from "@/assets/production/sewing/DSC07429.jpg"
 import Image from "next/image";
+import Link from "next/link";
 
-const SewingCreate = ({ dict }: { dict: any }) => {
+const SewingCreate = ({ dict, lang }: { dict: any, lang:string }) => {
     return (
         <section className="relative w-full h-[420px] md:h-[480px] overflow-hidden">
 
@@ -31,12 +32,9 @@ const SewingCreate = ({ dict }: { dict: any }) => {
 
                 {/* Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                    <a className="bg-[#08CB00] cursor-pointer hover:bg-[#078c02]/90 text-white px-6 py-3 rounded shadow">
+                    <Link href={`/${lang}/contact`} className="bg-[#08CB00] cursor-pointer hover:bg-[#078c02]/90 text-white px-6 py-3 rounded shadow">
                         {dict.create.btn_contact}
-                    </a>
-                    <a className="bg-[#fff] cursor-pointer hover:bg-[#fff]/90 text-black px-6 py-3 rounded shadow">
-                        {dict.create.btn_order}
-                    </a>
+                    </Link>
                 </div>
 
             </div>

@@ -9,9 +9,10 @@ import { motion, Variants } from "framer-motion";
 
 interface HomeHeaderProps {
     dict:any;
+    lang:string
 }
 
-export default function HomeHeader({dict}: HomeHeaderProps) {
+export default function HomeHeader({dict , lang}: HomeHeaderProps) {
     const title = dict?.home_header?.title || ["OLTIN MATO", "GROUP"];
 
     const fadeInScale: Variants = {
@@ -110,7 +111,7 @@ export default function HomeHeader({dict}: HomeHeaderProps) {
 
                     <motion.div variants={childVariant}>
                         <Link
-                            href="/contact"
+                            href={`${lang}/contact`}
                             className="index__btn_colors text-white inline-flex items-center justify-center rounded-sm px-6 py-2 font-manrope gap-1"
                         >
                             {dict.home_header.box.btn} <MoveRight/>

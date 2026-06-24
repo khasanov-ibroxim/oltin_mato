@@ -12,11 +12,7 @@ const SpinningHeader = ({ dict }: { dict: any }) => {
                 <div className="w-full absolute text-white flex pl-20 justify-center flex-col h-full z-10 ">
                     <h1 className={"text-3xl md:text-7xl font-medium font-dm"}>{dict.header.title}</h1>
                     <p className={"text-base md:text-xl mt-4 "}>{dict.header.subtitle}</p>
-                    <div
-                        className={"flex items-center justify-start flex-col md:flex-row  w-full md:w-1/3  gap-3 mt-3"}>
-                        <Link href={"#"}
-                              className={"w-1/2 bg-[#08CB00] hover:bg-[#078c02]/90 text-center py-2 rounded-sm"}>{dict.header.btn}</Link>
-                    </div>
+
                 </div>
             </div>
         </>

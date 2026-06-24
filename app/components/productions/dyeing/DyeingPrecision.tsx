@@ -4,8 +4,9 @@ import icon_1 from "@/assets/production/spinning/ball.png";
 import top_img from "@/assets/production/dyeing/IMG_9724.jpg"
 import bottom_img from "@/assets/production/dyeing/DSC07384.jpg"
 import iso from "@/assets/production/dyeing/iso.png"
+import Link from "next/link";
 
-const DyeingPrecision = ({ dict }: { dict: any }) => {
+const DyeingPrecision = ({ dict , lang}: { dict: any, lang:string }) => {
 
     const top_array = [
         { icon: icon_1, h: dict.precision.top.features.i_1.title, p: dict.precision.top.features.i_1.desc },
@@ -131,12 +132,9 @@ const DyeingPrecision = ({ dict }: { dict: any }) => {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                            <button className="px-6 py-3 rounded-md bg-[#08CB00] text-white font-medium hover:bg-[#078c02]/90 transition">
+                            <Link href={`/${lang}/contact`} className="px-6 py-3 rounded-md bg-[#08CB00] text-white font-medium hover:bg-[#078c02]/90 transition">
                                 {dict.precision.quality.btn_contact}
-                            </button>
-                            <button className="px-6 py-3 rounded-md bg-[#08CB00] text-white font-medium hover:bg-[#078c02]/90 transition">
-                                {dict.precision.quality.btn_order}
-                            </button>
+                            </Link>
                         </div>
                     </div>
 

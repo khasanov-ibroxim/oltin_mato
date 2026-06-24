@@ -2,14 +2,16 @@
 import React, { useState } from 'react';
 import TitleUI from "@/app/components/UI/titleUI";
 import { Variants, motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 interface QuestionsProps {
     dict: {
         [key: string]: any;
     };
+    lang: string;
 }
 
-const Questions = ({dict}: QuestionsProps) => {
+const Questions = ({dict , lang}: QuestionsProps) => {
     const [openLeftIndex, setOpenLeftIndex] = useState<number | null>(0);
     const [openRightIndex, setOpenRightIndex] = useState<number | null>(1);
 
@@ -244,9 +246,9 @@ const Questions = ({dict}: QuestionsProps) => {
                 <h3 className="font-dm font-bold text-[20px] md:text-[40px] lg:text-[48px] text-white mb-2 leading-tight">
                     {dict.box_title}
                 </h3>
-                <button className="index__btn_colors transition-colors px-8 py-2 rounded-xl text-[#2C2C2C] font-medium text-[14px]">
+                <Link href={`/${lang}/contact`} className="index__btn_colors transition-colors px-8 py-2 rounded-xl text-[#2C2C2C] font-medium text-[14px]">
                     {dict.btn}
-                </button>
+                </Link>
             </motion.div>
         </div>
     );

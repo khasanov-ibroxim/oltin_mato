@@ -67,8 +67,12 @@ function StatValue({ value }: { value: string }) {
     );
 }
 
+interface AStatProps {
+    dict:any;
+    lang:string;
+}
 // ─── Main component ──────────────────────────────────────────────────────────
-const AboutStat = ({dict}: any) => {
+const AboutStat = ({dict , lang}: AStatProps) => {
     const items = [
         { value: "3070",     label: dict.i1.desc, icon: i1 },
         { value: "500",      label: dict.i2.desc, icon: i2 },
@@ -188,7 +192,7 @@ const AboutStat = ({dict}: any) => {
                                 transition={{delay: 0.5}}
                             >
                                 <Link
-                                    href="/contact"
+                                    href={`/${lang}/contact`}
                                     className="inline-flex items-center justify-center bg-[#08CB00] hover:bg-[#078c02] text-white font-manrope font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
                                 >
                                     {dict.btn}

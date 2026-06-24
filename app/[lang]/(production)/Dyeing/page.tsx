@@ -16,7 +16,7 @@ export default async function PageDyeing({params}: AboutProps) {
         <>
             <DyeingHeader dict={dict.productions.dyeing}/>
             <DyeingOur dict={dict.productions.dyeing}/>
-            <DyeingPrecision dict={dict.productions.dyeing}/>
+            <DyeingPrecision dict={dict.productions.dyeing} lang={lang}/>
         </>
     );
 };

@@ -16,7 +16,7 @@ export default async function  Contact({params}: ContactParams){
     return(<>
         <SectionHeader title={dict.contact.title} linkName={dict.contact.title} titleImage={AboutHeader} badge={dict.badge}/>
         <ContactForm dict={dict.contact.form}/>
-        <Questions dict={dict.home.questions}/>
+        <Questions dict={dict.home.questions} lang={lang}/>
         <Testimonials dict={dict.home.testimonials}/>
     </>)
 }

@@ -23,9 +23,10 @@ interface AboutProps {
         [key: string]: any;
     };
     page: string;
+    lang: string ;
 }
 
-const AboutUs = ({dict , page}: AboutProps) => {
+const AboutUs = ({dict , page , lang}: AboutProps) => {
     // Animation variants
     const fadeInUp: Variants = {
         hidden: {opacity: 0, y: 30},
@@ -57,7 +58,7 @@ const AboutUs = ({dict , page}: AboutProps) => {
     };
 
     return (
-        <div className="w-full py-16 md:py-24 px-6 sm:px-12 lg:px-24">
+        <div className="w-full py-16 md:py-16 px-6 sm:px-12 lg:px-24">
             <div className="max-w-[1400px] mx-auto">
                 {/* Header Section */}
                 <motion.div
@@ -149,7 +150,7 @@ const AboutUs = ({dict , page}: AboutProps) => {
                 </div>
             </div>
             <div className="w-full flex justify-center items-center">
-                <Link href={"/about"} className={"index__btn_colors text-center mt-10 w-full sm:w-1/3 py-3 px-0  sm:py-3 sm:px-20 rounded-2xl "}>
+                <Link href={`/${lang}/contact`} className={"index__btn_colors text-center mt-10 w-full sm:w-1/3 py-3 px-0  sm:py-3 sm:px-20 rounded-2xl "}>
                     {dict?.btn}
                 </Link>
             </div>

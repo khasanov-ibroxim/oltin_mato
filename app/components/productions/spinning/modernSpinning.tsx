@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Toolbox, Award, BadgePercent, ChartColumnIncreasing, Palette, ShieldCheck, Trophy, Cpu } from "lucide-react"
 
-const ModernSpinning = ({ dict }: { dict: any }) => {
+const ModernSpinning = ({ dict, lang }: { dict: any, lang:string }) => {
     const top_array = [
         { icon: Toolbox,           h: dict.modern.top.features.i_1.title, p: dict.modern.top.features.i_1.desc },
         { icon: Award,             h: dict.modern.top.features.i_2.title, p: dict.modern.top.features.i_2.desc },
@@ -120,11 +120,8 @@ const ModernSpinning = ({ dict }: { dict: any }) => {
                         </div>
                     </div>
                     <div className={"flex items-center justify-center flex-col md:flex-row  w-full  gap-3 mt-10"}>
-                        <Link href={"#"} className={"w-1/2 bg-[#08CB00] hover:bg-[#078c02]/90 text-center py-2 text-white font-bold rounded-sm"}>
+                        <Link href={`/${lang}/contact`} className={"w-1/2 bg-[#08CB00] hover:bg-[#078c02]/90 text-center py-2 text-white font-bold rounded-sm"}>
                             {dict.modern.bottom.btn_contact}
-                        </Link>
-                        <Link href={"#"} className={"w-1/2 bg-gray-100 hover:bg-gray-100/90 text-black  text-center py-2 rounded-sm"}>
-                            {dict.modern.bottom.btn_order}
                         </Link>
                     </div>
                 </div>

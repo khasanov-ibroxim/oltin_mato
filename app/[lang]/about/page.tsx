@@ -23,8 +23,8 @@ export default async function About({params}: AboutProps) {
 
     return (<>
         <SectionHeader title={dict.about.title} linkName={dict.about.title} titleImage={AboutHeader} badge={dict.badge}/>
-        <AboutUs dict={dict.about.about} page={"about"}/>
-        <AboutStat dict={dict.about.aboutStat}/>
+        <AboutUs dict={dict.about.about} page={"about"} lang={lang}/>
+        <AboutStat dict={dict.about.aboutStat} lang={lang}/>
 
 
         <WhyChooseUs dict={dict.about.why_choose} page={"about"}/>

@@ -14,9 +14,9 @@ export default async function PageSpinning({params}: AboutProps) {
     const dict = await getDictionary(lang);
     return (
         <>
-            <SpinningHeader dict={dict.productions.spinning}/>
-            <SpinningOur dict={dict.productions.spinning}/>
-            <ModernSpinning dict={dict.productions.spinning}/>
+            <SpinningHeader dict={dict.productions.spinning} />
+            <SpinningOur dict={dict.productions.spinning} />
+            <ModernSpinning dict={dict.productions.spinning} lang={lang}/>
         </>
     );
 };

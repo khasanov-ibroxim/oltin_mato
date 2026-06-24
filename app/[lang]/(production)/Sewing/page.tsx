@@ -18,7 +18,7 @@ export default async function PageSewing({params}: AboutProps) {
             <SewingHeader dict={dict.productions.sewing}/>
             <SewingOur dict={dict.productions.sewing}/>
             <SewingOurTypes dict={dict.productions.sewing}/>
-            <SewingCreate dict={dict.productions.sewing}/>
+            <SewingCreate dict={dict.productions.sewing} lang={lang}/>
         </div>
     );
 };
