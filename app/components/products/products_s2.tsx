@@ -5,20 +5,22 @@ import "./products.css"
 import { Products_db } from "./products_db";
 import Image from "next/image";
 
-type TabType = "all" | "women" | "men";
+type TabType = "all" | "women" | "men" | "child";
 
 interface ProductItem {
     img_path: StaticImageData | StaticImageData[];
     cat_name: string;
 }
 
-const TABS: { key: TabType; label: string }[] = [
-    { key: "all",   label: "All" },
-    { key: "women", label: "Women" },
-    { key: "men",   label: "Men" },
-];
 
-const ProductsS2 = () => {
+
+const ProductsS2 = ({ dict }: { dict: any }) => {
+    const TABS: { key: TabType; label: string }[] = [
+        { key: "all",   label: dict.tabs.all },
+        { key: "women", label: dict.tabs.women },
+        { key: "men",   label: dict.tabs.men },
+        { key: "child", label: dict.tabs.child },
+    ];
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
     const [activeCat, setActiveCat]       = useState<TabType>("all");
     const [modalIndex, setModalIndex]     = useState<number | null>(null);
@@ -149,9 +151,9 @@ const ProductsS2 = () => {
     const total = allImages.length;
 
     return (
-        <section className="products_section container-sm">
+        <section className="products_section container">
 
-            <h2 className="products_heading">Последние коллекции</h2>
+            <h2 className="products_heading">{dict.title}</h2>
 
             {/* Tabs */}
             <div className="products_tabs_box">

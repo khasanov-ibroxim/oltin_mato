@@ -1,14 +1,24 @@
 import ProductsS2 from "@/app/components/products/products_s2";
-import SectionHeader from "@/app/components/sectionHeader";
-import AboutHeader from "@/assets/about/header/about_header.jpg";
 
+import Corousel_1 from "@/assets/products/corousel_1.jpg";
+import Corousel_2 from "@/assets/products/corousel_2.jpg";
+import Corousel_3 from "@/assets/products/corousel_3.jpg";
+import ProductCorousel from "@/app/components/products/products_corousel";
+import {Locale} from "@/i18n-config";
+import {getDictionary} from "@/lib/dictionary";
 
-const Page = () => {
+interface ProductsProps {
+    params: Promise<{ lang: Locale }>;
+}
+const  Page = async ({params}: ProductsProps) => {
+    const {lang} = await params;
+    const dict = await getDictionary(lang);
+
     return (
         <div>
-            <SectionHeader title={"products"} linkName={"product"} titleImage={AboutHeader} badge={"asdsad"}/>
+            <ProductCorousel title={dict.nav.products} linkName={"Продукция"} titleImages={[Corousel_1, Corousel_2, Corousel_3]} badge={"asdsad"}/>
 
-            <ProductsS2/>
+            <ProductsS2 dict={dict.product}/>
         </div>
     );
 };

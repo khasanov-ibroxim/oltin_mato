@@ -49,14 +49,14 @@ const Testimonials = ({dict}:testimonialsProps) => {
     ];
 
     return (
-        <div className={"container py-16"}>
+        <div className={"container pt-16"}>
             <motion.div
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
                 variants={fadeInScale}
                 transition={{ type: "spring", stiffness: 300 }}
-                className="w-full flex flex-col sm:flex-row justify-baseline items-center mb-12" >
+                className="w-full flex flex-col sm:flex-row justify-baseline items-center " >
                 <div className="flex flex-col w-full sm:w-2/3 justify-center items-start">
                     <TitleUI text={dict.title}/>
                     <h2 className="font-dm m-0 p-0 font-bold text-[32px] sm:text-[36px] md:text-[44px] lg:text-[50px] leading-tight text-[#222222]">
@@ -86,7 +86,7 @@ const Testimonials = ({dict}:testimonialsProps) => {
                 >
                     {testimonials.map((testimonial) => (
                         <SwiperSlide key={testimonial.id}>
-                            <div className="bg-none group  text-center rounded-3xl p-8 md:p-12 lg:p-16 min-h-[350px] w-full flex flex-col items-center justify-center">
+                            <div style={{paddingBottom:0 , paddingTop:0}} className="bg-none group  text-center rounded-3xl p-8 md:p-12 lg:p-16  min-h-[350px]  w-full flex flex-col items-center justify-center">
                                 <div className="mb-6 w-full">
                                     <Quote size={40} className="text-[rgba(126,126,126,0.2)] transition-colors duration-300 group-hover:text-[#162C43]"/>
                                 </div>

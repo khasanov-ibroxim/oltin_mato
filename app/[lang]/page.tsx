@@ -10,6 +10,7 @@ import PricingPlan from "@/app/components/home/Pricing_Plan";
 import Testimonials from "@/app/components/repiatComponent/Testimonials";
 import Questions from "@/app/components/home/Questions";
 import BlogPost from "@/app/components/home/Blog_Post";
+import ProductionSection from "@/app/components/home/production_section";
 
 interface HomeProps {
     params: Promise<{ lang: Locale }>;
@@ -29,9 +30,9 @@ export default async function IndexPage({params, searchParams}: HomeProps) {
         <OurProjects dict={dict.home.ourProject} lang={lang}/>
         <GetInTouch dict={dict.home.get_in_touch}/>
         <PricingPlan dict={dict.home.price}/>
+        <ProductionSection dict={dict} lang={lang}/>
         <Testimonials dict={dict.home.testimonials}/>
         <Questions dict={dict.home.questions}/>
-        <BlogPost dict={dict.home.blog}/>
-
+        {/*<BlogPost dict={dict.home.blog}/>*/}
     </div>)
 }

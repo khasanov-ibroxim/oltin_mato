@@ -3,7 +3,7 @@
     "home": "Home",
     "about": "About",
     "contact": "Contact",
-    "products": "products",
+    "products": "Products",
     "production": {
       "hero_link": "Production",
       "links": [
@@ -536,6 +536,15 @@
           "btn_order": "Order Now"
         }
       }
+    }
+  },
+  "product": {
+    "title": "Latest collections",
+    "tabs": {
+      "all": "All",
+      "women": "Women",
+      "men": "Men",
+      "child": "Children"
     }
   }
 }
