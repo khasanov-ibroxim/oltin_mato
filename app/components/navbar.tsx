@@ -45,6 +45,7 @@ export const Navbar = ({ dict, lang }: NavbarProps) => {
             path: dict.nav.production.links[0].link,
             sub_links: dict.nav.production.links,
         },
+        { name: dict.nav.products, path: "/products" },
         { name: dict.nav.contact, path: "/contact" },
     ];
 
